@@ -1,0 +1,3 @@
+/mnt/c/Users/Dear User/Desktop/tamrin5/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Dear User/Desktop/tamrin5/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Dear User/Desktop/tamrin5/build/CMakeFiles/todo.dir
