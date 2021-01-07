@@ -6,7 +6,7 @@ using namespace std;
 
 void start()
 {
-    sf::RenderWindow window(sf::VideoMode(900, 480), "ToDO");
+    sf::RenderWindow window(sf::VideoMode(800, 500), "ToDO");
     sf::Texture backgrounfTexture;
     if (!backgrounfTexture.loadFromFile("../assets/images/back.png"))
     {
@@ -22,7 +22,7 @@ void start()
     }
     sf::Sprite todoSprite;
     todoSprite.setTexture(todo);
-    todoSprite.setPosition(sf::Vector2f(400, 1));
+    todoSprite.setPosition(sf::Vector2f(400, 400));
 
     sf::Texture add;
     if (!add.loadFromFile("../assets/icons/add.png"))
@@ -31,7 +31,7 @@ void start()
     }
     sf::Sprite addSprite;
     addSprite.setTexture(add);
-    addSprite.setPosition(sf::Vector2f(13, 390));
+    addSprite.setPosition(sf::Vector2f(13, 400));
 
     sf::Texture trashBin;
     if (!trashBin.loadFromFile("../assets/icons/bin.png"))
@@ -40,7 +40,16 @@ void start()
     }
     sf::Sprite trashBinSprite;
     trashBinSprite.setTexture(trashBin);
-    trashBinSprite.setPosition(sf::Vector2f(800, 390));
+    trashBinSprite.setPosition(sf::Vector2f(280, 400));
+
+    sf::Texture edit;
+    if (!edit.loadFromFile("../assets/icons/edit5.png"))
+    {
+        // error...
+    }
+    sf::Sprite editSprite;
+    editSprite.setTexture(edit);
+    editSprite.setPosition(sf::Vector2f(150, 410));
 
     while (window.isOpen())
     {
@@ -72,7 +81,7 @@ void start()
                     }
                 }
             }
-            
+
             window.clear();
             window.draw(sprite);
             window.draw(todoSprite);
