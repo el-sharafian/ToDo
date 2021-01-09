@@ -86,6 +86,7 @@ void start()
             window.draw(sprite);
             window.draw(todoSprite);
             window.draw(addSprite);
+            window.draw(editSprite);
             window.draw(trashBinSprite);
             window.display();
         }
