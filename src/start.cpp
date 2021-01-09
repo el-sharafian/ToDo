@@ -81,7 +81,7 @@ void start()
                     }
                 }
             }
-
+            
             window.clear();
             window.draw(sprite);
             window.draw(todoSprite);
