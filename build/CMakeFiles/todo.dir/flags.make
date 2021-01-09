@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/c/Users/Dear User/Desktop/poof/todo/include" 
+CXX_INCLUDES = -I/mnt/c/Users/pc/desktop/TodoP/ToDo/include 
 
