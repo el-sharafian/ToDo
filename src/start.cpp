@@ -7,8 +7,18 @@ using namespace std;
 void start()
 {
     sf::RenderWindow window(sf::VideoMode(800, 500), "ToDO");
+
+    sf::Font font;
+    font.loadFromFile("../assets/icons/font.ttf");
+    sf::Text t;
+    t.setPosition(100, 100);
+    t.setFillColor(sf::Color::Black);
+    t.setFont(font);
+    std::string s = "This is text that you type: ";
+    t.setString(s);
+
     sf::Texture backgrounfTexture;
-    if (!backgrounfTexture.loadFromFile("../assets/images/bb.jpeg"))
+    if (!backgrounfTexture.loadFromFile("../assets/images/ax5.jpg"))
     {
         // error...
     }
@@ -81,14 +91,22 @@ void start()
                     }
                 }
             }
-            
-            window.clear();
-            window.draw(sprite);
-            window.draw(todoSprite);
-            window.draw(addSprite);
-            window.draw(editSprite);
-            window.draw(trashBinSprite);
-            window.display();
+            if (event.type == sf::Event::TextEntered)
+            {
+                if (event.text.unicode < 128)
+                {
+                    s += static_cast<char>(event.text.unicode);
+                }
+            }
         }
+        t.setString(s);
+        window.clear();
+        window.draw(sprite);
+        window.draw(todoSprite);
+        window.draw(addSprite);
+        window.draw(editSprite);
+        window.draw(trashBinSprite);
+        window.draw(t);
+        window.display();
     }
 }
