@@ -8,7 +8,7 @@ void start()
 {
     sf::RenderWindow window(sf::VideoMode(800, 500), "ToDO");
     sf::Texture backgrounfTexture;
-    if (!backgrounfTexture.loadFromFile("../assets/images/bb.jpg"))
+    if (!backgrounfTexture.loadFromFile("../assets/images/bb.jpeg"))
     {
         // error...
     }
