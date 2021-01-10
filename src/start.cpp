@@ -4,6 +4,20 @@
 
 using namespace std;
 
+void changecolor(sf::RenderWindow &window, sf::Text text)
+{
+    window.draw(text);
+
+    // if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window))))
+    // {
+    //     text.setFillColor(sf::Color::Blue);
+    // }
+    // else
+    // {
+    //     text.setFillColor(sf::Color(20, 150, 150));
+    // }
+}
+
 void start()
 {
     sf::RenderWindow window(sf::VideoMode(800, 500), "ToDO");
@@ -17,6 +31,12 @@ void start()
     std::string s = "This is text that you type: ";
     t.setString(s);
 
+    sf::Text text;
+    text.setString("Make a ToDo list");
+    text.setPosition(sf::Vector2f(300, 0));
+    text.setFillColor(sf::Color::Black);
+    text.setFont(font);
+
     sf::Texture backgrounfTexture;
     if (!backgrounfTexture.loadFromFile("../assets/images/ax5.jpg"))
     {
@@ -25,15 +45,6 @@ void start()
     sf::Sprite sprite;
     sprite.setTexture(backgrounfTexture);
 
-    sf::Texture todo;
-    if (!todo.loadFromFile("../assets/icons/todo4.png"))
-    {
-        // error...
-    }
-    sf::Sprite todoSprite;
-    todoSprite.setTexture(todo);
-    todoSprite.setPosition(sf::Vector2f(400, 400));
-
     sf::Texture add;
     if (!add.loadFromFile("../assets/icons/add.png"))
     {
@@ -41,16 +52,7 @@ void start()
     }
     sf::Sprite addSprite;
     addSprite.setTexture(add);
-    addSprite.setPosition(sf::Vector2f(13, 400));
-
-    sf::Texture trashBin;
-    if (!trashBin.loadFromFile("../assets/icons/bin.png"))
-    {
-        // error...
-    }
-    sf::Sprite trashBinSprite;
-    trashBinSprite.setTexture(trashBin);
-    trashBinSprite.setPosition(sf::Vector2f(280, 400));
+    addSprite.setPosition(sf::Vector2f(10, 0));
 
     sf::Texture edit;
     if (!edit.loadFromFile("../assets/icons/edit5.png"))
@@ -59,7 +61,25 @@ void start()
     }
     sf::Sprite editSprite;
     editSprite.setTexture(edit);
-    editSprite.setPosition(sf::Vector2f(150, 410));
+    editSprite.setPosition(sf::Vector2f(10, 100));
+
+    sf::Texture todo;
+    if (!todo.loadFromFile("../assets/icons/todo4.png"))
+    {
+        // error...
+    }
+    sf::Sprite todoSprite;
+    todoSprite.setTexture(todo);
+    todoSprite.setPosition(sf::Vector2f(7, 200));
+
+    sf::Texture trashBin;
+    if (!trashBin.loadFromFile("../assets/icons/bin.png"))
+    {
+        // error...
+    }
+    sf::Sprite trashBinSprite;
+    trashBinSprite.setTexture(trashBin);
+    trashBinSprite.setPosition(sf::Vector2f(10, 400));
 
     while (window.isOpen())
     {
@@ -91,6 +111,14 @@ void start()
                     }
                 }
             }
+            if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window))))
+            {
+                text.setFillColor(sf::Color(20, 150, 150));
+            }
+            else
+            {
+                text.setFillColor(sf::Color::Black);
+            }
             if (event.type == sf::Event::TextEntered)
             {
                 if (event.text.unicode < 128)
@@ -106,7 +134,9 @@ void start()
         window.draw(addSprite);
         window.draw(editSprite);
         window.draw(trashBinSprite);
+        // changecolor(window, t);
         window.draw(t);
+        window.draw(text);
         window.display();
     }
 }
