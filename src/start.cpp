@@ -1,26 +1,15 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "start.hpp"
+#include "icon.hpp"
 
 using namespace std;
-
-void changecolor(sf::RenderWindow &window, sf::Text text)
-{
-    window.draw(text);
-
-    // if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window))))
-    // {
-    //     text.setFillColor(sf::Color::Blue);
-    // }
-    // else
-    // {
-    //     text.setFillColor(sf::Color(20, 150, 150));
-    // }
-}
 
 void start()
 {
     sf::RenderWindow window(sf::VideoMode(800, 500), "ToDO");
+    string name = "../assets/icons";
+    Icon icon(name);
 
     sf::Font font;
     font.loadFromFile("../assets/icons/font.ttf");
@@ -45,72 +34,20 @@ void start()
     sf::Sprite sprite;
     sprite.setTexture(backgrounfTexture);
 
-    sf::Texture add;
-    if (!add.loadFromFile("../assets/icons/add.png"))
-    {
-        // error...
-    }
-    sf::Sprite addSprite;
-    addSprite.setTexture(add);
-    addSprite.setPosition(sf::Vector2f(10, 0));
-
-    sf::Texture edit;
-    if (!edit.loadFromFile("../assets/icons/edit5.png"))
-    {
-        // error...
-    }
-    sf::Sprite editSprite;
-    editSprite.setTexture(edit);
-    editSprite.setPosition(sf::Vector2f(10, 100));
-
-    sf::Texture todo;
-    if (!todo.loadFromFile("../assets/icons/todo4.png"))
-    {
-        // error...
-    }
-    sf::Sprite todoSprite;
-    todoSprite.setTexture(todo);
-    todoSprite.setPosition(sf::Vector2f(7, 200));
-
-    sf::Texture trashBin;
-    if (!trashBin.loadFromFile("../assets/icons/bin.png"))
-    {
-        // error...
-    }
-    sf::Sprite trashBinSprite;
-    trashBinSprite.setTexture(trashBin);
-    trashBinSprite.setPosition(sf::Vector2f(10, 400));
-
     while (window.isOpen())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
+        sf::Event evnt;
+        while (window.pollEvent(evnt))
         {
-            if (event.type == sf::Event::Closed)
+            if (evnt.type == sf::Event::Closed)
             {
                 window.close();
             }
-
-            if (event.type == sf::Event::MouseButtonPressed)
+            if (evnt.type == sf::Event::MouseButtonPressed)
             {
-                if (event.mouseButton.button == sf::Mouse::Left)
-                {
-                    if (addSprite.getGlobalBounds().contains(sf::Vector2f(event.mouseButton.x, event.mouseButton.y)))
-                    {
-                        cout << "add" << endl;
-                    }
-                }
+                icon.iconEvents(evnt);
             }
-            if (event.type == sf::Event::MouseButtonPressed)
-            {
-                if (event.mouseButton.button == sf::Mouse::Left)
-                {
-                    if (trashBinSprite.getGlobalBounds().contains(sf::Vector2f(event.mouseButton.x, event.mouseButton.y)))
-                    {
-                        cout << "delete" << endl;
-                    }
-                }
-            }
+            
             if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window))))
             {
                 text.setFillColor(sf::Color(20, 150, 150));
@@ -119,22 +56,21 @@ void start()
             {
                 text.setFillColor(sf::Color::Black);
             }
-            if (event.type == sf::Event::TextEntered)
+            if (evnt.type == sf::Event::TextEntered)
             {
-                if (event.text.unicode < 128)
+                if (evnt.text.unicode < 128)
                 {
-                    s += static_cast<char>(event.text.unicode);
+                    s += static_cast<char>(evnt.text.unicode);
                 }
             }
         }
         t.setString(s);
         window.clear();
         window.draw(sprite);
-        window.draw(todoSprite);
-        window.draw(addSprite);
-        window.draw(editSprite);
-        window.draw(trashBinSprite);
-        // changecolor(window, t);
+        icon.add(window);
+        icon.edit(window);
+        icon.list(window);
+        icon.bin(window);
         window.draw(t);
         window.draw(text);
         window.display();
