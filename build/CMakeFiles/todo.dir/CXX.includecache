@@ -12,15 +12,9 @@ string
 SFML/Graphics.hpp
 -
 
-../include/start.hpp
-
-/mnt/f/5/todo/src/start.cpp
-iostream
--
-SFML/Graphics.hpp
--
-start.hpp
-/mnt/f/5/todo/src/start.hpp
+/mnt/f/5/todo/src/icon.cpp
 icon.hpp
 /mnt/f/5/todo/src/icon.hpp
+iostream
+-
 

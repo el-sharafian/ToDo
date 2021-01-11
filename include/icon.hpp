@@ -9,7 +9,7 @@ class Icon
 public:
     Icon(std::string);
     // void IconDisplay(sf::RenderWindow &);
-    void iconEvents(sf::Event);
+    void iconEvents(sf::Event, sf::RenderWindow &);
     void list(sf::RenderWindow &);
     void edit(sf::RenderWindow &);
     void add(sf::RenderWindow &);

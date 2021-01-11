@@ -38,7 +38,7 @@ Icon::Icon(std::string imgDirectory)
 // void Icon::IconDisplay(sf::RenderWindow &window)
 // {
 // }
-void Icon::iconEvents(sf::Event evnt)
+void Icon::iconEvents(sf::Event evnt, sf::RenderWindow & window)
 {
     if (evnt.type == sf::Event::MouseButtonPressed)
     {

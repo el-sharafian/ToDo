@@ -6,6 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(include)
 
-add_executable(todo src/main.cpp src/start.cpp src/icon.cpp)
+add_executable(todo src/main.cpp src/icon.cpp src/ToDo.cpp)
 
 target_link_libraries(todo sfml-window sfml-system sfml-graphics)

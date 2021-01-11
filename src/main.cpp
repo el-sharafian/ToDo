@@ -1,7 +1,9 @@
-#include "start.hpp"
+#include "ToDo.hpp"
 
 int main()
 {
-    start();
+    ToDo todo;
+    todo.Loop();
+    
     return 0;
 }
