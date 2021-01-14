@@ -14,6 +14,7 @@ public:
     void edit(sf::RenderWindow &);
     void add(sf::RenderWindow &);
     void bin(sf::RenderWindow &);
+
 private:
     sf::Texture addTexture;
     sf::Sprite addSprite;
@@ -23,6 +24,7 @@ private:
     sf::Sprite editSprite;
     sf::Texture listTexture;
     sf::Sprite listSprite;
+    sf::Font font;
 };
 
 #endif // ICON_HPP

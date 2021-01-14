@@ -1,8 +1,12 @@
 #include "icon.hpp"
 #include <iostream>
 
+#define Enter_key 13
+
 Icon::Icon(std::string imgDirectory)
 {
+    font.loadFromFile("../assets/icons/font.ttf");
+
     std::string iconName = imgDirectory + "/add.png";
     if (!addTexture.loadFromFile(iconName))
     {
@@ -38,15 +42,88 @@ Icon::Icon(std::string imgDirectory)
 // void Icon::IconDisplay(sf::RenderWindow &window)
 // {
 // }
-void Icon::iconEvents(sf::Event evnt, sf::RenderWindow & window)
+void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
 {
     if (evnt.type == sf::Event::MouseButtonPressed)
     {
         if (evnt.mouseButton.button == sf::Mouse::Left)
         {
+
             if (addSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
-                std::cout << "add button" << std::endl;
+                std::string taskName = "";
+                sf::Text taskNameText;
+                taskNameText.setFont(font);
+                taskNameText.setPosition(sf::Vector2f(5, 25));
+                taskNameText.setFillColor(sf::Color(20, 100, 100));
+
+                std::string addTask = "Enter name of your task \n";
+                sf::Text addTaskText;
+                addTaskText.setFont(font);
+                addTaskText.setPosition(sf::Vector2f(140, 0));
+                addTaskText.setString(addTask);
+                addTaskText.setFillColor(sf::Color(20, 100, 100));
+
+                std::string limitTaskName = "task name is too long \n";
+                sf::Text limitTaskNameText;
+                limitTaskNameText.setFont(font);
+                limitTaskNameText.setPosition(sf::Vector2f(200, 200));
+                limitTaskNameText.setString(limitTaskName);
+                limitTaskNameText.setFillColor(sf::Color::Red);
+
+                sf::RenderWindow win(sf::VideoMode(600, 400), "add a task name");
+                sf::Texture addWindowTexture;
+                if (addWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
+                {
+                    // error ...
+                }
+                sf::Sprite addWindowSprite;
+                addWindowSprite.setTexture(addWindowTexture);
+
+                while (win.isOpen())
+                {
+                    bool checklimit = false;
+                    sf::Event evn;
+                    while (win.pollEvent(evn))
+                    {
+                        if (evn.type == sf::Event::Closed)
+                        {
+                            win.close();
+                        }
+                        if (evn.type == sf::Event::TextEntered)
+                        {
+                            if (evn.text.unicode == Enter_key)
+                            {
+                                win.close();
+                            }
+                            // t.setString(s);
+                            if (evn.text.unicode < 128)
+                            {
+                                if (taskName.size() < 30)
+                                {
+                                    taskName += static_cast<char>(evn.text.unicode);
+                                }
+                                else
+                                {
+                                    std::cout << "***************************";
+                                    std::cout << "***************************";
+                                    std::cout << "***************************";
+                                    checklimit = true;
+                                }
+                            }
+                        }
+                        taskNameText.setString(taskName);
+                        win.clear();
+                        if (checklimit)
+                        {
+                            win.draw(limitTaskNameText);
+                        }
+                        win.draw(addWindowSprite);
+                        win.draw(addTaskText);
+                        win.draw(taskNameText);
+                        win.display();
+                    }
+                }
             }
             else if (binSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
