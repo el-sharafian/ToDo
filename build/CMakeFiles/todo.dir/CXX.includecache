@@ -6,48 +6,60 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/pc/desktop/t2/ToDo/include/ToDo.hpp
+../include/addButton.hpp
+string
+-
+SFML/Graphics.hpp
+-
+../include/task.hpp
+../include/task.hpp
+
+/mnt/f/5/ToDo/include/ToDo.hpp
 string
 -
 SFML/Graphics.hpp
 -
 icon.hpp
-/mnt/c/Users/pc/desktop/t2/ToDo/include/icon.hpp
+/mnt/f/5/ToDo/include/icon.hpp
 
-/mnt/c/Users/pc/desktop/t2/ToDo/include/icon.hpp
+/mnt/f/5/ToDo/include/icon.hpp
 string
 -
 SFML/Graphics.hpp
 -
 ../include/task.hpp
-/mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
+/mnt/f/5/ToDo/include/task.hpp
 
-/mnt/c/Users/pc/desktop/t2/ToDo/include/table.hpp
+/mnt/f/5/ToDo/include/table.hpp
 vector
 -
 string
 -
 ../include/task.hpp
-/mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
+/mnt/f/5/ToDo/include/task.hpp
 
-/mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
+/mnt/f/5/ToDo/include/task.hpp
 string
 -
 vector
 -
 
-/mnt/c/Users/pc/desktop/t2/ToDo/src/icon.cpp
+/mnt/f/5/ToDo/src/icon.cpp
 ../include/icon.hpp
-/mnt/c/Users/pc/desktop/t2/ToDo/include/icon.hpp
+/mnt/f/5/ToDo/include/icon.hpp
 ../include/task.hpp
-/mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
+/mnt/f/5/ToDo/include/task.hpp
 ../include/table.hpp
-/mnt/c/Users/pc/desktop/t2/ToDo/include/table.hpp
+/mnt/f/5/ToDo/include/table.hpp
 ../include/ToDo.hpp
-/mnt/c/Users/pc/desktop/t2/ToDo/include/ToDo.hpp
+/mnt/f/5/ToDo/include/ToDo.hpp
+addButton.hpp
+/mnt/f/5/ToDo/src/addButton.hpp
 iostream
 -
 fstream
+-
+cstdlib
 -
 string
 -
@@ -62,5 +74,21 @@ SFML/System/String.hpp
 locale
 -
 vector
+-
+
+/mnt/f/5/ToDo/src/table.cpp
+../include/task.hpp
+/mnt/f/5/ToDo/include/task.hpp
+../include/table.hpp
+/mnt/f/5/ToDo/include/table.hpp
+iostream
+-
+cstdlib
+-
+string
+-
+vector
+-
+iomanip
 -
 

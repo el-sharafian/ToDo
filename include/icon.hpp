@@ -11,7 +11,6 @@ public:
     Icon(std::string);
     // void IconDisplay(sf::RenderWindow &);
     void iconEvents(sf::Event, sf::RenderWindow &);
-    void list(sf::RenderWindow &);
     void edit(sf::RenderWindow &);
     void add(sf::RenderWindow &);
     void bin(sf::RenderWindow &);
@@ -23,8 +22,6 @@ private:
     sf::Sprite binSprite;
     sf::Texture editTexture;
     sf::Sprite editSprite;
-    sf::Texture listTexture;
-    sf::Sprite listSprite;
     sf::Font font;
 };
 

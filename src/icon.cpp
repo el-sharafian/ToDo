@@ -2,8 +2,10 @@
 #include "../include/task.hpp"
 #include "../include/table.hpp"
 #include "../include/ToDo.hpp"
+#include "addButton.hpp"
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 #include <string>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
@@ -12,8 +14,8 @@
 #include <locale>
 #include <vector>
 
-#define Enter_key 13
 #define Sp 20
+#define Enter_key 13
 
 using namespace std;
 
@@ -37,14 +39,6 @@ Icon::Icon(std::string imgDirectory)
     editSprite.setTexture(editTexture);
     editSprite.setPosition(sf::Vector2f(10, 125));
 
-    iconName = imgDirectory + "/list.png";
-    if (!listTexture.loadFromFile(iconName))
-    {
-        // error...
-    }
-    listSprite.setTexture(listTexture);
-    listSprite.setPosition(sf::Vector2f(7, 250));
-
     iconName = imgDirectory + "/bin.png";
     if (!binTexture.loadFromFile(iconName))
     {
@@ -53,9 +47,9 @@ Icon::Icon(std::string imgDirectory)
     binSprite.setTexture(binTexture);
     binSprite.setPosition(sf::Vector2f(10, 400));
 }
-ostream &operator<<(ostream &out, const task &p)
+ostream &operator<<(ostream &out, const Task &p)
 {
-    out << p.TaskN << "\t" << p.priority << "\t" << p.favorite << "\t" << p.id << endl;
+    out << p.TaskName << "\t" << p.priority << "\t" << p.favorite << endl;
     // output << p.age;
     return out;
 }
@@ -82,6 +76,8 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
 
             if (addSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
+                // AddButton addbutton;
+                // displayWindow(addbutton);
 
                 std::string addTask = "Enter name of your task \n";
                 sf::Text addTaskText;
@@ -90,14 +86,14 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                 addTaskText.setString(addTask);
                 addTaskText.setFillColor(sf::Color(20, 100, 100));
 
-                /*  std::string limitTaskName = "task name is too long \n";
+                std::string limitTaskName = "task name is too long \n";
                 sf::Text limitTaskNameText;
                 limitTaskNameText.setFont(font);
                 limitTaskNameText.setPosition(sf::Vector2f(200, 200));
                 limitTaskNameText.setString(limitTaskName);
-                limitTaskNameText.setFillColor(sf::Color::Red);*/
+                limitTaskNameText.setFillColor(sf::Color::Red);
 
-                sf::RenderWindow win(sf::VideoMode(600, 400), "add a task name");
+                sf::RenderWindow win(sf::VideoMode(600, 400), "add a task name", sf::Style::Close);
                 sf::Texture addWindowTexture;
                 if (addWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
                 {
@@ -105,11 +101,12 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                 }
                 sf::Sprite addWindowSprite;
                 addWindowSprite.setTexture(addWindowTexture);
-                std::vector<task> v;
+
+                std::vector<Task> tasks;
 
                 while (win.isOpen())
                 {
-                    // bool checklimit = false;
+                    bool checklimit = false;
                     sf::Event evn;
                     if (win.pollEvent(evn))
                     {
@@ -120,16 +117,21 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                         }
                         if (evn.type == sf::Event::TextEntered)
                         {
-                            /* if (evn.text.unicode == Enter_key)
+                            if (evn.text.unicode == Enter_key)
                             {
                                 win.close();
-                            }*/
-                            if (evn.text.unicode < 128)
+                            }
+                            else if (evn.text.unicode < 128)
                             {
-                                // if (taskName.size() < 30)
-                                // {
-                                taskName += static_cast<char>(evn.text.unicode);
-                                // }
+                                if (taskName.size() < 30)
+                                {
+                                    taskName += static_cast<char>(evn.text.unicode);
+                                }
+                                else
+                                {
+                                    std::cout << "***************************";
+                                    checklimit = true;
+                                }
                             }
                             unsigned int m = 5;
                             char c = 'y';
@@ -138,66 +140,154 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                                     t.setPriority(m);
                                     t.setFavorite(c);*/
                             taskNameText.setString(taskName);
-                            if (evn.text.unicode == Enter_key)
-                            {
 
-                                addT(v, taskName, m, c);
+                            addT(tasks, taskName, m, c);
 
-                                std::ofstream output("../src/output.txt", std::ios::out | std::ios::app);
-                                testOpen(output);
-
-                                // output << taskName;
-                                for (const auto &e : v)
-                                    output << e;
-                                cin.ignore();
-                            }
-
-                            /* else
-                                {
-                                    std::cout << "***************************";
-                                    std::cout << "***************************";
-                                    std::cout << "***************************";
-                                    checklimit = true;
-                                }*/
+                            // for (const auto &e : v)
+                            //     output << e;
+                            // cin.ignore();
                         }
 
-                        //taskNameText.setString(taskName);
+                        taskNameText.setString(taskName);
                         win.clear();
-                        /* if (checklimit)
+                        if (checklimit)
                         {
                             win.draw(limitTaskNameText);
-                        }*/
+                        }
                         win.draw(addWindowSprite);
                         win.draw(addTaskText);
                         win.draw(taskNameText);
                         win.display();
                     }
                 }
-                // char a = taskName.back();
-                // if (a == ' ')
-                // {
-
-                //}
+                std::ofstream output("../src/output.txt", std::ios::app);
+                testOpen(output);
+                output << taskName << endl;
             }
             else if (binSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
-                std::cout << "bin button" << std::endl;
-            }
-            else if (listSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
-            {
-                std::cout << "list button" << std::endl;
+                std::string deleteTask = "Enter the number of task \n";
+                sf::Text deleteTaskText;
+                deleteTaskText.setFont(font);
+                deleteTaskText.setPosition(sf::Vector2f(10, 0));
+                deleteTaskText.setString(deleteTask);
+                deleteTaskText.setFillColor(sf::Color(20, 100, 100));
+                deleteTaskText.setCharacterSize(30);
+
+                std::string deleteTaskNumber = "";
+                sf::Text deleteTaskNumberText;
+                deleteTaskNumberText.setFont(font);
+                deleteTaskNumberText.setPosition(sf::Vector2f(150, 50));
+                deleteTaskNumberText.setString(deleteTaskNumber);
+                deleteTaskNumberText.setFillColor(sf::Color::Black);
+                deleteTaskNumberText.setCharacterSize(30);
+
+                sf::RenderWindow win(sf::VideoMode(400, 200), "delete a task", sf::Style::Close);
+                sf::Texture deleteWindowTexture;
+                if (deleteWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
+                {
+                    // error ...
+                }
+                sf::Sprite deleteWindowSprite;
+                deleteWindowSprite.setTexture(deleteWindowTexture);
+                while (win.isOpen())
+                {
+                    sf::Event evn;
+                    if (win.pollEvent(evn))
+                    {
+
+                        if (evn.type == sf::Event::Closed)
+                        {
+                            win.close();
+                        }
+                        if (evn.type == sf::Event::TextEntered)
+                        {
+                            if (evn.text.unicode == Enter_key)
+                            {
+                                win.close();
+                            }
+                            else if (46 < evn.text.unicode && evn.text.unicode < 58)
+                            {
+                                if (deleteTaskNumber.size() < 5)
+                                {
+                                    deleteTaskNumber += static_cast<char>(evn.text.unicode);
+                                }
+                            }
+                            deleteTaskNumberText.setString(deleteTaskNumber);
+                        }
+
+                        deleteTaskText.setString(deleteTask);
+                        win.clear();
+                        win.draw(deleteWindowSprite);
+                        win.draw(deleteTaskText);
+                        win.draw(deleteTaskNumberText);
+                        win.display();
+                    }
+                }
             }
             else if (editSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
-                std::cout << "edit button" << std::endl;
+                std::string editTask = "Enter the number of task \n";
+                sf::Text editTaskText;
+                editTaskText.setFont(font);
+                editTaskText.setPosition(sf::Vector2f(10, 0));
+                editTaskText.setString(editTask);
+                editTaskText.setFillColor(sf::Color(20, 100, 100));
+                editTaskText.setCharacterSize(30);
+
+                std::string editTaskNumber = "";
+                sf::Text editTaskNumberText;
+                editTaskNumberText.setFont(font);
+                editTaskNumberText.setPosition(sf::Vector2f(150, 50));
+                editTaskNumberText.setString(editTaskNumber);
+                editTaskNumberText.setFillColor(sf::Color::Black);
+                editTaskNumberText.setCharacterSize(30);
+
+                sf::RenderWindow win(sf::VideoMode(400, 200), "edit a task", sf::Style::Close);
+                sf::Texture editWindowTexture;
+                if (editWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
+                {
+                    // error ...
+                }
+                sf::Sprite editWindowSprite;
+                editWindowSprite.setTexture(editWindowTexture);
+                while (win.isOpen())
+                {
+                    sf::Event evn;
+                    if (win.pollEvent(evn))
+                    {
+
+                        if (evn.type == sf::Event::Closed)
+                        {
+                            win.close();
+                        }
+                        if (evn.type == sf::Event::TextEntered)
+                        {
+                            if (evn.text.unicode == Enter_key)
+                            {
+                                win.close();
+                            }
+                            else if (46 < evn.text.unicode && evn.text.unicode < 58)
+                            {
+                                if (editTaskNumber.size() < 5)
+                                {
+                                    editTaskNumber += static_cast<char>(evn.text.unicode);
+                                }
+                            }
+                            editTaskNumberText.setString(editTaskNumber);
+                        }
+
+                        editTaskText.setString(editTask);
+                        win.clear();
+                        win.draw(editWindowSprite);
+                        win.draw(editTaskText);
+                        win.draw(editTaskNumberText);
+                        win.display();
+                    }
+                }
             }
         }
     }
-}
-
-void Icon::list(sf::RenderWindow &window)
-{
-    window.draw(listSprite);
 }
 void Icon::edit(sf::RenderWindow &window)
 {

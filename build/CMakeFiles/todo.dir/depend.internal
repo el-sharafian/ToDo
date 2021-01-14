@@ -5,24 +5,27 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/icon.hpp
  ../include/task.hpp
  ../include/todo.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/src/ToDo.cpp
+ /mnt/f/5/ToDo/src/ToDo.cpp
+CMakeFiles/todo.dir/src/addButton.cpp.o
+ ../include/addButton.hpp
+ ../include/task.hpp
+ /mnt/f/5/ToDo/src/addButton.cpp
 CMakeFiles/todo.dir/src/icon.cpp.o
- /mnt/c/Users/pc/desktop/t2/ToDo/include/ToDo.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/include/icon.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/include/table.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/src/icon.cpp
+ ../include/addButton.hpp
+ /mnt/f/5/ToDo/include/ToDo.hpp
+ /mnt/f/5/ToDo/include/icon.hpp
+ /mnt/f/5/ToDo/include/table.hpp
+ /mnt/f/5/ToDo/include/task.hpp
+ /mnt/f/5/ToDo/src/icon.cpp
 CMakeFiles/todo.dir/src/main.cpp.o
  ../include/ToDo.hpp
  ../include/icon.hpp
  ../include/task.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/src/main.cpp
+ /mnt/f/5/ToDo/src/main.cpp
 CMakeFiles/todo.dir/src/table.cpp.o
- /mnt/c/Users/pc/desktop/t2/ToDo/include/start.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/include/table.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/src/table.cpp
+ /mnt/f/5/ToDo/include/table.hpp
+ /mnt/f/5/ToDo/include/task.hpp
+ /mnt/f/5/ToDo/src/table.cpp
 CMakeFiles/todo.dir/src/task.cpp.o
- /mnt/c/Users/pc/desktop/t2/ToDo/include/start.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
- /mnt/c/Users/pc/desktop/t2/ToDo/src/task.cpp
+ /mnt/f/5/ToDo/include/task.hpp
+ /mnt/f/5/ToDo/src/task.cpp

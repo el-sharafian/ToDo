@@ -4,33 +4,27 @@
 #include <vector>
 
 
-class task
+class Task
 {
-    friend std::istream &operator>>(std::istream &input, task &p);
-    friend std::ostream &operator<<(std::ostream &output, const task &p);
+    friend std::istream &operator>>(std::istream &input, Task &p);
+    friend std::ostream &operator<<(std::ostream &output, const Task &p);
     // friend void add(std::vector<task> &,std::string);
 
 public:
-    task();
-
-    void setTask(std::string t);
-    std::string getTask();
+    Task();
     void setPriority(unsigned int);
     int getPriority(void);
     void setFavorite(char);
     char getFavorite(void);
-    void setId();
-    int getId(void);
     void setCheck(bool);
     bool getCheck(void);
+    std::string TaskName;
 
 private:
-    std::string TaskN;
-    unsigned int id;
+    // std::string TaskName;
     unsigned int priority;
     char favorite;
     bool check = false;
-    int index;
 };
 
 #endif

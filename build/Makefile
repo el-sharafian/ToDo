@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/pc/desktop/t2/ToDo
+CMAKE_SOURCE_DIR = /mnt/f/5/ToDo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/pc/desktop/t2/ToDo/build
+CMAKE_BINARY_DIR = /mnt/f/5/ToDo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles /mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/ToDo/build/CMakeFiles /mnt/f/5/ToDo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/ToDo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,33 @@ src/ToDo.s: src/ToDo.cpp.s
 src/ToDo.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/ToDo.cpp.s
 .PHONY : src/ToDo.cpp.s
+
+src/addButton.o: src/addButton.cpp.o
+
+.PHONY : src/addButton.o
+
+# target to build an object file
+src/addButton.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/addButton.cpp.o
+.PHONY : src/addButton.cpp.o
+
+src/addButton.i: src/addButton.cpp.i
+
+.PHONY : src/addButton.i
+
+# target to preprocess a source file
+src/addButton.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/addButton.cpp.i
+.PHONY : src/addButton.cpp.i
+
+src/addButton.s: src/addButton.cpp.s
+
+.PHONY : src/addButton.s
+
+# target to generate assembly for a file
+src/addButton.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/addButton.cpp.s
+.PHONY : src/addButton.cpp.s
 
 src/icon.o: src/icon.cpp.o
 
@@ -270,6 +297,9 @@ help:
 	@echo "... src/ToDo.o"
 	@echo "... src/ToDo.i"
 	@echo "... src/ToDo.s"
+	@echo "... src/addButton.o"
+	@echo "... src/addButton.i"
+	@echo "... src/addButton.s"
 	@echo "... src/icon.o"
 	@echo "... src/icon.i"
 	@echo "... src/icon.s"

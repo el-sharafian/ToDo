@@ -9,12 +9,6 @@ ToDo::ToDo()
     icon = new Icon("../assets/icons");
 
     font.loadFromFile("../assets/icons/font.ttf");
-    t.setPosition(100, 100);
-    t.setFillColor(sf::Color::Black);
-    t.setFont(font);
-    s = "This is text that you type: ";
-    //  t.setString(s);
-    t.setString(s);
 
     text.setString("Make a ToDo list");
     text.setPosition(sf::Vector2f(300, 0));
@@ -44,34 +38,20 @@ void ToDo::Loop()
                 icon->iconEvents(evnt, *window);
             }
 
-            // if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window))))
-            // {
-            //     text.setFillColor(sf::Color(20, 150, 150));
-            // }
-            /*else
+            if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(*window))))
+            {
+                text.setFillColor(sf::Color(20, 150, 150));
+            }
+            else
             {
                 text.setFillColor(sf::Color::Black);
-            }*/
-
-            if (evnt.type == sf::Event::TextEntered)
-            {
-
-                if (evnt.text.unicode < 128)
-                {
-                    s += static_cast<char>(evnt.text.unicode);
-                }
-                t.setString(s);
-                cout << s << endl;
             }
         }
-
         window->clear();
         window->draw(sprite);
         icon->add(*window);
         icon->edit(*window);
-        icon->list(*window);
         icon->bin(*window);
-        window->draw(t);
         window->draw(text);
         window->display();
     }

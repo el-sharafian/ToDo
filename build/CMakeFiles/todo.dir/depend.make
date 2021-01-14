@@ -6,6 +6,11 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/todo.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../src/ToDo.cpp
 
+CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/addButton.hpp
+CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/addButton.cpp.o: ../src/addButton.cpp
+
+CMakeFiles/todo.dir/src/icon.cpp.o: ../include/addButton.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/ToDo.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/icon.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/table.hpp
@@ -17,12 +22,10 @@ CMakeFiles/todo.dir/src/main.cpp.o: ../include/icon.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../src/main.cpp
 
-CMakeFiles/todo.dir/src/table.cpp.o: ../include/start.hpp
 CMakeFiles/todo.dir/src/table.cpp.o: ../include/table.hpp
 CMakeFiles/todo.dir/src/table.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/table.cpp.o: ../src/table.cpp
 
-CMakeFiles/todo.dir/src/task.cpp.o: ../include/start.hpp
 CMakeFiles/todo.dir/src/task.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/task.cpp.o: ../src/task.cpp
 

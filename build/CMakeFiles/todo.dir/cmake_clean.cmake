@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/todo.dir/src/ToDo.cpp.o"
+  "CMakeFiles/todo.dir/src/addButton.cpp.o"
   "CMakeFiles/todo.dir/src/icon.cpp.o"
   "CMakeFiles/todo.dir/src/main.cpp.o"
   "CMakeFiles/todo.dir/src/table.cpp.o"
