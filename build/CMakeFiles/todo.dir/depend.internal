@@ -3,12 +3,26 @@
 
 CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/icon.hpp
+ ../include/task.hpp
  ../include/todo.hpp
- /mnt/f/5/todo/src/ToDo.cpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/src/ToDo.cpp
 CMakeFiles/todo.dir/src/icon.cpp.o
- ../include/icon.hpp
- /mnt/f/5/todo/src/icon.cpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/ToDo.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/icon.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/table.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/src/icon.cpp
 CMakeFiles/todo.dir/src/main.cpp.o
  ../include/ToDo.hpp
  ../include/icon.hpp
- /mnt/f/5/todo/src/main.cpp
+ ../include/task.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/src/main.cpp
+CMakeFiles/todo.dir/src/table.cpp.o
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/start.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/table.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/src/table.cpp
+CMakeFiles/todo.dir/src/task.cpp.o
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/start.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/include/task.hpp
+ /mnt/c/Users/pc/desktop/t2/ToDo/src/task.cpp

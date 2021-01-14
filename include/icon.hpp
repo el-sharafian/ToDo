@@ -3,6 +3,7 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "../include/task.hpp"
 
 class Icon
 {

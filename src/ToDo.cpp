@@ -1,4 +1,6 @@
 #include "todo.hpp"
+#include <iostream>
+using namespace std;
 
 ToDo::ToDo()
 {
@@ -10,6 +12,8 @@ ToDo::ToDo()
     t.setPosition(100, 100);
     t.setFillColor(sf::Color::Black);
     t.setFont(font);
+    s = "This is text that you type: ";
+    //  t.setString(s);
     t.setString(s);
 
     text.setString("Make a ToDo list");
@@ -25,6 +29,7 @@ ToDo::ToDo()
 }
 void ToDo::Loop()
 {
+
     while (window->isOpen())
     {
         sf::Event evnt;
@@ -43,19 +48,23 @@ void ToDo::Loop()
             // {
             //     text.setFillColor(sf::Color(20, 150, 150));
             // }
-            else
+            /*else
             {
                 text.setFillColor(sf::Color::Black);
-            }
+            }*/
+
             if (evnt.type == sf::Event::TextEntered)
             {
+
                 if (evnt.text.unicode < 128)
                 {
                     s += static_cast<char>(evnt.text.unicode);
                 }
+                t.setString(s);
+                cout << s << endl;
             }
         }
-        t.setString(s);
+
         window->clear();
         window->draw(sprite);
         icon->add(*window);

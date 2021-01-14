@@ -19,7 +19,7 @@ private:
     sf::Text text;
     sf::Sprite sprite;
     sf::Texture backgrounfTexture;
-    std::string s = "This is text that you type: ";
+    std::string s;
     sf::Text t;
 };
 

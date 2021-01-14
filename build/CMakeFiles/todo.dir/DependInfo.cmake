@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/f/5/todo/src/ToDo.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
-  "/mnt/f/5/todo/src/icon.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
-  "/mnt/f/5/todo/src/main.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
+  "/mnt/c/Users/pc/desktop/t2/ToDo/src/ToDo.cpp" "/mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
+  "/mnt/c/Users/pc/desktop/t2/ToDo/src/icon.cpp" "/mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
+  "/mnt/c/Users/pc/desktop/t2/ToDo/src/main.cpp" "/mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles/todo.dir/src/main.cpp.o"
+  "/mnt/c/Users/pc/desktop/t2/ToDo/src/table.cpp" "/mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles/todo.dir/src/table.cpp.o"
+  "/mnt/c/Users/pc/desktop/t2/ToDo/src/task.cpp" "/mnt/c/Users/pc/desktop/t2/ToDo/build/CMakeFiles/todo.dir/src/task.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
