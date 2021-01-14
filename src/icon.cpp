@@ -13,6 +13,7 @@
 #include <vector>
 
 #define Enter_key 13
+#define Sp 20
 
 using namespace std;
 
@@ -119,10 +120,10 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                         }
                         if (evn.type == sf::Event::TextEntered)
                         {
-                            if (evn.text.unicode == Enter_key)
+                            /* if (evn.text.unicode == Enter_key)
                             {
                                 win.close();
-                            }
+                            }*/
                             if (evn.text.unicode < 128)
                             {
                                 // if (taskName.size() < 30)
@@ -130,16 +131,26 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                                 taskName += static_cast<char>(evn.text.unicode);
                                 // }
                             }
-
-                            taskNameText.setString(taskName);
-                            cout << taskName;
                             unsigned int m = 5;
                             char c = 'y';
 
                             /*t.setTask(b);
                                     t.setPriority(m);
                                     t.setFavorite(c);*/
-                            addT(v, taskName, m, c);
+                            taskNameText.setString(taskName);
+                            if (evn.text.unicode == Enter_key)
+                            {
+
+                                addT(v, taskName, m, c);
+
+                                std::ofstream output("../src/output.txt", std::ios::out | std::ios::app);
+                                testOpen(output);
+
+                                // output << taskName;
+                                for (const auto &e : v)
+                                    output << e;
+                                cin.ignore();
+                            }
 
                             /* else
                                 {
@@ -162,11 +173,11 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                         win.display();
                     }
                 }
-                std::ofstream output("../src/output.txt", std::ios::out);
-                testOpen(output);
-                // output << taskName;
-                for (const auto &e : v)
-                    output << e;
+                // char a = taskName.back();
+                // if (a == ' ')
+                // {
+
+                //}
             }
             else if (binSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {

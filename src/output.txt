@@ -1,8 +1,5 @@
-m	5	y	4405
-ma	5	y	4405
-mah	5	y	4405
-mahs	5	y	4405
-mahsh	5	y	4405
-mahshi	5	y	4405
-mahshid	5	y	4405
-mahshid	5	y	4405
+
+salam	5	y	5212
+mahshid	5	y	5213
+asal	5	y	5223
+salammmm	5	y	5259
