@@ -3,6 +3,9 @@
 #include "../include/table.hpp"
 #include "../include/ToDo.hpp"
 #include "addButton.hpp"
+#include "Button.hpp"
+#include "editButton.hpp"
+#include "deleteButton.hpp"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -166,125 +169,13 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
             }
             else if (binSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
-                std::string deleteTask = "Enter the number of task \n";
-                sf::Text deleteTaskText;
-                deleteTaskText.setFont(font);
-                deleteTaskText.setPosition(sf::Vector2f(10, 0));
-                deleteTaskText.setString(deleteTask);
-                deleteTaskText.setFillColor(sf::Color(20, 100, 100));
-                deleteTaskText.setCharacterSize(30);
-
-                std::string deleteTaskNumber = "";
-                sf::Text deleteTaskNumberText;
-                deleteTaskNumberText.setFont(font);
-                deleteTaskNumberText.setPosition(sf::Vector2f(150, 50));
-                deleteTaskNumberText.setString(deleteTaskNumber);
-                deleteTaskNumberText.setFillColor(sf::Color::Black);
-                deleteTaskNumberText.setCharacterSize(30);
-
-                sf::RenderWindow win(sf::VideoMode(400, 200), "delete a task", sf::Style::Close);
-                sf::Texture deleteWindowTexture;
-                if (deleteWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
-                {
-                    // error ...
-                }
-                sf::Sprite deleteWindowSprite;
-                deleteWindowSprite.setTexture(deleteWindowTexture);
-                while (win.isOpen())
-                {
-                    sf::Event evn;
-                    if (win.pollEvent(evn))
-                    {
-
-                        if (evn.type == sf::Event::Closed)
-                        {
-                            win.close();
-                        }
-                        if (evn.type == sf::Event::TextEntered)
-                        {
-                            if (evn.text.unicode == Enter_key)
-                            {
-                                win.close();
-                            }
-                            else if (46 < evn.text.unicode && evn.text.unicode < 58)
-                            {
-                                if (deleteTaskNumber.size() < 5)
-                                {
-                                    deleteTaskNumber += static_cast<char>(evn.text.unicode);
-                                }
-                            }
-                            deleteTaskNumberText.setString(deleteTaskNumber);
-                        }
-
-                        deleteTaskText.setString(deleteTask);
-                        win.clear();
-                        win.draw(deleteWindowSprite);
-                        win.draw(deleteTaskText);
-                        win.draw(deleteTaskNumberText);
-                        win.display();
-                    }
-                }
+                DeleteButton deleteButton;
+                WindowDisplay(deleteButton);
             }
             else if (editSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
-                std::string editTask = "Enter the number of task \n";
-                sf::Text editTaskText;
-                editTaskText.setFont(font);
-                editTaskText.setPosition(sf::Vector2f(10, 0));
-                editTaskText.setString(editTask);
-                editTaskText.setFillColor(sf::Color(20, 100, 100));
-                editTaskText.setCharacterSize(30);
-
-                std::string editTaskNumber = "";
-                sf::Text editTaskNumberText;
-                editTaskNumberText.setFont(font);
-                editTaskNumberText.setPosition(sf::Vector2f(150, 50));
-                editTaskNumberText.setString(editTaskNumber);
-                editTaskNumberText.setFillColor(sf::Color::Black);
-                editTaskNumberText.setCharacterSize(30);
-
-                sf::RenderWindow win(sf::VideoMode(400, 200), "edit a task", sf::Style::Close);
-                sf::Texture editWindowTexture;
-                if (editWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
-                {
-                    // error ...
-                }
-                sf::Sprite editWindowSprite;
-                editWindowSprite.setTexture(editWindowTexture);
-                while (win.isOpen())
-                {
-                    sf::Event evn;
-                    if (win.pollEvent(evn))
-                    {
-
-                        if (evn.type == sf::Event::Closed)
-                        {
-                            win.close();
-                        }
-                        if (evn.type == sf::Event::TextEntered)
-                        {
-                            if (evn.text.unicode == Enter_key)
-                            {
-                                win.close();
-                            }
-                            else if (46 < evn.text.unicode && evn.text.unicode < 58)
-                            {
-                                if (editTaskNumber.size() < 5)
-                                {
-                                    editTaskNumber += static_cast<char>(evn.text.unicode);
-                                }
-                            }
-                            editTaskNumberText.setString(editTaskNumber);
-                        }
-
-                        editTaskText.setString(editTask);
-                        win.clear();
-                        win.draw(editWindowSprite);
-                        win.draw(editTaskText);
-                        win.draw(editTaskNumberText);
-                        win.display();
-                    }
-                }
+                EditButton editButton;
+                WindowDisplay(editButton);
             }
         }
     }

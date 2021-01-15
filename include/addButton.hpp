@@ -2,12 +2,15 @@
 #define ADDBUTTON_HPP
 
 #include <string>
+#include <vector>
 #include <SFML/Graphics.hpp>
-#include "../include/task.hpp"
+#include "task.hpp"
+#include "Button.hpp"
 
-class AddButton
+class AddButton //: public Button
 {
- friend void displayWindow(AddButton &);
+    friend void displayWindow(AddButton &);
+
 public:
     AddButton();
 
