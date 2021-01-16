@@ -38,12 +38,18 @@ CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/windowDisplay.hpp
 CMakeFiles/todo.dir/src/editButton.cpp.o: ../src/editButton.cpp
 
+CMakeFiles/todo.dir/src/file.cpp.o: ../include/File.hpp
+CMakeFiles/todo.dir/src/file.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/file.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/file.cpp.o: ../src/file.cpp
+
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/Button.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/ToDo.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/addButton.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/button.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/deleteButton.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/editButton.hpp
+CMakeFiles/todo.dir/src/icon.cpp.o: ../include/file.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/icon.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/set.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/table.hpp

@@ -6,6 +6,10 @@
 
 using namespace std;
 
+Task::Task()
+{
+
+}
 Task::Task(string imgDirectory)
 {
     string iconName = imgDirectory + "/favorite.png";
@@ -36,6 +40,11 @@ void Task::setPriority(unsigned int p)
     {
         throw invalid_argument("The input was not valid!!");
     }
+}
+void Task::setTask(string t)
+{
+    TaskName = t;
+    // return TaskName;
 }
 int Task::getPriority()
 {

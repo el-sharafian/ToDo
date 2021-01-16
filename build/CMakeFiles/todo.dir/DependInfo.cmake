@@ -4,17 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/f/5/todo/src/Button.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
-  "/mnt/f/5/todo/src/ToDo.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
-  "/mnt/f/5/todo/src/addButton.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/addButton.cpp.o"
-  "/mnt/f/5/todo/src/deleteButton.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/deleteButton.cpp.o"
-  "/mnt/f/5/todo/src/editButton.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/editButton.cpp.o"
-  "/mnt/f/5/todo/src/icon.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
-  "/mnt/f/5/todo/src/main.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
-  "/mnt/f/5/todo/src/set.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/set.cpp.o"
-  "/mnt/f/5/todo/src/table.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/table.cpp.o"
-  "/mnt/f/5/todo/src/task.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/task.cpp.o"
-  "/mnt/f/5/todo/src/windowDisplay.cpp" "/mnt/f/5/todo/build/CMakeFiles/todo.dir/src/windowDisplay.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/Button.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/ToDo.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/addButton.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/addButton.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/deleteButton.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/deleteButton.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/editButton.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/editButton.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/file.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/file.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/icon.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/main.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/main.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/set.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/set.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/table.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/table.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/task.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/task.cpp.o"
+  "/mnt/c/Users/pc/desktop/t4/ToDo/src/windowDisplay.cpp" "/mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/todo.dir/src/windowDisplay.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

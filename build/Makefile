@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/f/5/todo
+CMAKE_SOURCE_DIR = /mnt/c/Users/pc/desktop/t4/ToDo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/f/5/todo/build
+CMAKE_BINARY_DIR = /mnt/c/Users/pc/desktop/t4/ToDo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/todo/build/CMakeFiles /mnt/f/5/todo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/todo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -257,6 +257,33 @@ src/editButton.s: src/editButton.cpp.s
 src/editButton.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/editButton.cpp.s
 .PHONY : src/editButton.cpp.s
+
+src/file.o: src/file.cpp.o
+
+.PHONY : src/file.o
+
+# target to build an object file
+src/file.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/file.cpp.o
+.PHONY : src/file.cpp.o
+
+src/file.i: src/file.cpp.i
+
+.PHONY : src/file.i
+
+# target to preprocess a source file
+src/file.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/file.cpp.i
+.PHONY : src/file.cpp.i
+
+src/file.s: src/file.cpp.s
+
+.PHONY : src/file.s
+
+# target to generate assembly for a file
+src/file.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/file.cpp.s
+.PHONY : src/file.cpp.s
 
 src/icon.o: src/icon.cpp.o
 
@@ -444,6 +471,9 @@ help:
 	@echo "... src/editButton.o"
 	@echo "... src/editButton.i"
 	@echo "... src/editButton.s"
+	@echo "... src/file.o"
+	@echo "... src/file.i"
+	@echo "... src/file.s"
 	@echo "... src/icon.o"
 	@echo "... src/icon.i"
 	@echo "... src/icon.s"

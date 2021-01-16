@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include "file.hpp"
 
 #define Sp 20
 #define BS_key 8
@@ -11,7 +12,7 @@
 
 using namespace std;
 
-Icon::Icon(std::string imgDirectory)    
+Icon::Icon(std::string imgDirectory)
 {
     font.loadFromFile("../assets/icons/f1.ttf"); //**********
 
@@ -24,27 +25,17 @@ Icon::Icon(std::string imgDirectory)
     iconName = imgDirectory + "/bin.png";
     set.setTexture(binSprite, iconName, binTexture, 10, 400);
 }
-ostream &operator<<(ostream &out, const Task &p)
-{
-    out << p.TaskName << "\t" << p.priority << endl;
-    // output << p.age;
-    return out;
-}
-void testOpen(std::ofstream &out)
-{
-    if (!out)
-    {
-        cout << "can not open the file !!!" << endl;
-        // exit(EXIT_FAILURE);
-    }
-}
 void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
 {
     sf::Text taskNameText;
+    sf::Text txt;
     std::string taskName;
     taskNameText.setFont(font);
     taskNameText.setPosition(sf::Vector2f(5, 25));
     taskNameText.setFillColor(sf::Color(20, 100, 100));
+    txt.setFont(font);
+    txt.setPosition(sf::Vector2f(400, 300));
+    txt.setFillColor(sf::Color::Black);
 
     if (evnt.type == sf::Event::MouseButtonPressed)
     {
@@ -77,16 +68,17 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                     sf::Event evn;
                     if (win.pollEvent(evn))
                     {
+
                         if (evn.type == sf::Event::Closed)
                         {
                             win.close();
                         }
                         if (evn.type == sf::Event::TextEntered)
                         {
-                            if (evn.text.unicode == Enter_key)
+                            /*if (evn.text.unicode == Enter_key)
                             {
                                 win.close();
-                            }
+                            }*/
                             if (evn.text.unicode == BS_key)
                             {
                                 taskName.erase(taskName.size() - 1);
@@ -96,15 +88,33 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                                 if (taskName.size() < 30)
                                 {
                                     taskName += static_cast<char>(evn.text.unicode);
+
+                                    taskNameText.setString(taskName);
+
+                                    fstream file;
+                                    string s = "both.txt";
+                                    File fi(file, s);
+                                    fi.isOpen(file);
+                                    Task t;
+                                    t.setTask(taskName);
+                                    //string a = "salam";
+                                    fi.writeToFile(file, t);
+                                    if (evn.text.unicode == Enter_key)
+                                    {
+                                        string b = fi.readFromFile(file, t);
+                                        txt.setString(b);
+                                    }
                                 }
                             }
-                            taskNameText.setString(taskName);
+                            // taskNameText.setString(taskName);
 
-                            addT(tasks, taskName);
+                            //addT(tasks, taskName);
 
                             // for (const auto &e : v)
                             //     output << e;
                             // cin.ignore();
+
+                            // taskNameText.setString(taskName);
                         }
 
                         taskNameText.setString(taskName);
@@ -112,12 +122,10 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                         win.draw(addWindowSprite);
                         win.draw(addTaskText);
                         win.draw(taskNameText);
+                        win.draw(txt);
                         win.display();
                     }
                 }
-                std::ofstream output("../src/output.txt", std::ios::app);
-                testOpen(output);
-                output << taskName << endl;
             }
             else if (binSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
