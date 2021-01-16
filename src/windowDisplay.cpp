@@ -1,15 +1,15 @@
 #include "../include/windowDisplay.hpp"
 
 #define Enter_key 13
+#define BACKSPACE_key 8
 
-void WindowDisplay(Button & button)
+void WindowDisplay(Button &button)
 {
     while (button.win.isOpen())
     {
         sf::Event evn;
         if (button.win.pollEvent(evn))
         {
-
             if (evn.type == sf::Event::Closed)
             {
                 button.win.close();
@@ -19,6 +19,10 @@ void WindowDisplay(Button & button)
                 if (evn.text.unicode == Enter_key)
                 {
                     button.win.close();
+                }
+                if (evn.text.unicode == BACKSPACE_key)
+                {
+                     button.TaskNumber.erase(button.TaskNumber.size() - 1);
                 }
                 else if (46 < evn.text.unicode && evn.text.unicode < 58)
                 {

@@ -9,28 +9,11 @@
 
 using namespace std;
 
-void addT(vector<Task> &tasks, string taskN, unsigned int Pi, char fav)
+void addT(vector<Task> &tasks, string taskN)
 {
-  Task t;
+  Task t("../assets/icons");
 
   // t.setTask(taskN);
-  try
-  {
-    t.setPriority(Pi);
-  }
-  catch (invalid_argument &e)
-  {
-    std::cerr << e.what() << '\n';
-  }
-
-  try
-  {
-    t.setFavorite(fav);
-  }
-  catch (invalid_argument &e)
-  {
-    std::cerr << e.what() << '\n';
-  }
 
   tasks.push_back(t);
 }

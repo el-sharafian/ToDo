@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include "../include/task.hpp"
 //#include "../include/table.hpp"
 #include <random>
@@ -7,8 +6,25 @@
 
 using namespace std;
 
-Task::Task()
+Task::Task(string imgDirectory)
 {
+    string iconName = imgDirectory + "/favorite.png";
+    // if (!favoriteTexture.loadFromFile(iconName))
+    // {
+    //     // error...
+    // }
+    // favoriteSprite.setTexture(favoriteTexture);
+    // favoriteSprite.setPosition(sf::Vector2f(0, 200));
+    set.setTexture(favoriteSprite, iconName, favoriteTexture, 0, 200);
+
+    iconName = imgDirectory + "/notFavorite.png";
+    // if (!notFavoriteTexture.loadFromFile(iconName))
+    // {
+    //     // error...
+    // }
+    // notFavoriteSprite.setTexture(notFavoriteTexture);
+    // notFavoriteSprite.setPosition(sf::Vector2f(0, 200));
+    set.setTexture(notFavoriteSprite, iconName, notFavoriteTexture, 0, 200);
 }
 void Task::setPriority(unsigned int p)
 {
@@ -25,20 +41,6 @@ int Task::getPriority()
 {
     return priority;
 }
-void Task::setFavorite(char f)
-{
-    if (f == 'y' || f == 'n')
-        favorite = f;
-    else
-    {
-        throw invalid_argument("The input was not valid!!");
-    }
-}
-char Task::getFavorite()
-{
-    return favorite;
-}
-
 void Task::setCheck(bool c)
 {
     check = c;
@@ -46,4 +48,12 @@ void Task::setCheck(bool c)
 bool Task::getCheck()
 {
     return check;
+}
+void Task::favorite(sf::RenderWindow &window)
+{
+    window.draw(favoriteSprite);
+}
+void Task::notFavorite(sf::RenderWindow &window)
+{
+    window.draw(notFavoriteSprite);
 }

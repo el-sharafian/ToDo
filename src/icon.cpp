@@ -1,58 +1,32 @@
-#include "../include/icon.hpp"
-#include "../include/task.hpp"
-#include "../include/table.hpp"
-#include "../include/ToDo.hpp"
-#include "addButton.hpp"
-#include "Button.hpp"
-#include "editButton.hpp"
-#include "deleteButton.hpp"
+#include "icon.hpp"
+#include "table.hpp"
+#include "ToDo.hpp"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-#include <string>
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
-#include <SFML/System/String.hpp>
-#include <locale>
-#include <vector>
 
 #define Sp 20
+#define BS_key 8
 #define Enter_key 13
 
 using namespace std;
 
-Icon::Icon(std::string imgDirectory)
+Icon::Icon(std::string imgDirectory)    
 {
-    font.loadFromFile("../assets/icons/font.ttf");
+    font.loadFromFile("../assets/icons/f1.ttf"); //**********
 
     std::string iconName = imgDirectory + "/add.png";
-    if (!addTexture.loadFromFile(iconName))
-    {
-        // error...
-    }
-    addSprite.setTexture(addTexture);
-    editSprite.setPosition(sf::Vector2f(10, 0));
+    set.setTexture(addSprite, iconName, addTexture, 10, 0);
 
     iconName = imgDirectory + "/edit5.png";
-    if (!editTexture.loadFromFile(iconName))
-    {
-        //error
-    }
-    editSprite.setTexture(editTexture);
-    editSprite.setPosition(sf::Vector2f(10, 125));
+    set.setTexture(editSprite, iconName, editTexture, 10, 125);
 
     iconName = imgDirectory + "/bin.png";
-    if (!binTexture.loadFromFile(iconName))
-    {
-        // error...
-    }
-    binSprite.setTexture(binTexture);
-    binSprite.setPosition(sf::Vector2f(10, 400));
+    set.setTexture(binSprite, iconName, binTexture, 10, 400);
 }
 ostream &operator<<(ostream &out, const Task &p)
 {
-    out << p.TaskName << "\t" << p.priority << "\t" << p.favorite << endl;
+    out << p.TaskName << "\t" << p.priority << endl;
     // output << p.age;
     return out;
 }
@@ -85,16 +59,7 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                 std::string addTask = "Enter name of your task \n";
                 sf::Text addTaskText;
                 addTaskText.setFont(font);
-                addTaskText.setPosition(sf::Vector2f(140, 0));
-                addTaskText.setString(addTask);
-                addTaskText.setFillColor(sf::Color(20, 100, 100));
-
-                std::string limitTaskName = "task name is too long \n";
-                sf::Text limitTaskNameText;
-                limitTaskNameText.setFont(font);
-                limitTaskNameText.setPosition(sf::Vector2f(200, 200));
-                limitTaskNameText.setString(limitTaskName);
-                limitTaskNameText.setFillColor(sf::Color::Red);
+                set.setText(addTaskText, 140, 0, addTask);
 
                 sf::RenderWindow win(sf::VideoMode(600, 400), "add a task name", sf::Style::Close);
                 sf::Texture addWindowTexture;
@@ -109,11 +74,9 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
 
                 while (win.isOpen())
                 {
-                    bool checklimit = false;
                     sf::Event evn;
                     if (win.pollEvent(evn))
                     {
-
                         if (evn.type == sf::Event::Closed)
                         {
                             win.close();
@@ -124,27 +87,20 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                             {
                                 win.close();
                             }
+                            if (evn.text.unicode == BS_key)
+                            {
+                                taskName.erase(taskName.size() - 1);
+                            }
                             else if (evn.text.unicode < 128)
                             {
                                 if (taskName.size() < 30)
                                 {
                                     taskName += static_cast<char>(evn.text.unicode);
                                 }
-                                else
-                                {
-                                    std::cout << "***************************";
-                                    checklimit = true;
-                                }
                             }
-                            unsigned int m = 5;
-                            char c = 'y';
-
-                            /*t.setTask(b);
-                                    t.setPriority(m);
-                                    t.setFavorite(c);*/
                             taskNameText.setString(taskName);
 
-                            addT(tasks, taskName, m, c);
+                            addT(tasks, taskName);
 
                             // for (const auto &e : v)
                             //     output << e;
@@ -153,10 +109,6 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
 
                         taskNameText.setString(taskName);
                         win.clear();
-                        if (checklimit)
-                        {
-                            win.draw(limitTaskNameText);
-                        }
                         win.draw(addWindowSprite);
                         win.draw(addTaskText);
                         win.draw(taskNameText);
@@ -180,15 +132,21 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
         }
     }
 }
-void Icon::edit(sf::RenderWindow &window)
+sf::Sprite Icon::edit()
 {
-    window.draw(editSprite);
+    return editSprite;
 }
-void Icon::add(sf::RenderWindow &window)
+sf::Sprite Icon::add()
+{
+    return addSprite;
+}
+sf::Sprite Icon::bin()
+{
+    return binSprite;
+}
+void Icon::DrawIcons(sf::RenderWindow &window, sf::Sprite addSprite, sf::Sprite binSprite, sf::Sprite editSprite)
 {
     window.draw(addSprite);
-}
-void Icon::bin(sf::RenderWindow &window)
-{
     window.draw(binSprite);
+    window.draw(editSprite);
 }

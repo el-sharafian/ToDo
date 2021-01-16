@@ -3,17 +3,22 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "../include/task.hpp"
+#include "task.hpp"
+#include "set.hpp"
+#include "editButton.hpp"
+#include "deleteButton.hpp"
+#include "addButton.hpp"
+#include "Button.hpp"
 
 class Icon
 {
 public:
     Icon(std::string);
-    // void IconDisplay(sf::RenderWindow &);
     void iconEvents(sf::Event, sf::RenderWindow &);
-    void edit(sf::RenderWindow &);
-    void add(sf::RenderWindow &);
-    void bin(sf::RenderWindow &);
+    sf::Sprite edit();
+    sf::Sprite add();
+    sf::Sprite bin();
+    void DrawIcons(sf::RenderWindow &window, sf::Sprite, sf::Sprite, sf::Sprite);
 
 private:
     sf::Texture addTexture;
@@ -23,6 +28,7 @@ private:
     sf::Texture editTexture;
     sf::Sprite editSprite;
     sf::Font font;
+    Set set;    //sets Texts and Sprites
 };
 
 #endif // ICON_HPP

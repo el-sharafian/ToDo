@@ -4,6 +4,6 @@
 #include <string>
 #include "../include/task.hpp"
 
-void addT(std::vector<Task> &, std::string, unsigned int, char);
+void addT(std::vector<Task> &, std::string);
 
 #endif

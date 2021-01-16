@@ -1,19 +1,18 @@
 #include "todo.hpp"
+#include "set.hpp"
 #include <iostream>
 using namespace std;
 
 ToDo::ToDo()
 {
+    Set set;
     window = new sf::RenderWindow(sf::VideoMode(800, 500), "ToDO");
-
     icon = new Icon("../assets/icons");
 
     font.loadFromFile("../assets/icons/font.ttf");
 
-    text.setString("Make a ToDo list");
-    text.setPosition(sf::Vector2f(300, 0));
-    text.setFillColor(sf::Color::Black);
     text.setFont(font);
+    set.setText(text, 300, 0, "Make a ToDo list");
 
     if (!backgrounfTexture.loadFromFile("../assets/images/ax5.jpg"))
     {
@@ -23,7 +22,6 @@ ToDo::ToDo()
 }
 void ToDo::Loop()
 {
-
     while (window->isOpen())
     {
         sf::Event evnt;
@@ -37,7 +35,6 @@ void ToDo::Loop()
             {
                 icon->iconEvents(evnt, *window);
             }
-
             if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(*window))))
             {
                 text.setFillColor(sf::Color(20, 150, 150));
@@ -49,9 +46,7 @@ void ToDo::Loop()
         }
         window->clear();
         window->draw(sprite);
-        icon->add(*window);
-        icon->edit(*window);
-        icon->bin(*window);
+        icon->DrawIcons(*window, icon->add(), icon->bin(), icon->edit());
         window->draw(text);
         window->display();
     }

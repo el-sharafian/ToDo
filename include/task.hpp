@@ -1,8 +1,10 @@
 #ifndef TASK_H
 #define TASK_H
+
+#include "set.hpp"
 #include <string>
 #include <vector>
-
+#include <SFML/Graphics.hpp>
 
 class Task
 {
@@ -11,20 +13,26 @@ class Task
     // friend void add(std::vector<task> &,std::string);
 
 public:
-    Task();
+    Task(std::string);
     void setPriority(unsigned int);
-    int getPriority(void);
     void setFavorite(char);
-    char getFavorite(void);
     void setCheck(bool);
+    int getPriority(void);
+    char getFavorite(void);
     bool getCheck(void);
     std::string TaskName;
+    void favorite(sf::RenderWindow &);
+    void notFavorite(sf::RenderWindow &);
 
 private:
     // std::string TaskName;
     unsigned int priority;
-    char favorite;
     bool check = false;
+    sf::Texture favoriteTexture;
+    sf::Sprite favoriteSprite;
+    sf::Texture notFavoriteTexture;
+    sf::Sprite notFavoriteSprite;
+    Set set;    // sets Texts and Sprites
 };
 
 #endif

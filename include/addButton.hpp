@@ -17,8 +17,8 @@ public:
 private:
     sf::Font font;
     std::string addTask = "Enter name of your task \n";
-    std::string taskName = "";
     sf::Text addTaskText;
+    std::string taskName = "";
     std::string limitTaskName = "task name is too long \n";
     sf::Text limitTaskNameText;
     sf::Text TaskNameText;

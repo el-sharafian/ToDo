@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/todo.dir/src/editButton.cpp.o"
   "CMakeFiles/todo.dir/src/icon.cpp.o"
   "CMakeFiles/todo.dir/src/main.cpp.o"
+  "CMakeFiles/todo.dir/src/set.cpp.o"
   "CMakeFiles/todo.dir/src/table.cpp.o"
   "CMakeFiles/todo.dir/src/task.cpp.o"
   "CMakeFiles/todo.dir/src/windowDisplay.cpp.o"
