@@ -16,6 +16,14 @@ task.hpp
 set.hpp
 ../include/set.hpp
 
+../include/ToDo.hpp
+string
+-
+SFML/Graphics.hpp
+-
+icon.hpp
+../include/icon.hpp
+
 ../include/addButton.hpp
 string
 -
@@ -40,6 +48,22 @@ task.hpp
 set.hpp
 ../include/set.hpp
 
+../include/deleteButton.hpp
+SFML/Graphics.hpp
+-
+button.hpp
+../include/button.hpp
+
+../include/editButton.hpp
+SFML/Graphics.hpp
+-
+task.hpp
+../include/task.hpp
+button.hpp
+../include/button.hpp
+windowDisplay.hpp
+../include/windowDisplay.hpp
+
 ../include/file.hpp
 iostream
 -
@@ -48,11 +72,37 @@ fstream
 task.hpp
 ../include/task.hpp
 
+../include/icon.hpp
+string
+-
+SFML/Graphics.hpp
+-
+task.hpp
+../include/task.hpp
+set.hpp
+../include/set.hpp
+editButton.hpp
+../include/editButton.hpp
+deleteButton.hpp
+../include/deleteButton.hpp
+addButton.hpp
+../include/addButton.hpp
+Button.hpp
+../include/Button.hpp
+
 ../include/set.hpp
 SFML/Graphics.hpp
 -
 string
 -
+
+../include/table.hpp
+vector
+-
+string
+-
+../include/task.hpp
+../include/task.hpp
 
 ../include/task.hpp
 set.hpp
@@ -64,9 +114,25 @@ vector
 SFML/Graphics.hpp
 -
 
+../include/todo.hpp
+string
+-
+SFML/Graphics.hpp
+-
+icon.hpp
+../include/icon.hpp
+
 ../include/windowDisplay.hpp
 ../include/button.hpp
 ../include/button.hpp
+
+/mnt/f/5/todo2/todo/src/ToDo.cpp
+todo.hpp
+/mnt/f/5/todo2/todo/src/todo.hpp
+set.hpp
+/mnt/f/5/todo2/todo/src/set.hpp
+iostream
+-
 
 /mnt/f/5/todo2/todo/src/addButton.cpp
 addButton.hpp
@@ -89,4 +155,24 @@ cstdlib
 -
 file.hpp
 /mnt/f/5/todo2/todo/src/file.hpp
+
+/mnt/f/5/todo2/todo/src/icon.cpp
+icon.hpp
+/mnt/f/5/todo2/todo/src/icon.hpp
+table.hpp
+/mnt/f/5/todo2/todo/src/table.hpp
+ToDo.hpp
+/mnt/f/5/todo2/todo/src/ToDo.hpp
+iostream
+-
+fstream
+-
+cstdlib
+-
+file.hpp
+/mnt/f/5/todo2/todo/src/file.hpp
+
+/mnt/f/5/todo2/todo/src/main.cpp
+ToDo.hpp
+/mnt/f/5/todo2/todo/src/ToDo.hpp
 

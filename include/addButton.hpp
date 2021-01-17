@@ -16,17 +16,15 @@ public:
     void displayWindow(AddButton &addButton);
 
 private:
-    sf::Font font;
     std::string addTask = "Enter name of your task \n";
     sf::Text addTaskText;
     std::string taskName = "";
-    std::string limitTaskName = "task name is too long \n";
-    sf::Text limitTaskNameText;
     sf::Text TaskNameText;
     sf::RenderWindow win;
     sf::Texture addWindowTexture;
     sf::Sprite addWindowSprite;
-    std::vector<Task> tasks;
+    Set set;
+    sf::Font fontt;
 };
 
 #endif // ADDBUTTON_HPP

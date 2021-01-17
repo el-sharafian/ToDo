@@ -20,20 +20,20 @@ AddButton::AddButton()
         // error ...
     }
     addWindowSprite.setTexture(addWindowTexture);
+
+    fontt.loadFromFile("../assets/icons/f1.ttf");
+    
+    TaskNameText.setFont(fontt);
+    set.setText(TaskNameText, 10, 50, taskName);
+    addTaskText.setFont(fontt);
+    set.setText(addTaskText, 140, 0, addTask);
 }
 void AddButton::displayWindow(AddButton &addButton)
 {
-    Set set;
-    sf::Font fontt;
-    fontt.loadFromFile("../assets/icons/f1.ttf");
-    TaskNameText.setFont(fontt);
-    set.setText(TaskNameText, 10, 50, taskName);
 
-    addTaskText.setFont(fontt);
-    set.setText(addTaskText, 140, 0, addTask);
 
     sf::Text txt;
-    txt.setFont(font);
+    txt.setFont(fontt);
     txt.setPosition(sf::Vector2f(400, 300));
     txt.setFillColor(sf::Color::Black);
 

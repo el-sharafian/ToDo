@@ -29,10 +29,10 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
     std::string taskName;
     taskNameText.setFont(font);
     taskNameText.setPosition(sf::Vector2f(5, 25));
+    taskNameText.setFillColor(sf::Color(20, 100, 100));
     txt.setFont(font);
     txt.setPosition(sf::Vector2f(400, 300));
     txt.setFillColor(sf::Color::Black);
-    taskNameText.setFillColor(sf::Color(20, 100, 100));
 
     if (evnt.type == sf::Event::MouseButtonPressed)
     {
@@ -121,9 +121,9 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                         win.draw(taskNameText);
                         win.draw(txt);
                         win.display();
-                    }*/
-                }
-            // }
+                    }
+                }*/
+            }
             else if (editSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 EditButton editButton;
