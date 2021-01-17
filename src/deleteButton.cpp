@@ -1,16 +1,16 @@
 #include "deleteButton.hpp"
+#include <string>
 
 DeleteButton::DeleteButton()
 {
-    WindowTexture.loadFromFile("../assets/images/ax5.jpg");
-    WindowSprite.setTexture(WindowTexture);
-    win.create(sf::VideoMode(400, 200), "delete a task", sf::Style::Close);
-
-    font.loadFromFile("../assets/icons/f1.ttf");
-
-    set.setText(TaskText, 35, 0, Task);
-    TaskText.setFont(font);
-
-    set.setText(TaskNumberText, 150, 50, TaskNumber);
-    TaskNumberText.setFont(font);
+    std::string iconName = "../assets/icons/bin.png";
+    set.setTexture(Sprite, iconName, Texture, 10, 400);
+}
+void DeleteButton::setIsDeleted(int check)
+{
+    isDeleted = check;
+}
+int DeleteButton::getIsDeleted(void)
+{
+    return isDeleted;
 }

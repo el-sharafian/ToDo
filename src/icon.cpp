@@ -7,7 +7,7 @@
 #include "file.hpp"
 
 #define Sp 20
-#define BS_key 8
+#define BACKSPACE_key 8
 #define Enter_key 13
 
 using namespace std;
@@ -17,13 +17,10 @@ Icon::Icon(std::string imgDirectory)
     font.loadFromFile("../assets/icons/f1.ttf"); //**********
 
     std::string iconName = imgDirectory + "/add.png";
-    set.setTexture(addSprite, iconName, addTexture, 10, 0);
+    set.setTexture(addSprite, iconName, addTexture, 10, 410);
 
     iconName = imgDirectory + "/edit5.png";
-    set.setTexture(editSprite, iconName, editTexture, 10, 125);
-
-    iconName = imgDirectory + "/bin.png";
-    set.setTexture(binSprite, iconName, binTexture, 10, 400);
+    set.setTexture(editSprite, iconName, editTexture, 685, 390);
 }
 void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
 {
@@ -32,22 +29,22 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
     std::string taskName;
     taskNameText.setFont(font);
     taskNameText.setPosition(sf::Vector2f(5, 25));
-    taskNameText.setFillColor(sf::Color(20, 100, 100));
     txt.setFont(font);
     txt.setPosition(sf::Vector2f(400, 300));
     txt.setFillColor(sf::Color::Black);
+    taskNameText.setFillColor(sf::Color(20, 100, 100));
 
     if (evnt.type == sf::Event::MouseButtonPressed)
     {
         if (evnt.mouseButton.button == sf::Mouse::Left)
         {
-
             if (addSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
-                // AddButton addbutton;
+                AddButton addbutton;
+                addbutton.displayWindow(addbutton);
                 // displayWindow(addbutton);
 
-                std::string addTask = "Enter name of your task \n";
+                /*std::string addTask = "Enter name of your task \n";
                 sf::Text addTaskText;
                 addTaskText.setFont(font);
                 set.setText(addTaskText, 140, 0, addTask);
@@ -78,8 +75,8 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                             /*if (evn.text.unicode == Enter_key)
                             {
                                 win.close();
-                            }*/
-                            if (evn.text.unicode == BS_key)
+                            }*//*
+                            if (evn.text.unicode == BACKSPACE_key)
                             {
                                 taskName.erase(taskName.size() - 1);
                             }
@@ -124,14 +121,9 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                         win.draw(taskNameText);
                         win.draw(txt);
                         win.display();
-                    }
+                    }*/
                 }
-            }
-            else if (binSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
-            {
-                DeleteButton deleteButton;
-                WindowDisplay(deleteButton);
-            }
+            // }
             else if (editSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 EditButton editButton;
@@ -148,13 +140,8 @@ sf::Sprite Icon::add()
 {
     return addSprite;
 }
-sf::Sprite Icon::bin()
-{
-    return binSprite;
-}
-void Icon::DrawIcons(sf::RenderWindow &window, sf::Sprite addSprite, sf::Sprite binSprite, sf::Sprite editSprite)
+void Icon::DrawIcons(sf::RenderWindow &window, sf::Sprite addSprite, sf::Sprite editSprite)
 {
     window.draw(addSprite);
-    window.draw(binSprite);
     window.draw(editSprite);
 }

@@ -20,15 +20,17 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o: ../src/ToDo.cpp
 
 CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/Button.hpp
 CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/addButton.hpp
+CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/button.hpp
+CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/file.hpp
 CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/set.hpp
 CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/addButton.cpp.o: ../include/windowDisplay.hpp
 CMakeFiles/todo.dir/src/addButton.cpp.o: ../src/addButton.cpp
 
 CMakeFiles/todo.dir/src/deleteButton.cpp.o: ../include/button.hpp
 CMakeFiles/todo.dir/src/deleteButton.cpp.o: ../include/deleteButton.hpp
 CMakeFiles/todo.dir/src/deleteButton.cpp.o: ../include/set.hpp
 CMakeFiles/todo.dir/src/deleteButton.cpp.o: ../include/task.hpp
-CMakeFiles/todo.dir/src/deleteButton.cpp.o: ../include/windowDisplay.hpp
 CMakeFiles/todo.dir/src/deleteButton.cpp.o: ../src/deleteButton.cpp
 
 CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/button.hpp
@@ -37,6 +39,12 @@ CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/set.hpp
 CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/windowDisplay.hpp
 CMakeFiles/todo.dir/src/editButton.cpp.o: ../src/editButton.cpp
+
+CMakeFiles/todo.dir/src/favoriteButton.cpp.o: ../include/button.hpp
+CMakeFiles/todo.dir/src/favoriteButton.cpp.o: ../include/favoriteButton.hpp
+CMakeFiles/todo.dir/src/favoriteButton.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/favoriteButton.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/favoriteButton.cpp.o: ../src/favoriteButton.cpp
 
 CMakeFiles/todo.dir/src/file.cpp.o: ../include/File.hpp
 CMakeFiles/todo.dir/src/file.cpp.o: ../include/set.hpp
@@ -56,6 +64,12 @@ CMakeFiles/todo.dir/src/icon.cpp.o: ../include/table.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../include/windowDisplay.hpp
 CMakeFiles/todo.dir/src/icon.cpp.o: ../src/icon.cpp
+
+CMakeFiles/todo.dir/src/isDoneButton.cpp.o: ../include/button.hpp
+CMakeFiles/todo.dir/src/isDoneButton.cpp.o: ../include/isDoneButton.hpp
+CMakeFiles/todo.dir/src/isDoneButton.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/isDoneButton.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/isDoneButton.cpp.o: ../src/isDoneButton.cpp
 
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/Button.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/ToDo.hpp

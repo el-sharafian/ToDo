@@ -5,14 +5,15 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include "task.hpp"
+#include "windowDisplay.hpp"
 #include "Button.hpp"
 
 class AddButton //: public Button
 {
-    friend void displayWindow(AddButton &);
 
 public:
     AddButton();
+    void displayWindow(AddButton &addButton);
 
 private:
     sf::Font font;

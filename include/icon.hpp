@@ -17,14 +17,11 @@ public:
     void iconEvents(sf::Event, sf::RenderWindow &);
     sf::Sprite edit();
     sf::Sprite add();
-    sf::Sprite bin();
-    void DrawIcons(sf::RenderWindow &window, sf::Sprite, sf::Sprite, sf::Sprite);
+    void DrawIcons(sf::RenderWindow &window, sf::Sprite, sf::Sprite);
 
 private:
     sf::Texture addTexture;
     sf::Sprite addSprite;
-    sf::Texture binTexture;
-    sf::Sprite binSprite;
     sf::Texture editTexture;
     sf::Sprite editSprite;
     sf::Font font;

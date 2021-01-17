@@ -46,7 +46,7 @@ void ToDo::Loop()
         }
         window->clear();
         window->draw(sprite);
-        icon->DrawIcons(*window, icon->add(), icon->bin(), icon->edit());
+        icon->DrawIcons(*window, icon->add(), icon->edit());
         window->draw(text);
         window->display();
     }

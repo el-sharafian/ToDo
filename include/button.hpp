@@ -21,8 +21,8 @@ protected:
     sf::Text TaskNumberText;
     sf::RenderWindow win;
     sf::Font font;
-    sf::Texture WindowTexture;
-    sf::Sprite WindowSprite;
+    sf::Texture Texture;
+    sf::Sprite Sprite;
     Set set;    //sets Texts and Sprites
 };
 

@@ -2,8 +2,8 @@
 
 EditButton::EditButton()
 {
-    WindowTexture.loadFromFile("../assets/images/ax5.jpg");
-    WindowSprite.setTexture(WindowTexture);
+    Texture.loadFromFile("../assets/images/ax5.jpg");
+    Sprite.setTexture(Texture);
     win.create(sf::VideoMode(400, 200), "edit a task", sf::Style::Close);
     
     font.loadFromFile("../assets/icons/f1.ttf");

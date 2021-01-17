@@ -36,7 +36,7 @@ void WindowDisplay(Button &button)
 
             button.TaskText.setString(button.Task);
             button.win.clear();
-            button.win.draw(button.WindowSprite);
+            button.win.draw(button.Sprite);
             button.win.draw(button.TaskText);
             button.win.draw(button.TaskNumberText);
             button.win.display();

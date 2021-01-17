@@ -1,8 +1,8 @@
 #ifndef SET_HPP
 #define SET_HPP
+
 #include <SFML/Graphics.hpp>
 #include <string>
-
 
 class Set   // sets Texts and Sprites
 {
