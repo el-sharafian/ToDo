@@ -4,7 +4,6 @@
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <iostream>
-#include <fstream>
 #include <cstdlib>
 #include <cstdlib>
 #include "file.hpp"
@@ -22,22 +21,23 @@ AddButton::AddButton()
     addWindowSprite.setTexture(addWindowTexture);
 
     fontt.loadFromFile("../assets/icons/f1.ttf");
-    
+
     TaskNameText.setFont(fontt);
     set.setText(TaskNameText, 10, 50, taskName);
     addTaskText.setFont(fontt);
     set.setText(addTaskText, 140, 0, addTask);
 }
+
 void AddButton::displayWindow(AddButton &addButton)
 {
-
 
     sf::Text txt;
     txt.setFont(fontt);
     txt.setPosition(sf::Vector2f(400, 300));
     txt.setFillColor(sf::Color::Black);
 
-    std::vector<Task> tasks;
+    // std::vector<Task> tasks;
+    Vector v;
 
     while (addButton.win.isOpen())
     {
@@ -67,14 +67,28 @@ void AddButton::displayWindow(AddButton &addButton)
                         std::string s = "both.txt";
                         File fi(file, s);
                         fi.isOpen(file);
-                        Task t;
-                        t.setTask(taskName);
+                        //Task t;
+                        //t.setTask(taskName);
                         //string a = "salam";
-                        fi.writeToFile(file, t);
+                        //v.push(taskName);
+                        fi.writeToFile(file, v);
+                        std::vector<Task> t;
+                        std::vector<Task> *vptr = v.assign();
+                        std::vector<Task> *vptr2 = &t;
+                        Task tt;
+                        tt.setTask(taskName);
+                        t.push_back(tt);
+                        std::cout << vptr << std::endl;
+                        vptr2 = v.assign();
+                        std::cout << vptr2 << std::endl;
+                        //std::cout<<v.assign()<<std::endl;
+                        //t=v.assign();
                         if (evn.text.unicode == Enter_key)
                         {
-                            std::string b = fi.readFromFile(file, t);
+                            std::string b = fi.readFromFile(file, v);
+                            std::cout << b << std::endl;
                             txt.setString(b);
+                            //std::cout << v.assign() << std::endl;
                         }
                     }
                 }
@@ -87,7 +101,7 @@ void AddButton::displayWindow(AddButton &addButton)
             addButton.win.draw(addButton.addWindowSprite);
             addButton.win.draw(addButton.addTaskText);
             addButton.win.draw(addButton.TaskNameText);
-            win.draw(txt);
+            addButton.win.draw(txt);
             addButton.win.display();
         }
     }

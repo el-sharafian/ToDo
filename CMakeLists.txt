@@ -11,6 +11,6 @@ add_executable(todo src/main.cpp src/icon.cpp src/ToDo.cpp
                  src/windowDisplay.cpp src/editButton.cpp 
                  src/deleteButton.cpp src/Button.cpp
                  src/set.cpp src/favoriteButton.cpp
-                 src/isDoneButton.cpp src/file.cpp)
+                 src/isDoneButton.cpp src/file.cpp src/vector.cpp)
 
 target_link_libraries(todo sfml-window sfml-system sfml-graphics)

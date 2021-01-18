@@ -1,4 +1,4 @@
-#include "../include/File.hpp"
+#include "File.hpp"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -29,13 +29,22 @@ void File::close(fstream output)
 {
     output.close();
 }
-void File::writeToFile(fstream &output, Task &s)
+void File::writeToFile(fstream &output, Vector &s)
 {
     output.write(reinterpret_cast<const char *>(&s), sizeof(s));
 }
-string File::readFromFile(fstream &output, Task &s)
+/*std::ostream &operator<<(std::ostream &out, const Vector &p)
+{
+    for (size_t i = 0; i < 2; i++)
+    {
+        out << p.tasks;
+    }
+    return out;
+}*/
+string File::readFromFile(fstream &output, Vector &s)
 {
     output.seekg(0, ios::beg);
     output.read(reinterpret_cast<char *>(&s), sizeof(s));
-    return s.TaskName;
+    //std::cout << s.get();
+    return s.get();
 }

@@ -3,10 +3,12 @@
 
 #include <string>
 #include <vector>
+#include <fstream>
 #include <SFML/Graphics.hpp>
 #include "task.hpp"
 #include "windowDisplay.hpp"
 #include "Button.hpp"
+#include "vector.hpp"
 
 class AddButton //: public Button
 {

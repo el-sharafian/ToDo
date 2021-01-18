@@ -8,7 +8,6 @@ using namespace std;
 
 Task::Task()
 {
-
 }
 Task::Task(string imgDirectory)
 {
@@ -45,6 +44,10 @@ void Task::setTask(string t)
 {
     TaskName = t;
     // return TaskName;
+}
+string Task::getTask()
+{
+    return TaskName;
 }
 int Task::getPriority()
 {

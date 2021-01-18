@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/f/5/todo2/todo
+CMAKE_SOURCE_DIR = /mnt/c/Users/pc/desktop/t4/ToDo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/f/5/todo2/todo/build
+CMAKE_BINARY_DIR = /mnt/c/Users/pc/desktop/t4/ToDo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/todo2/todo/build/CMakeFiles /mnt/f/5/todo2/todo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/todo2/todo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -474,6 +474,33 @@ src/task.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/task.cpp.s
 .PHONY : src/task.cpp.s
 
+src/vector.o: src/vector.cpp.o
+
+.PHONY : src/vector.o
+
+# target to build an object file
+src/vector.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/vector.cpp.o
+.PHONY : src/vector.cpp.o
+
+src/vector.i: src/vector.cpp.i
+
+.PHONY : src/vector.i
+
+# target to preprocess a source file
+src/vector.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/vector.cpp.i
+.PHONY : src/vector.cpp.i
+
+src/vector.s: src/vector.cpp.s
+
+.PHONY : src/vector.s
+
+# target to generate assembly for a file
+src/vector.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/vector.cpp.s
+.PHONY : src/vector.cpp.s
+
 src/windowDisplay.o: src/windowDisplay.cpp.o
 
 .PHONY : src/windowDisplay.o
@@ -549,6 +576,9 @@ help:
 	@echo "... src/task.o"
 	@echo "... src/task.i"
 	@echo "... src/task.s"
+	@echo "... src/vector.o"
+	@echo "... src/vector.i"
+	@echo "... src/vector.s"
 	@echo "... src/windowDisplay.o"
 	@echo "... src/windowDisplay.i"
 	@echo "... src/windowDisplay.s"

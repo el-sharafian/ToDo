@@ -16,6 +16,16 @@ task.hpp
 set.hpp
 ../include/set.hpp
 
+../include/File.hpp
+iostream
+-
+fstream
+-
+task.hpp
+../include/task.hpp
+vector.hpp
+../include/vector.hpp
+
 ../include/ToDo.hpp
 string
 -
@@ -29,6 +39,8 @@ string
 -
 vector
 -
+fstream
+-
 SFML/Graphics.hpp
 -
 task.hpp
@@ -37,6 +49,8 @@ windowDisplay.hpp
 ../include/windowDisplay.hpp
 Button.hpp
 ../include/Button.hpp
+vector.hpp
+../include/vector.hpp
 
 ../include/button.hpp
 string
@@ -71,6 +85,8 @@ fstream
 -
 task.hpp
 ../include/task.hpp
+vector.hpp
+../include/vector.hpp
 
 ../include/icon.hpp
 string
@@ -111,6 +127,8 @@ string
 -
 vector
 -
+iostream
+-
 SFML/Graphics.hpp
 -
 
@@ -122,23 +140,31 @@ SFML/Graphics.hpp
 icon.hpp
 ../include/icon.hpp
 
+../include/vector.hpp
+vector
+-
+iostream
+-
+task.hpp
+../include/task.hpp
+
 ../include/windowDisplay.hpp
 ../include/button.hpp
 ../include/button.hpp
 
-/mnt/f/5/todo2/todo/src/ToDo.cpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/ToDo.cpp
 todo.hpp
-/mnt/f/5/todo2/todo/src/todo.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/todo.hpp
 set.hpp
-/mnt/f/5/todo2/todo/src/set.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/set.hpp
 iostream
 -
 
-/mnt/f/5/todo2/todo/src/addButton.cpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/addButton.cpp
 addButton.hpp
-/mnt/f/5/todo2/todo/src/addButton.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/addButton.hpp
 set.hpp
-/mnt/f/5/todo2/todo/src/set.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/set.hpp
 SFML/Graphics.hpp
 -
 SFML/Window.hpp
@@ -147,22 +173,30 @@ SFML/System.hpp
 -
 iostream
 -
-fstream
--
 cstdlib
 -
 cstdlib
 -
 file.hpp
-/mnt/f/5/todo2/todo/src/file.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/file.hpp
 
-/mnt/f/5/todo2/todo/src/icon.cpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/file.cpp
+File.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/File.hpp
+iostream
+-
+string
+-
+fstream
+-
+
+/mnt/c/Users/pc/desktop/t4/ToDo/src/icon.cpp
 icon.hpp
-/mnt/f/5/todo2/todo/src/icon.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/icon.hpp
 table.hpp
-/mnt/f/5/todo2/todo/src/table.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/table.hpp
 ToDo.hpp
-/mnt/f/5/todo2/todo/src/ToDo.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/ToDo.hpp
 iostream
 -
 fstream
@@ -170,9 +204,15 @@ fstream
 cstdlib
 -
 file.hpp
-/mnt/f/5/todo2/todo/src/file.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/file.hpp
 
-/mnt/f/5/todo2/todo/src/main.cpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/main.cpp
 ToDo.hpp
-/mnt/f/5/todo2/todo/src/ToDo.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/ToDo.hpp
+
+/mnt/c/Users/pc/desktop/t4/ToDo/src/vector.cpp
+iostream
+-
+vector.hpp
+/mnt/c/Users/pc/desktop/t4/ToDo/src/vector.hpp
 

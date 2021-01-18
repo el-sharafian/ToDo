@@ -4,6 +4,7 @@
 #include "set.hpp"
 #include <string>
 #include <vector>
+#include<iostream>
 #include <SFML/Graphics.hpp>
 
 class Task
@@ -22,6 +23,7 @@ public:
     int getPriority(void);
     char getFavorite(void);
     bool getCheck(void);
+    std::string getTask(void);
    // std::string TaskName;
     void favorite(sf::RenderWindow &);
     void notFavorite(sf::RenderWindow &);

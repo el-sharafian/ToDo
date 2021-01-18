@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include "task.hpp"
+#include "vector.hpp"
 
 class File
 {
@@ -12,8 +13,8 @@ public:
     File(std::fstream &, std::string);
     void isOpen(std::fstream &);
     void close(std::fstream);
-    void writeToFile(std::fstream &, Task &t);
-    std::string readFromFile(std::fstream &, Task &t);
+    void writeToFile(std::fstream &,Vector&);
+    std::string readFromFile(std::fstream &,Vector&);
     ~File();
 
 private:
