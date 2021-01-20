@@ -15,18 +15,19 @@ class AddButton //: public Button
 
 public:
     AddButton();
-    void displayWindow(AddButton &addButton);
+    void DisplayWindow(AddButton &);
+    Task SetTask(std::string );   
 
 private:
     std::string addTask = "Enter name of your task \n";
-    sf::Text addTaskText;
-    std::string taskName = "";
+    sf::Text AddTaskText;
+    std::string TaskName = "";
     sf::Text TaskNameText;
-    sf::RenderWindow win;
-    sf::Texture addWindowTexture;
-    sf::Sprite addWindowSprite;
+    sf::RenderWindow Win;
+    sf::Texture AddWindowTexture;
+    sf::Sprite AddWindowSprite;
     Set set;
-    sf::Font fontt;
+    sf::Font Fontt;
 };
 
 #endif // ADDBUTTON_HPP

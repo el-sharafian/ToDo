@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
 
 add_executable(todo src/main.cpp src/icon.cpp src/ToDo.cpp 
-                 src/task.cpp src/table.cpp src/addButton.cpp
+                 src/task.cpp src/table.cpp src/AddButton.cpp
                  src/windowDisplay.cpp src/editButton.cpp 
                  src/deleteButton.cpp src/Button.cpp
                  src/set.cpp src/favoriteButton.cpp

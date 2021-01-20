@@ -22,34 +22,50 @@ ToDo::ToDo()
 }
 void ToDo::Loop()
 {
-    while (window->isOpen())
+    fstream Tasks("../Tasks.txt", ios::app);
+    if (!Tasks.is_open())
     {
-        sf::Event evnt;
-        while (window->pollEvent(evnt))
-        {
-            if (evnt.type == sf::Event::Closed)
-            {
-                window->close();
-            }
-            if (evnt.type == sf::Event::MouseButtonPressed)
-            {
-                icon->iconEvents(evnt, *window);
-            }
-            if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(*window))))
-            {
-                text.setFillColor(sf::Color(20, 150, 150));
-            }
-            else
-            {
-                text.setFillColor(sf::Color::Black);
-            }
-        }
-        window->clear();
-        window->draw(sprite);
-        icon->DrawIcons(*window, icon->add(), icon->edit());
-        window->draw(text);
-        window->display();
+        exit(EXIT_FAILURE);
     }
+    string a = "lalal";
+    // Tasks.seekp(ios::beg);
+    // Tasks << a << endl;
+    Tasks >> a;
+    cout << "++++++++++" << a << endl;
+    bool showTasks = true;
+    if (Tasks.tellp() == 0)
+    {
+        showTasks = false;
+    }
+    else
+        while (window->isOpen())
+        {
+            sf::Event evnt;
+            while (window->pollEvent(evnt))
+            {
+                if (evnt.type == sf::Event::Closed)
+                {
+                    window->close();
+                }
+                if (evnt.type == sf::Event::MouseButtonPressed)
+                {
+                    icon->iconEvents(evnt, *window);
+                }
+                if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(*window))))
+                {
+                    text.setFillColor(sf::Color(20, 150, 150));
+                }
+                else
+                {
+                    text.setFillColor(sf::Color::Black);
+                }
+            }
+            window->clear();
+            window->draw(sprite);
+            icon->DrawIcons(*window, icon->add(), icon->edit());
+            window->draw(text);
+            window->display();
+        }
 }
 
 ToDo::~ToDo()

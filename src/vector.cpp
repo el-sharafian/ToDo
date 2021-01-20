@@ -19,7 +19,6 @@ void Vector::push(string taskN)
 string Vector::get()
 {
     // Task t;
-
     std::string b = t.getTask();
     tasks.push_back(t);
     std::cout << b << std::endl;
