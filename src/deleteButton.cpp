@@ -4,7 +4,7 @@
 DeleteButton::DeleteButton()
 {
     std::string iconName = "../assets/icons/bin.png";
-    set.setTexture(Sprite, iconName, Texture, 10, 400);
+    set.setTexture(DeletedSprite, iconName, DeletedTexture, 715, 50);
 }
 void DeleteButton::setIsDeleted(int check)
 {

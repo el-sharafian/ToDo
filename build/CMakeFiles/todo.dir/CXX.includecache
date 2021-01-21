@@ -6,23 +6,29 @@
 
 #IncludeRegexTransform: 
 
-../include/Button.hpp
+../include/AddButton.hpp
 string
+-
+vector
+-
+fstream
 -
 SFML/Graphics.hpp
 -
 task.hpp
 ../include/task.hpp
-set.hpp
-../include/set.hpp
+windowDisplay.hpp
+../include/windowDisplay.hpp
+vector.hpp
+../include/vector.hpp
 
-../include/ToDo.hpp
+../include/Button.hpp
 string
 -
 SFML/Graphics.hpp
 -
-icon.hpp
-../include/icon.hpp
+set.hpp
+../include/set.hpp
 
 ../include/addButton.hpp
 string
@@ -37,8 +43,6 @@ task.hpp
 ../include/task.hpp
 windowDisplay.hpp
 ../include/windowDisplay.hpp
-Button.hpp
-../include/Button.hpp
 vector.hpp
 ../include/vector.hpp
 
@@ -47,8 +51,6 @@ string
 -
 SFML/Graphics.hpp
 -
-task.hpp
-../include/task.hpp
 set.hpp
 ../include/set.hpp
 
@@ -68,15 +70,11 @@ button.hpp
 windowDisplay.hpp
 ../include/windowDisplay.hpp
 
-../include/file.hpp
-iostream
+../include/favoriteButton.hpp
+SFML/Graphics.hpp
 -
-fstream
--
-task.hpp
-../include/task.hpp
-vector.hpp
-../include/vector.hpp
+button.hpp
+../include/button.hpp
 
 ../include/icon.hpp
 string
@@ -96,23 +94,27 @@ addButton.hpp
 Button.hpp
 ../include/Button.hpp
 
+../include/isDoneButton.hpp
+SFML/Graphics.hpp
+-
+button.hpp
+../include/button.hpp
+
 ../include/set.hpp
 SFML/Graphics.hpp
 -
 string
 -
 
-../include/table.hpp
-vector
--
-string
--
-../include/task.hpp
-../include/task.hpp
-
 ../include/task.hpp
 set.hpp
 ../include/set.hpp
+../include/deleteButton.hpp
+../include/deleteButton.hpp
+favoriteButton.hpp
+../include/favoriteButton.hpp
+isDoneButton.hpp
+../include/isDoneButton.hpp
 string
 -
 vector
@@ -129,6 +131,8 @@ SFML/Graphics.hpp
 -
 icon.hpp
 ../include/icon.hpp
+AddButton.hpp
+../include/AddButton.hpp
 
 ../include/vector.hpp
 vector
@@ -142,51 +146,13 @@ task.hpp
 ../include/button.hpp
 ../include/button.hpp
 
-/mnt/f/5/todo3/todo/src/AddButton.cpp
-addButton.hpp
-/mnt/f/5/todo3/todo/src/addButton.hpp
-set.hpp
-/mnt/f/5/todo3/todo/src/set.hpp
-SFML/Graphics.hpp
--
-SFML/Window.hpp
--
-SFML/System.hpp
--
-iostream
--
-cstdlib
--
-cstdlib
--
-file.hpp
-/mnt/f/5/todo3/todo/src/file.hpp
-
 /mnt/f/5/todo3/todo/src/ToDo.cpp
 todo.hpp
 /mnt/f/5/todo3/todo/src/todo.hpp
 set.hpp
 /mnt/f/5/todo3/todo/src/set.hpp
+task.hpp
+/mnt/f/5/todo3/todo/src/task.hpp
 iostream
 -
-
-/mnt/f/5/todo3/todo/src/icon.cpp
-icon.hpp
-/mnt/f/5/todo3/todo/src/icon.hpp
-table.hpp
-/mnt/f/5/todo3/todo/src/table.hpp
-ToDo.hpp
-/mnt/f/5/todo3/todo/src/ToDo.hpp
-iostream
--
-fstream
--
-cstdlib
--
-file.hpp
-/mnt/f/5/todo3/todo/src/file.hpp
-
-/mnt/f/5/todo3/todo/src/main.cpp
-ToDo.hpp
-/mnt/f/5/todo3/todo/src/ToDo.hpp
 

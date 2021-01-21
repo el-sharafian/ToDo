@@ -12,7 +12,7 @@ Task t;
 void Vector::push(string taskN)
 {
 
-    t.setTask(taskN);
+    t.SetTask(taskN);
 
     tasks.push_back(t);
 }

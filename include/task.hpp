@@ -2,9 +2,12 @@
 #define TASK_H
 
 #include "set.hpp"
+#include "../include/deleteButton.hpp"
+#include "favoriteButton.hpp"
+#include "isDoneButton.hpp"
 #include <string>
 #include <vector>
-#include<iostream>
+#include <iostream>
 #include <SFML/Graphics.hpp>
 
 class Task
@@ -17,27 +20,19 @@ class Task
 public:
     Task();
     Task(std::string);
-    void setPriority(unsigned int);
-    void setFavorite(char);
-    void setCheck(bool);
-    int getPriority(void);
-    char getFavorite(void);
-    bool getCheck(void);
+    void showTask(sf::RenderWindow &, Task);
+    void SetTask(std::string, int fav = 0, int deleted = 0, int done = 0);
+    std::string GetName();
     std::string getTask(void);
-   // std::string TaskName;
-    void favorite(sf::RenderWindow &);
-    void notFavorite(sf::RenderWindow &);
-    void setTask(std::string);
 
 private:
+    sf::Font font;
     std::string TaskName;
-    unsigned int priority;
+    FavoriteButton favoriteButton;
+    DeleteButton deleteButton;
+    IsDoneButton isDoneButton;
     bool check = false;
-    sf::Texture favoriteTexture;
-    sf::Sprite favoriteSprite;
-    sf::Texture notFavoriteTexture;
-    sf::Sprite notFavoriteSprite;
-    Set set;    // sets Texts and Sprites
+    Set set; // sets Texts and Sprites
 };
 
 #endif

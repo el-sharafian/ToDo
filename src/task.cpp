@@ -11,61 +11,47 @@ Task::Task()
 }
 Task::Task(string imgDirectory)
 {
-    string iconName = imgDirectory + "/favorite.png";
-    // if (!favoriteTexture.loadFromFile(iconName))
-    // {
-    //     // error...
-    // }
-    // favoriteSprite.setTexture(favoriteTexture);
-    // favoriteSprite.setPosition(sf::Vector2f(0, 200));
-    set.setTexture(favoriteSprite, iconName, favoriteTexture, 0, 200);
-
-    iconName = imgDirectory + "/notFavorite.png";
-    // if (!notFavoriteTexture.loadFromFile(iconName))
-    // {
-    //     // error...
-    // }
-    // notFavoriteSprite.setTexture(notFavoriteTexture);
-    // notFavoriteSprite.setPosition(sf::Vector2f(0, 200));
-    set.setTexture(notFavoriteSprite, iconName, notFavoriteTexture, 0, 200);
+    if(!font.loadFromFile("../assets/icons/f1.ttf"))
+    {
+        exit(EXIT_FAILURE);
+    }
 }
-void Task::setPriority(unsigned int p)
+void Task::showTask(sf::RenderWindow &window, Task task)
 {
-    if (p > 0 && p < 6)
+    sf::Text TName;
+    TName.setFont(font);
+    set.setText(TName, 20,50, task.GetName());
+    TName.setString("aaaaa");
+    TName.setCharacterSize(50);
+    TName.setFillColor(sf::Color::Red);
+    if (!task.deleteButton.getIsDeleted())
     {
-        priority = p;
-    }
-    else
-    {
-        throw invalid_argument("The input was not valid!!");
+        if (!task.favoriteButton.getIsFavorite())
+        {
+            window.draw(task.favoriteButton.FavoriteSprite);
+        }
+        else
+        {
+            window.draw(task.favoriteButton.notFavoriteSprite);
+        }
+        window.draw(TName);
+        window.draw(task.deleteButton.DeletedSprite);
+        window.draw(task.isDoneButton.IsDoneSprite);
     }
 }
-void Task::setTask(string t)
+
+void Task::SetTask(string t, int fav, int deleted, int done)
 {
     TaskName = t;
-    // return TaskName;
+    favoriteButton.setIsFavorite(fav);
+    deleteButton.setIsDeleted(deleted);
+    isDoneButton.setIsDone(done);
 }
 string Task::getTask()
 {
     return TaskName;
 }
-int Task::getPriority()
+std::string Task::GetName()
 {
-    return priority;
-}
-void Task::setCheck(bool c)
-{
-    check = c;
-}
-bool Task::getCheck()
-{
-    return check;
-}
-void Task::favorite(sf::RenderWindow &window)
-{
-    window.draw(favoriteSprite);
-}
-void Task::notFavorite(sf::RenderWindow &window)
-{
-    window.draw(notFavoriteSprite);
+    return TaskName;
 }

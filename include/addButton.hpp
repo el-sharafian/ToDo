@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "task.hpp"
 #include "windowDisplay.hpp"
-#include "Button.hpp"
+// #include "Button.hpp"
 #include "vector.hpp"
 
 class AddButton //: public Button
@@ -16,7 +16,6 @@ class AddButton //: public Button
 public:
     AddButton();
     void DisplayWindow(AddButton &);
-    Task SetTask(std::string );   
 
 private:
     std::string addTask = "Enter name of your task \n";

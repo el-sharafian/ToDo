@@ -3,7 +3,6 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "task.hpp"
 #include "set.hpp"
 
 //abstract class

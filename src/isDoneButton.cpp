@@ -3,8 +3,10 @@
 
 IsDoneButton::IsDoneButton()
 {
-    std::string iconName = "../assets/icons/bin.png";
-    set.setTexture(Sprite, iconName, Texture, 10, 400);
+    std::string iconName = "../assets/icons/tick.png";
+    set.setTexture(IsDoneSprite, iconName, IsDoneTexture, 10, 50);
+    // IsDoneTexture.loadFromFile("../assets/icons/tick.png");
+    // IsDoneSprite.setTexture(IsDoneTexture);
 }
 void IsDoneButton::setIsDone(int check)
 {

@@ -1,5 +1,6 @@
 #include "todo.hpp"
 #include "set.hpp"
+#include "task.hpp"
 #include <iostream>
 using namespace std;
 
@@ -22,54 +23,81 @@ ToDo::ToDo()
 }
 void ToDo::Loop()
 {
-    fstream Tasks("../Tasks.txt", ios::app);
+    fstream Tasks("../Tasks.txt", ios::app | ios::in);
     if (!Tasks.is_open())
     {
         exit(EXIT_FAILURE);
     }
-    string a = "lalal";
-    // Tasks.seekp(ios::beg);
-    // Tasks << a << endl;
-    Tasks >> a;
-    cout << "++++++++++" << a << endl;
+    string a;
+    getline(Tasks, a);
     bool showTasks = true;
     if (Tasks.tellp() == 0)
     {
         showTasks = false;
     }
     else
-        while (window->isOpen())
+    {
+        Tasks.seekg(ios::beg);
+        cout << "++++++++++" << a << endl;
+        // getline(Tasks, a);
+    }
+    while (window->isOpen())
+    {
+        Task t;
+        t.SetTask("mewaaa");
+
+        sf::Text TaskText;
+        Set set;
+        set.setText(TaskText, 100, 200, a);
+        TaskText.setFont(font);
+        sf::Event evnt;
+        while (window->pollEvent(evnt))
         {
-            sf::Event evnt;
-            while (window->pollEvent(evnt))
+            if (evnt.type == sf::Event::Closed)
             {
-                if (evnt.type == sf::Event::Closed)
-                {
-                    window->close();
-                }
-                if (evnt.type == sf::Event::MouseButtonPressed)
-                {
-                    icon->iconEvents(evnt, *window);
-                }
-                if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(*window))))
-                {
-                    text.setFillColor(sf::Color(20, 150, 150));
-                }
-                else
-                {
-                    text.setFillColor(sf::Color::Black);
-                }
+                window->close();
             }
-            window->clear();
-            window->draw(sprite);
-            icon->DrawIcons(*window, icon->add(), icon->edit());
-            window->draw(text);
-            window->display();
+            if (evnt.type == sf::Event::MouseButtonPressed)
+            {
+                icon->iconEvents(evnt, *window);
+            }
+            if (text.getGlobalBounds().contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(*window))))
+            {
+                text.setFillColor(sf::Color(20, 150, 150));
+            }
+            else
+            {
+                text.setFillColor(sf::Color::Black);
+            }
         }
+        window->clear();
+        window->draw(sprite);
+        icon->DrawIcons(*window, icon->add(), icon->edit());
+        window->draw(text);
+        window->draw(TaskText);
+        t.showTask(*window, t);
+        window->display();
+    }
 }
 
 ToDo::~ToDo()
 {
     delete window;
     delete icon;
+}
+Task ToDo::SetTask(string taskN)
+{
+    int index = taskN.size();
+    Task taskV;
+    char settask = taskN[index - 1];
+
+    settask = taskN[index - 2];
+
+    settask = taskN[index - 3];
+
+    taskN = taskN.erase(index - 3);
+
+    taskN.erase(taskN.size() - 3);
+
+    return taskV;
 }

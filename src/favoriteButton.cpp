@@ -4,10 +4,10 @@
 FavoriteButton::FavoriteButton()
 {
     std::string iconName = "../assets/icons/favorite.png";
-    set.setTexture(Sprite, iconName, Texture, 0, 200);
+    set.setTexture(FavoriteSprite, iconName, FavoriteTexture, 680, 50);
 
     iconName = "../assets/icons/notFavorite.png";
-    set.setTexture(notFavoriteSprite, iconName, notFavoriteTexture, 0, 200);
+    set.setTexture(notFavoriteSprite, iconName, notFavoriteTexture, 680, 50);
 }
 void FavoriteButton::setIsFavorite(int check)
 {

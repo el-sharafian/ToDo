@@ -1,4 +1,5 @@
 #include "addButton.hpp"
+// #include "task.hpp"
 #include "set.hpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
@@ -12,28 +13,6 @@
 #define BACKSPACE_key 8
 
 using namespace std;
-
-Task AddButton::SetTask(string taskN)
-{
-    int index = taskN.size();
-    Task taskV;
-    char settask = taskN[index - 1];
-    // taskV.setFavorite(settask);
-
-    settask = taskN[index - 2];
-    taskV.setCheck(settask);
-
-    settask = taskN[index - 3];
-    // taskV.setIsDeleted(settask);
-
-    taskN = taskN.erase(index - 3);
-
-    // taskV.setName(taskN);
-
-    taskN.erase(taskN.size() - 3);
-
-    return taskV;
-}
 
 AddButton::AddButton()
 {
@@ -60,7 +39,7 @@ void AddButton::DisplayWindow(AddButton &addButton)
     txt.setFillColor(sf::Color::Black);
 
     ofstream Tasks("../Tasks.txt", ios::app);
-    if(!Tasks.is_open())
+    if (!Tasks.is_open())
     {
         exit(EXIT_FAILURE);
     }
