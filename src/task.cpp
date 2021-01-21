@@ -25,32 +25,41 @@ void Task::showTask(sf::RenderWindow &window, Task task)
     //TName.setString("aaaaa");
     TName.setCharacterSize(50);
     TName.setFillColor(sf::Color::Red);
-    if (!task.deleteButton.getIsDeleted())
+    if (!task.deleteButton.GetIsDeleted())
     {
-        if (!task.favoriteButton.getIsFavorite())
+        window.draw(task.deleteButton.GetDeletedSprite());
+        if (!task.favoriteButton.GetIsFavorite())
         {
-            window.draw(task.favoriteButton.FavoriteSprite);
+            window.draw(task.favoriteButton.GetFavoriteSprite());
         }
         else
         {
-            window.draw(task.favoriteButton.notFavoriteSprite);
+            window.draw(task.favoriteButton.GetNotFavoriteSprite());
         }
-
-        //window.draw(task.deleteButton.DeletedSprite);
-        if (task.isDoneButton.getIsDone())
+        if (!task.isDoneButton.getIsDone())
         {
-            window.draw(task.isDoneButton.IsDoneSprite);
+            window.draw(task.isDoneButton.GetIsDoneSprite());
+        }
+        else
+        {
+            window.draw(task.isDoneButton.GetNotDoneSprite());
         }
         window.draw(TName);
     }
 }
-
+void Task::Event(sf::RenderWindow &window, sf::Event evnt)
+{
+    if ((favoriteButton.GetNotFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y))))
+    {
+        window.draw(favoriteButton.GetFavoriteSprite());
+    }
+}
 void Task::SetTask(string t)
 {
     TaskName = t;
     int index = TaskName.size();
     string f = TaskName;
-    f = f[index - 3];//the first int for favorite
+    f = f[index - 3]; //the first int for favorite
     stringstream geek(f);
 
     // it to the integer x
@@ -59,10 +68,10 @@ void Task::SetTask(string t)
 
     // Now the variable x holds the value 12345
     cout << "Value of x : " << x;
-    favoriteButton.setIsFavorite(x);
+    favoriteButton.SetIsFavorite(x);
 
     string d = TaskName;
-    d = d[index - 2];//the second int for delete
+    d = d[index - 2]; //the second int for delete
     stringstream geek1(d);
 
     // it to the integer x
@@ -71,10 +80,10 @@ void Task::SetTask(string t)
 
     // Now the variable x holds the value 12345
     cout << "Value of x : " << y;
-    deleteButton.setIsDeleted(y);
+    deleteButton.SetIsDeleted(y);
 
     string dn = TaskName;
-    dn = dn[index - 1];//the third int for isDone
+    dn = dn[index - 1]; //the third int for isDone
     stringstream geek2(dn);
 
     // it to the integer x

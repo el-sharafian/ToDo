@@ -5,6 +5,7 @@
 #include <fstream>
 #include <cstdlib>
 #include "file.hpp"
+#include "task.hpp"
 
 #define Sp 20
 #define BACKSPACE_key 8
@@ -24,6 +25,9 @@ Icon::Icon(std::string imgDirectory)
 }
 void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
 {
+    FavoriteButton fav;
+    
+    Task tsk;
     sf::Text taskNameText;
     sf::Text txt;
     std::string taskName;
@@ -48,11 +52,13 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                 EditButton editButton;
                 WindowDisplay(editButton);
             }
-           /* else if (FavoriteSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            else if (fav.GetNotFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)) )
             {
-                FavoriteButton favoriteButton;
-                WindowDisplay(favoriteButton);
-            }*/
+                tsk.Event(window, evnt);
+                window.draw(fav.GetFavoriteSprite());
+
+                // window.close();
+            }
         }
     }
 }

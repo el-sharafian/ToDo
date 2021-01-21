@@ -9,15 +9,16 @@ class FavoriteButton //: public Button
     // friend void WindowDisplay(Button &);
 public:
     FavoriteButton();
-    void setIsFavorite(int);
-    int getIsFavorite(void);
-    sf::Sprite notFavoriteSprite;
-    sf::Sprite FavoriteSprite;
-
+    void SetIsFavorite(int);
+    int GetIsFavorite(void);
+    sf::Sprite GetNotFavoriteSprite();
+    sf::Sprite GetFavoriteSprite();
 private:
     Set set;
-    int isFavorite = 0;
-    sf::Texture notFavoriteTexture;
+    int IsFavorite = 0;
+    sf::Sprite NotFavoriteSprite;
+    sf::Sprite FavoriteSprite;
+    sf::Texture NotFavoriteTexture;
     sf::Texture FavoriteTexture;
 };
 

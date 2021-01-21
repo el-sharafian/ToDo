@@ -7,13 +7,21 @@ FavoriteButton::FavoriteButton()
     set.setTexture(FavoriteSprite, iconName, FavoriteTexture, 680, 50);
 
     iconName = "../assets/icons/notFavorite.png";
-    set.setTexture(notFavoriteSprite, iconName, notFavoriteTexture, 680, 50);
+    set.setTexture(NotFavoriteSprite, iconName, NotFavoriteTexture, 680, 50);
 }
-void FavoriteButton::setIsFavorite(int check)
+sf::Sprite FavoriteButton::GetFavoriteSprite()
 {
-    isFavorite = check;
+    return FavoriteSprite;
 }
-int FavoriteButton::getIsFavorite(void)
+sf::Sprite FavoriteButton::GetNotFavoriteSprite()
 {
-    return isFavorite;
+    return NotFavoriteSprite;
+}
+void FavoriteButton::SetIsFavorite(int check)
+{
+    IsFavorite = check;
+}
+int FavoriteButton::GetIsFavorite(void)
+{
+    return IsFavorite;
 }

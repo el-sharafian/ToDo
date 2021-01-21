@@ -28,6 +28,12 @@ istream &operator>>(istream &input, Task &p)
 }
 void ToDo::Loop()
 {
+    int CheckFav = 0;
+    int CheckIsDne = 0;
+    int CheckDelete = 0;
+    FavoriteButton fav;
+    IsDoneButton IsDne;
+    DeleteButton dlt;
     fstream Tasks("../Tasks.txt", ios::app | ios::in);
     if (!Tasks.is_open())
     {
@@ -48,16 +54,11 @@ void ToDo::Loop()
         cout << "++++++++++" << a << endl;
         // getline(Tasks, a);
     }
-    /* string c = a.getTask();
-    int index = c.size();
-    c = c[index - 1];*/
-
-    Task t;
-    t.SetTask(a.GetName());
+    Task tsk;
+    tsk.SetTask(a.GetName());
 
     while (window->isOpen())
     {
-
         sf::Text TaskText;
         Set set;
         set.setText(TaskText, 100, 200, a.GetName());
@@ -81,13 +82,34 @@ void ToDo::Loop()
             {
                 text.setFillColor(sf::Color::Black);
             }
+            if (fav.GetNotFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            {
+                CheckFav = 1;
+            }
+            else if (fav.GetFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            {
+                CheckFav = 0;
+            }
+            else if (dlt.GetDeletedSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            {
+                CheckDelete = 1;
+            }
+            else if(IsDne.GetNotDoneSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            {
+                CheckIsDne = 1;
+            }
         }
         window->clear();
         window->draw(sprite);
         icon->DrawIcons(*window, icon->add(), icon->edit());
         window->draw(text);
         window->draw(TaskText);
-        t.showTask(*window, t);
+        if(CheckIsDne)
+            window->draw(IsDne.GetIsDoneSprite());
+        if (!CheckDelete)
+            tsk.showTask(*window, tsk);
+        if (CheckFav)
+            window->draw(fav.GetFavoriteSprite());
         window->display();
     }
 }

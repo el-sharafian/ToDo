@@ -10,12 +10,16 @@ public:
     IsDoneButton();
     void setIsDone(int);
     int getIsDone(void);
-    sf::Sprite IsDoneSprite;
+    sf::Sprite GetIsDoneSprite();
+    sf::Sprite GetNotDoneSprite();
 
 private:
-Set set;
+    Set set;
+    sf::Sprite IsDoneSprite;
+    sf::Sprite NotDoneSprite;
     int isDone = 0;
     sf::Texture IsDoneTexture;
+    sf::Texture NotDoneTexture;
 };
 
 #endif // ISDONEBUTTON_HPP

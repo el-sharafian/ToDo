@@ -9,13 +9,14 @@ class DeleteButton //: public Button
     friend void WindowDisplay(Button &);
 public:
     DeleteButton();
-    void setIsDeleted(int);
-    int getIsDeleted(void);
-    sf::Sprite DeletedSprite;
+    void SetIsDeleted(int);
+    int GetIsDeleted(void);
+    sf::Sprite GetDeletedSprite();
 
 private:
     Set set;
     int isDeleted = 0;
+    sf::Sprite DeletedSprite;
     sf::Texture DeletedTexture;
 };
 
