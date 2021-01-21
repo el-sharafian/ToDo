@@ -21,7 +21,7 @@ public:
     Task();
     Task(std::string);
     void showTask(sf::RenderWindow &, Task);
-    void SetTask(std::string, int fav = 0, int deleted = 0, int done = 0);
+    void SetTask(std::string);
     std::string GetName();
     std::string getTask(void);
 

@@ -48,6 +48,11 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
                 EditButton editButton;
                 WindowDisplay(editButton);
             }
+           /* else if (FavoriteSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            {
+                FavoriteButton favoriteButton;
+                WindowDisplay(favoriteButton);
+            }*/
         }
     }
 }

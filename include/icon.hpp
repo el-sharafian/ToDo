@@ -9,6 +9,9 @@
 #include "deleteButton.hpp"
 #include "addButton.hpp"
 #include "Button.hpp"
+#include "deleteButton.hpp"
+#include "isDoneButton.hpp"
+#include "favoriteButton.hpp"
 
 class Icon
 {
@@ -24,8 +27,14 @@ private:
     sf::Sprite addSprite;
     sf::Texture editTexture;
     sf::Sprite editSprite;
+    sf::Texture DeleteTexture;
+    sf::Sprite DeleteSprite;
+    sf::Texture FavoriteTexture;
+    sf::Sprite FavoriteSprite;
+    sf::Texture IsDoneTexture;
+    sf::Sprite IsDoneSprite;
     sf::Font font;
-    Set set;    //sets Texts and Sprites
+    Set set; //sets Texts and Sprites
 };
 
 #endif // ICON_HPP

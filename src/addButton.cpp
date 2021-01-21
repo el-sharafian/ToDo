@@ -30,6 +30,11 @@ AddButton::AddButton()
     AddTaskText.setFont(Fontt);
     set.setText(AddTaskText, 140, 0, addTask);
 }
+ostream &operator<<(ostream &output, const Task &p)
+{
+    output<<p.TaskName;
+    return output;
+}
 
 void AddButton::DisplayWindow(AddButton &addButton)
 {
@@ -37,6 +42,8 @@ void AddButton::DisplayWindow(AddButton &addButton)
     txt.setFont(Fontt);
     txt.setPosition(sf::Vector2f(400, 300));
     txt.setFillColor(sf::Color::Black);
+
+    Task t;
 
     ofstream Tasks("../Tasks.txt", ios::app);
     if (!Tasks.is_open())
@@ -71,6 +78,7 @@ void AddButton::DisplayWindow(AddButton &addButton)
                 }
             }
             addButton.TaskNameText.setString(addButton.TaskName);
+            t.SetTask(addButton.TaskName);
             addButton.Win.clear();
             addButton.Win.draw(addButton.AddWindowSprite);
             addButton.Win.draw(addButton.AddTaskText);
@@ -80,5 +88,5 @@ void AddButton::DisplayWindow(AddButton &addButton)
         }
     }
     cout << addButton.TaskName;
-    Tasks << addButton.TaskName;
+    Tasks << t;
 }

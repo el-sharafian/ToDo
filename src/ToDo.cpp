@@ -21,6 +21,11 @@ ToDo::ToDo()
     }
     sprite.setTexture(backgrounfTexture);
 }
+istream &operator>>(istream &input, Task &p)
+{
+    input >> p.TaskName;
+    return input;
+}
 void ToDo::Loop()
 {
     fstream Tasks("../Tasks.txt", ios::app | ios::in);
@@ -28,8 +33,10 @@ void ToDo::Loop()
     {
         exit(EXIT_FAILURE);
     }
-    string a;
-    getline(Tasks, a);
+    //string a;
+    Task a;
+    Tasks >> a;
+    //getline(Tasks, a);
     bool showTasks = true;
     if (Tasks.tellp() == 0)
     {
@@ -41,14 +48,19 @@ void ToDo::Loop()
         cout << "++++++++++" << a << endl;
         // getline(Tasks, a);
     }
+    /* string c = a.getTask();
+    int index = c.size();
+    c = c[index - 1];*/
+
+    Task t;
+    t.SetTask(a.GetName());
+
     while (window->isOpen())
     {
-        Task t;
-        t.SetTask("mewaaa");
 
         sf::Text TaskText;
         Set set;
-        set.setText(TaskText, 100, 200, a);
+        set.setText(TaskText, 100, 200, a.GetName());
         TaskText.setFont(font);
         sf::Event evnt;
         while (window->pollEvent(evnt))
