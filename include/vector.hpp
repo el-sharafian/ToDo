@@ -1,5 +1,6 @@
 #ifndef VECTOR_H
 #define VECTOR_H
+
 #include <vector>
 #include <iostream>
 #include "task.hpp"
@@ -16,9 +17,9 @@ private:
 public:
     Vector();
     // ~Vector();
-    void push(std::string);
-    std::string get();
-    std::vector<Task>* assign();
+    void Push(std::string);
+    std::string Get();
+    std::vector<Task>* Assign();
 };
 
 #endif // VECTOR_H

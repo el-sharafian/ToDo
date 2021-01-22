@@ -14,17 +14,16 @@ class Task
 {
     friend std::istream &operator>>(std::istream &input, Task &p);
     friend std::ostream &operator<<(std::ostream &output, const std::vector<Task> &p);
-    // friend void add(std::vector<task> &,std::string);
     friend class File;
 
 public:
     Task();
     Task(std::string);
-    void showTask(sf::RenderWindow &, Task);
+    void ShowTask(sf::RenderWindow &, Task);
     void SetTask(std::string);
     void Event(sf::RenderWindow &, sf::Event);
     std::string GetName();
-    std::string getTask(void);
+    std::string GetTask(void);
     FavoriteButton favoriteButton;
     DeleteButton deleteButton;
     IsDoneButton isDoneButton;
@@ -32,7 +31,7 @@ public:
 private:
     sf::Font font;
     std::string TaskName;
-    bool check = false;
+    bool Check = false;
     Set set; // sets Texts and Sprites
 };
 

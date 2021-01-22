@@ -4,21 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/AddButton.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/Button.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/ToDo.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/deleteButton.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/deleteButton.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/editButton.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/editButton.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/favoriteButton.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/favoriteButton.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/file.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/file.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/icon.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/isDoneButton.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/isDoneButton.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/main.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/set.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/set.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/table.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/table.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/task.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/task.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/vector.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/vector.cpp.o"
-  "/mnt/c/Users/pc/desktop/t7/Todo/src/windowDisplay.cpp" "/mnt/c/Users/pc/desktop/t7/Todo/build/CMakeFiles/todo.dir/src/windowDisplay.cpp.o"
+  "/mnt/f/5/9/todo/src/AddButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
+  "/mnt/f/5/9/todo/src/Button.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
+  "/mnt/f/5/9/todo/src/ToDo.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
+  "/mnt/f/5/9/todo/src/deleteButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/deleteButton.cpp.o"
+  "/mnt/f/5/9/todo/src/editButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/editButton.cpp.o"
+  "/mnt/f/5/9/todo/src/favoriteButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/favoriteButton.cpp.o"
+  "/mnt/f/5/9/todo/src/file.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/file.cpp.o"
+  "/mnt/f/5/9/todo/src/icon.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
+  "/mnt/f/5/9/todo/src/isDoneButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/isDoneButton.cpp.o"
+  "/mnt/f/5/9/todo/src/main.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
+  "/mnt/f/5/9/todo/src/set.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/set.cpp.o"
+  "/mnt/f/5/9/todo/src/task.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/task.cpp.o"
+  "/mnt/f/5/9/todo/src/vector.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/vector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

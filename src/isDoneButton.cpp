@@ -4,23 +4,23 @@
 IsDoneButton::IsDoneButton()
 {
     std::string iconName = "../assets/icons/tick.png";
-    set.setTexture(IsDoneSprite, iconName, IsDoneTexture, 10, 50);
+    set.SetTexture(Sprite, iconName, Texture, 10, 50);
     iconName = "../assets/icons/notDone.png";
-    set.setTexture(NotDoneSprite, iconName, NotDoneTexture, 10, 50);
+    set.SetTexture(NotDoneSprite, iconName, NotDoneTexture, 10, 50);
 }
 sf::Sprite IsDoneButton::GetIsDoneSprite()
 {
-    return IsDoneSprite;
+    return Sprite;
 }
 sf::Sprite IsDoneButton::GetNotDoneSprite()
 {
     return NotDoneSprite;
 }
-void IsDoneButton::setIsDone(int check)
+void IsDoneButton::SetIsDone(int check)
 {
-    isDone = check;
+    IsDone = check;
 }
-int IsDoneButton::getIsDone(void)
+int IsDoneButton::GetIsDone(void)
 {
-    return isDone;
+    return IsDone;
 }

@@ -6,7 +6,7 @@
 #include "task.hpp"
 #include "vector.hpp"
 
-class File
+class File      // saving tasks in a file
 {
 public:
     File();

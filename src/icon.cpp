@@ -1,5 +1,4 @@
 #include "icon.hpp"
-#include "table.hpp"
 #include "ToDo.hpp"
 #include <iostream>
 #include <fstream>
@@ -18,12 +17,12 @@ Icon::Icon(std::string imgDirectory)
     font.loadFromFile("../assets/icons/f1.ttf");
 
     std::string iconName = imgDirectory + "/add.png";
-    set.setTexture(addSprite, iconName, addTexture, 10, 410);
+    set.SetTexture(AddSprite, iconName, AddTexture, 10, 410);
 
     iconName = imgDirectory + "/edit5.png";
-    set.setTexture(editSprite, iconName, editTexture, 685, 390);
+    set.SetTexture(EditSprite, iconName, EditTexture, 685, 390);
 }
-void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
+void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window)
 {
     FavoriteButton fav;
     
@@ -42,12 +41,12 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
     {
         if (evnt.mouseButton.button == sf::Mouse::Left)
         {
-            if (addSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            if (AddSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 AddButton addbutton;
                 addbutton.DisplayWindow(addbutton);
             }
-            else if (editSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            else if (EditSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 EditButton editButton;
                 WindowDisplay(editButton);
@@ -62,13 +61,13 @@ void Icon::iconEvents(sf::Event evnt, sf::RenderWindow &window)
         }
     }
 }
-sf::Sprite Icon::edit()
+sf::Sprite Icon::Edit()
 {
-    return editSprite;
+    return EditSprite;
 }
-sf::Sprite Icon::add()
+sf::Sprite Icon::Add()
 {
-    return addSprite;
+    return AddSprite;
 }
 void Icon::DrawIcons(sf::RenderWindow &window, sf::Sprite addSprite, sf::Sprite editSprite)
 {

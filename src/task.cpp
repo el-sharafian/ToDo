@@ -17,18 +17,17 @@ Task::Task(string imgDirectory)
         exit(EXIT_FAILURE);
     }
 }
-void Task::showTask(sf::RenderWindow &window, Task task)
+void Task::ShowTask(sf::RenderWindow &window, Task task)
 {
     sf::Text TName;
     TName.setFont(font);
-    set.setText(TName, 20, 50, task.GetName());
-    //TName.setString("aaaaa");
+    set.SetText(TName, 20, 50, task.GetName());
     TName.setCharacterSize(50);
     TName.setFillColor(sf::Color::Red);
     if (!task.deleteButton.GetIsDeleted())
     {
-        window.draw(task.deleteButton.GetDeletedSprite());
-        if (!task.isDoneButton.getIsDone())
+        window.draw(task.deleteButton.GetSprite());
+        if (!task.isDoneButton.GetIsDone())
         {
             window.draw(task.isDoneButton.GetIsDoneSprite());
         }
@@ -84,13 +83,9 @@ void Task::SetTask(string t)
 
     // Now the variable x holds the value 12345
     cout << "Value of x : " << z;
-    isDoneButton.setIsDone(z);
-
-    //favoriteButton.setIsFavorite(fav);
-    // deleteButton.setIsDeleted(deleted);
-    // isDoneButton.setIsDone(done);
+    isDoneButton.SetIsDone(z);
 }
-string Task::getTask()
+string Task::GetTask()
 {
     return TaskName;
 }

@@ -4,14 +4,13 @@
 FavoriteButton::FavoriteButton()
 {
     std::string iconName = "../assets/icons/favorite.png";
-    set.setTexture(FavoriteSprite, iconName, FavoriteTexture, 670, 50);
-
+    set.SetTexture(Sprite, iconName, Texture, 670, 50);
     iconName = "../assets/icons/notFavorite.png";
-    set.setTexture(NotFavoriteSprite, iconName, NotFavoriteTexture, 670, 50);
+    set.SetTexture(NotFavoriteSprite, iconName, NotFavoriteTexture, 670, 50);
 }
 sf::Sprite FavoriteButton::GetFavoriteSprite()
 {
-    return FavoriteSprite;
+    return Sprite;
 }
 sf::Sprite FavoriteButton::GetNotFavoriteSprite()
 {

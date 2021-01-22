@@ -16,19 +16,19 @@ using namespace std;
 
 AddButton::AddButton()
 {
-    Win.create(sf::VideoMode(600, 400), "add a task name");
-    if (AddWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
+    Win.create(sf::VideoMode(600, 200), "add a task name", sf::Style::Close);
+    if (Texture.loadFromFile("../assets/images/ax5.jpg"))
     {
         // error ...
     }
-    AddWindowSprite.setTexture(AddWindowTexture);
+    Sprite.setTexture(Texture);
 
     Fontt.loadFromFile("../assets/icons/f1.ttf");
 
     TaskNameText.setFont(Fontt);
-    set.setText(TaskNameText, 10, 50, TaskName);
+    set.SetText(TaskNameText, 10, 50, TaskName);
     AddTaskText.setFont(Fontt);
-    set.setText(AddTaskText, 140, 0, addTask);
+    set.SetText(AddTaskText, 140, 0, addTask);
 }
 ostream &operator<<(ostream &output, const vector<Task> &p)
 {
@@ -74,7 +74,7 @@ void AddButton::DisplayWindow(AddButton &addButton)
                 }
                 else if (evn.text.unicode < 128)
                 {
-                    if (addButton.TaskName.size() < 40)
+                    if (addButton.TaskName.size() < 35)
                     {
                         addButton.TaskName += static_cast<char>(evn.text.unicode);
                     }
@@ -83,7 +83,7 @@ void AddButton::DisplayWindow(AddButton &addButton)
             addButton.TaskNameText.setString(addButton.TaskName);
             //t.SetTask(addButton.TaskName);
             addButton.Win.clear();
-            addButton.Win.draw(addButton.AddWindowSprite);
+            addButton.Win.draw(addButton.Sprite);
             addButton.Win.draw(addButton.AddTaskText);
             addButton.Win.draw(addButton.TaskNameText);
             addButton.Win.draw(txt);

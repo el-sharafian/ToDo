@@ -22,7 +22,6 @@ private:
     sf::Sprite sprite;
     sf::Texture backgrounfTexture;
     std::string s;
-    // sf::Text t;
 };
 
 #endif // TODO_HPP

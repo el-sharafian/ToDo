@@ -6,13 +6,10 @@
 #include <fstream>
 #include <SFML/Graphics.hpp>
 #include "task.hpp"
-#include "windowDisplay.hpp"
-// #include "Button.hpp"
 #include "vector.hpp"
 
-class AddButton //: public Button
+class AddButton : public Button     // adds a task
 {
-
 public:
     AddButton();
     void DisplayWindow(AddButton &);
@@ -23,9 +20,6 @@ private:
     std::string TaskName = "";
     sf::Text TaskNameText;
     sf::RenderWindow Win;
-    sf::Texture AddWindowTexture;
-    sf::Sprite AddWindowSprite;
-    Set set;
     sf::Font Fontt;
 };
 

@@ -10,10 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/todo.dir/src/isDoneButton.cpp.o"
   "CMakeFiles/todo.dir/src/main.cpp.o"
   "CMakeFiles/todo.dir/src/set.cpp.o"
-  "CMakeFiles/todo.dir/src/table.cpp.o"
   "CMakeFiles/todo.dir/src/task.cpp.o"
   "CMakeFiles/todo.dir/src/vector.cpp.o"
-  "CMakeFiles/todo.dir/src/windowDisplay.cpp.o"
   "todo"
   "todo.pdb"
 )

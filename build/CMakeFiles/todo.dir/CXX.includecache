@@ -6,19 +6,13 @@
 
 #IncludeRegexTransform: 
 
-../include/addButton.hpp
-string
--
-vector
+../include/File.hpp
+iostream
 -
 fstream
 -
-SFML/Graphics.hpp
--
 task.hpp
 ../include/task.hpp
-windowDisplay.hpp
-../include/windowDisplay.hpp
 vector.hpp
 ../include/vector.hpp
 
@@ -41,16 +35,6 @@ SFML/Graphics.hpp
 -
 button.hpp
 ../include/button.hpp
-
-../include/file.hpp
-iostream
--
-fstream
--
-task.hpp
-../include/task.hpp
-vector.hpp
-../include/vector.hpp
 
 ../include/isDoneButton.hpp
 SFML/Graphics.hpp
@@ -90,27 +74,13 @@ iostream
 task.hpp
 ../include/task.hpp
 
-../include/windowDisplay.hpp
-../include/button.hpp
-../include/button.hpp
-
-/mnt/c/Users/pc/desktop/t7/Todo/src/AddButton.cpp
-addButton.hpp
-/mnt/c/Users/pc/desktop/t7/Todo/src/addButton.hpp
-set.hpp
-/mnt/c/Users/pc/desktop/t7/Todo/src/set.hpp
-SFML/Graphics.hpp
--
-SFML/Window.hpp
--
-SFML/System.hpp
--
+/mnt/f/5/9/todo/src/file.cpp
+File.hpp
+/mnt/f/5/9/todo/src/File.hpp
 iostream
 -
-cstdlib
+string
 -
-cstdlib
+fstream
 -
-file.hpp
-/mnt/c/Users/pc/desktop/t7/Todo/src/file.hpp
 

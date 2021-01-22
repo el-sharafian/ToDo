@@ -9,23 +9,23 @@ Vector::Vector()
 }
 Task t;
 //tasks.push_back(t);
-void Vector::push(string taskN)
+void Vector::Push(string taskN)
 {
 
     t.SetTask(taskN);
 
     tasks.push_back(t);
 }
-string Vector::get()
+string Vector::Get()
 {
     // Task t;
-    std::string b = t.getTask();
+    std::string b = t.GetTask();
     tasks.push_back(t);
     std::cout << b << std::endl;
 
     return b;
 }
-vector<Task> *Vector::assign()
+vector<Task> *Vector::Assign()
 {
     // vector<Task>& tasks;
     //cout << &tasks << endl;

@@ -4,22 +4,20 @@
 #include <SFML/Graphics.hpp>
 #include "button.hpp"
 
-class DeleteButton //: public Button
+// icon for deleting a task
+
+class DeleteButton : public Button
 {
     friend void WindowDisplay(Button &);
+    
 public:
     DeleteButton();
     void SetIsDeleted(int);
     int GetIsDeleted(void);
-    sf::Sprite GetDeletedSprite();
+    sf::Sprite GetSprite();
 
 private:
-    // sf::RenderWindow winp;
-    // sf::CircleShape c;
-    Set set;
     int isDeleted = 0;
-    sf::Sprite DeletedSprite;
-    sf::Texture DeletedTexture;
 };
 
 #endif // DELETEBUTTON_HPP

@@ -1,38 +1,33 @@
 #ifndef ICON_HPP
 #define ICON_HPP
 
-#include <string>
 #include <SFML/Graphics.hpp>
+#include <string>
 #include "task.hpp"
 #include "set.hpp"
 #include "editButton.hpp"
 #include "deleteButton.hpp"
 #include "addButton.hpp"
-#include "Button.hpp"
 #include "deleteButton.hpp"
 #include "isDoneButton.hpp"
 #include "favoriteButton.hpp"
 
-class Icon
+
+
+class Icon     // drawing icons
 {
 public:
     Icon(std::string);
-    void iconEvents(sf::Event, sf::RenderWindow &);
-    sf::Sprite edit();
-    sf::Sprite add();
+    sf::Sprite Edit();
+    sf::Sprite Add();
+    void IconEvents(sf::Event, sf::RenderWindow &);
     void DrawIcons(sf::RenderWindow &window, sf::Sprite, sf::Sprite);
 
 private:
-    sf::Texture addTexture;
-    sf::Sprite addSprite;
-    sf::Texture editTexture;
-    sf::Sprite editSprite;
-    sf::Texture DeleteTexture;
-    sf::Sprite DeleteSprite;
-    sf::Texture FavoriteTexture;
-    sf::Sprite FavoriteSprite;
-    sf::Texture IsDoneTexture;
-    sf::Sprite IsDoneSprite;
+    sf::Texture AddTexture;
+    sf::Sprite AddSprite;
+    sf::Texture EditTexture;
+    sf::Sprite EditSprite;
     sf::Font font;
     Set set; //sets Texts and Sprites
 };

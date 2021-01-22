@@ -46,5 +46,5 @@ string File::readFromFile(fstream &output, Vector &s)
     output.seekg(0, ios::beg);
     output.read(reinterpret_cast<char *>(&s), sizeof(s));
     //std::cout << s.get();
-    return s.get();
+    return s.Get();
 }
