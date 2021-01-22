@@ -28,14 +28,6 @@ void Task::showTask(sf::RenderWindow &window, Task task)
     if (!task.deleteButton.GetIsDeleted())
     {
         window.draw(task.deleteButton.GetDeletedSprite());
-        if (!task.favoriteButton.GetIsFavorite())
-        {
-            window.draw(task.favoriteButton.GetFavoriteSprite());
-        }
-        else
-        {
-            window.draw(task.favoriteButton.GetNotFavoriteSprite());
-        }
         if (!task.isDoneButton.getIsDone())
         {
             window.draw(task.isDoneButton.GetIsDoneSprite());

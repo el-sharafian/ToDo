@@ -14,6 +14,8 @@ public:
     sf::Sprite GetDeletedSprite();
 
 private:
+    // sf::RenderWindow winp;
+    // sf::CircleShape c;
     Set set;
     int isDeleted = 0;
     sf::Sprite DeletedSprite;

@@ -25,13 +25,13 @@ public:
     void Event(sf::RenderWindow &, sf::Event);
     std::string GetName();
     std::string getTask(void);
+    FavoriteButton favoriteButton;
+    DeleteButton deleteButton;
+    IsDoneButton isDoneButton;
 
 private:
     sf::Font font;
     std::string TaskName;
-    FavoriteButton favoriteButton;
-    DeleteButton deleteButton;
-    IsDoneButton isDoneButton;
     bool check = false;
     Set set; // sets Texts and Sprites
 };

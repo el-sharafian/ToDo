@@ -22,23 +22,22 @@ void WindowDisplay(Button &button)
                 }
                 if (evn.text.unicode == BACKSPACE_key)
                 {
-                     button.TaskNumber.erase(button.TaskNumber.size() - 1);
+                     button.TaskName.erase(button.TaskName.size() - 1);
                 }
-                else if (46 < evn.text.unicode && evn.text.unicode < 58)
+                else if (evn.text.unicode < 128)
                 {
-                    if (button.TaskNumber.size() < 5)
+                    if (button.TaskName.size() < 40)
                     {
-                        button.TaskNumber += static_cast<char>(evn.text.unicode);
+                        button.TaskName += static_cast<char>(evn.text.unicode);
                     }
                 }
-                button.TaskNumberText.setString(button.TaskNumber);
+                button.TaskNameText.setString(button.TaskName);
             }
-
             button.TaskText.setString(button.Task);
             button.win.clear();
             button.win.draw(button.Sprite);
             button.win.draw(button.TaskText);
-            button.win.draw(button.TaskNumberText);
+            button.win.draw(button.TaskNameText);
             button.win.display();
         }
     }

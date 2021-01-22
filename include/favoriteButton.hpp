@@ -13,6 +13,7 @@ public:
     int GetIsFavorite(void);
     sf::Sprite GetNotFavoriteSprite();
     sf::Sprite GetFavoriteSprite();
+    
 private:
     Set set;
     int IsFavorite = 0;

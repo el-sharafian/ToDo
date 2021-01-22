@@ -14,10 +14,10 @@ public:
     Button();
 
 protected:
-    std::string Task = "Enter the number of task \n";
+    std::string Task = "Enter the name of task \n";
     sf::Text TaskText;
-    std::string TaskNumber = "";
-    sf::Text TaskNumberText;
+    std::string TaskName = "";
+    sf::Text TaskNameText;
     sf::RenderWindow win;
     sf::Font font;
     sf::Texture Texture;
