@@ -30,9 +30,11 @@ AddButton::AddButton()
     AddTaskText.setFont(Fontt);
     set.setText(AddTaskText, 140, 0, addTask);
 }
-ostream &operator<<(ostream &output, const Task &p)
+ostream &operator<<(ostream &output, const vector<Task> &p)
 {
-    output<<p.TaskName;
+    int i = 0;
+    output << p[i].TaskName;
+    i++;
     return output;
 }
 
@@ -43,7 +45,8 @@ void AddButton::DisplayWindow(AddButton &addButton)
     txt.setPosition(sf::Vector2f(400, 300));
     txt.setFillColor(sf::Color::Black);
 
-    Task t;
+    vector<Task> v;
+    Task t(addButton.TaskName);
 
     ofstream Tasks("../Tasks.txt", ios::app);
     if (!Tasks.is_open())
@@ -78,7 +81,7 @@ void AddButton::DisplayWindow(AddButton &addButton)
                 }
             }
             addButton.TaskNameText.setString(addButton.TaskName);
-            t.SetTask(addButton.TaskName);
+            //t.SetTask(addButton.TaskName);
             addButton.Win.clear();
             addButton.Win.draw(addButton.AddWindowSprite);
             addButton.Win.draw(addButton.AddTaskText);
@@ -87,6 +90,12 @@ void AddButton::DisplayWindow(AddButton &addButton)
             addButton.Win.display();
         }
     }
+    t.SetTask(addButton.TaskName);
+    cout << "========" << t.GetName() << endl;
+    v.push_back(t);
+    cout << "++++++++++" << v[0].GetName() << endl;
+
     cout << addButton.TaskName;
-    Tasks << t;
+    Tasks << v <<"\n";
+    //fflush(stdin);
 }

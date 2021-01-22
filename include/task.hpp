@@ -13,7 +13,7 @@
 class Task
 {
     friend std::istream &operator>>(std::istream &input, Task &p);
-    friend std::ostream &operator<<(std::ostream &output, const Task &p);
+    friend std::ostream &operator<<(std::ostream &output, const std::vector<Task> &p);
     // friend void add(std::vector<task> &,std::string);
     friend class File;
 

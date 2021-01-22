@@ -9,7 +9,7 @@ bool DrawWindow()
     bool check;
     sf::RenderWindow window;
     window.create(sf::VideoMode(300, 150), "delete", sf::Style::None);
-    window.setPosition(sf::Vector2i(500,500));
+    window.setPosition(sf::Vector2i(500, 500));
     Set set;
     sf::Sprite Sprite;
     sf::Texture Texture;
@@ -17,14 +17,14 @@ bool DrawWindow()
     sf::Texture YesTexture;
     sf::Sprite NoSprite;
     sf::Texture NoTexture;
-    
+
     std::string iconName = "../assets/icons/t1.png";
     set.setTexture(YesSprite, iconName, YesTexture, 80, 50);
     iconName = "../assets/icons/cross.png";
     set.setTexture(NoSprite, iconName, NoTexture, 150, 50);
     iconName = "../assets/images/back.png";
     Texture.loadFromFile(iconName);
-    Sprite.setTexture(Texture);    
+    Sprite.setTexture(Texture);
     while (window.isOpen())
     {
         sf::Event evnt;
@@ -89,10 +89,21 @@ void ToDo::Loop()
     {
         exit(EXIT_FAILURE);
     }
-    //string a;
     Task a;
-    Tasks >> a;
-    //getline(Tasks, a);
+    vector<Task> tasks;
+    vector<sf::Text> TaskName;
+    sf::Text Task1;
+
+    while (!Tasks.fail() && !Tasks.eof())
+    {
+        Tasks >> a;
+        tasks.push_back(a);
+    }
+    for (size_t i = 0; i < tasks.size(); i++)
+    {
+        cout << tasks[i].GetName() << endl;
+    }
+
     bool showTasks = true;
     if (Tasks.tellp() == 0)
     {
@@ -101,8 +112,14 @@ void ToDo::Loop()
     else
     {
         Tasks.seekg(ios::beg);
-        cout << "++++++++++" << a << endl;
+       // cout << "++++++++++" << a << endl;
         // getline(Tasks, a);
+    }
+    for (size_t i = 0; i < tasks.size(); i++)
+    {
+        Task1.setFont(font);
+        Task1.setString(tasks[i].GetName());
+        TaskName.push_back(Task1);
     }
     Task tsk;
     tsk.SetTask(a.GetName());
@@ -151,11 +168,19 @@ void ToDo::Loop()
             //     cout << "/////////3333333333////";
             // }
         }
+        for (size_t i = 0; i < tasks.size(); i++)
+        {
+            TaskName[i].setFillColor(sf::Color::Red);
+            TaskName[i].setPosition(sf::Vector2f(50, (i * 50)));
+        }
         window->clear();
         window->draw(sprite);
         icon->DrawIcons(*window, icon->add(), icon->edit());
         window->draw(text);
-        window->draw(TaskText);
+        for (size_t i = 0; i < tasks.size(); i++)
+        {
+            window->draw(TaskName[i]);
+        }
         if (!CheckDelete)
         {
             if (!CheckFav)
