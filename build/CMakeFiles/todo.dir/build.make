@@ -70,18 +70,18 @@ CMakeFiles/todo.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/main.cpp -o CMakeFiles/todo.dir/src/main.cpp.s
 
-CMakeFiles/todo.dir/src/icon.cpp.o: CMakeFiles/todo.dir/flags.make
-CMakeFiles/todo.dir/src/icon.cpp.o: ../src/icon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/todo.dir/src/icon.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/icon.cpp.o -c /mnt/f/5/10/todo/src/icon.cpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: CMakeFiles/todo.dir/flags.make
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../src/Icon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/todo.dir/src/Icon.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/Icon.cpp.o -c /mnt/f/5/10/todo/src/Icon.cpp
 
-CMakeFiles/todo.dir/src/icon.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/icon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/icon.cpp > CMakeFiles/todo.dir/src/icon.cpp.i
+CMakeFiles/todo.dir/src/Icon.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/Icon.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/Icon.cpp > CMakeFiles/todo.dir/src/Icon.cpp.i
 
-CMakeFiles/todo.dir/src/icon.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/icon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/icon.cpp -o CMakeFiles/todo.dir/src/icon.cpp.s
+CMakeFiles/todo.dir/src/Icon.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/Icon.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/Icon.cpp -o CMakeFiles/todo.dir/src/Icon.cpp.s
 
 CMakeFiles/todo.dir/src/ToDo.cpp.o: CMakeFiles/todo.dir/flags.make
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../src/ToDo.cpp
@@ -96,18 +96,18 @@ CMakeFiles/todo.dir/src/ToDo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/ToDo.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/ToDo.cpp -o CMakeFiles/todo.dir/src/ToDo.cpp.s
 
-CMakeFiles/todo.dir/src/task.cpp.o: CMakeFiles/todo.dir/flags.make
-CMakeFiles/todo.dir/src/task.cpp.o: ../src/task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/todo.dir/src/task.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/task.cpp.o -c /mnt/f/5/10/todo/src/task.cpp
+CMakeFiles/todo.dir/src/Task.cpp.o: CMakeFiles/todo.dir/flags.make
+CMakeFiles/todo.dir/src/Task.cpp.o: ../src/Task.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/todo.dir/src/Task.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/Task.cpp.o -c /mnt/f/5/10/todo/src/Task.cpp
 
-CMakeFiles/todo.dir/src/task.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/task.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/task.cpp > CMakeFiles/todo.dir/src/task.cpp.i
+CMakeFiles/todo.dir/src/Task.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/Task.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/Task.cpp > CMakeFiles/todo.dir/src/Task.cpp.i
 
-CMakeFiles/todo.dir/src/task.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/task.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/task.cpp -o CMakeFiles/todo.dir/src/task.cpp.s
+CMakeFiles/todo.dir/src/Task.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/Task.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/Task.cpp -o CMakeFiles/todo.dir/src/Task.cpp.s
 
 CMakeFiles/todo.dir/src/AddButton.cpp.o: CMakeFiles/todo.dir/flags.make
 CMakeFiles/todo.dir/src/AddButton.cpp.o: ../src/AddButton.cpp
@@ -122,31 +122,31 @@ CMakeFiles/todo.dir/src/AddButton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/AddButton.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/AddButton.cpp -o CMakeFiles/todo.dir/src/AddButton.cpp.s
 
-CMakeFiles/todo.dir/src/vector.cpp.o: CMakeFiles/todo.dir/flags.make
-CMakeFiles/todo.dir/src/vector.cpp.o: ../src/vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/todo.dir/src/vector.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/vector.cpp.o -c /mnt/f/5/10/todo/src/vector.cpp
+CMakeFiles/todo.dir/src/Vector.cpp.o: CMakeFiles/todo.dir/flags.make
+CMakeFiles/todo.dir/src/Vector.cpp.o: ../src/Vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/todo.dir/src/Vector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/Vector.cpp.o -c /mnt/f/5/10/todo/src/Vector.cpp
 
-CMakeFiles/todo.dir/src/vector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/vector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/vector.cpp > CMakeFiles/todo.dir/src/vector.cpp.i
+CMakeFiles/todo.dir/src/Vector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/Vector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/Vector.cpp > CMakeFiles/todo.dir/src/Vector.cpp.i
 
-CMakeFiles/todo.dir/src/vector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/vector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/vector.cpp -o CMakeFiles/todo.dir/src/vector.cpp.s
+CMakeFiles/todo.dir/src/Vector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/Vector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/Vector.cpp -o CMakeFiles/todo.dir/src/Vector.cpp.s
 
-CMakeFiles/todo.dir/src/editButton.cpp.o: CMakeFiles/todo.dir/flags.make
-CMakeFiles/todo.dir/src/editButton.cpp.o: ../src/editButton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/todo.dir/src/editButton.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/editButton.cpp.o -c /mnt/f/5/10/todo/src/editButton.cpp
+CMakeFiles/todo.dir/src/EditButton.cpp.o: CMakeFiles/todo.dir/flags.make
+CMakeFiles/todo.dir/src/EditButton.cpp.o: ../src/EditButton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/todo.dir/src/EditButton.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/EditButton.cpp.o -c /mnt/f/5/10/todo/src/EditButton.cpp
 
-CMakeFiles/todo.dir/src/editButton.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/editButton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/editButton.cpp > CMakeFiles/todo.dir/src/editButton.cpp.i
+CMakeFiles/todo.dir/src/EditButton.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/EditButton.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/EditButton.cpp > CMakeFiles/todo.dir/src/EditButton.cpp.i
 
-CMakeFiles/todo.dir/src/editButton.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/editButton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/editButton.cpp -o CMakeFiles/todo.dir/src/editButton.cpp.s
+CMakeFiles/todo.dir/src/EditButton.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/EditButton.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/EditButton.cpp -o CMakeFiles/todo.dir/src/EditButton.cpp.s
 
 CMakeFiles/todo.dir/src/Button.cpp.o: CMakeFiles/todo.dir/flags.make
 CMakeFiles/todo.dir/src/Button.cpp.o: ../src/Button.cpp
@@ -161,58 +161,58 @@ CMakeFiles/todo.dir/src/Button.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/Button.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/Button.cpp -o CMakeFiles/todo.dir/src/Button.cpp.s
 
-CMakeFiles/todo.dir/src/set.cpp.o: CMakeFiles/todo.dir/flags.make
-CMakeFiles/todo.dir/src/set.cpp.o: ../src/set.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/todo.dir/src/set.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/set.cpp.o -c /mnt/f/5/10/todo/src/set.cpp
+CMakeFiles/todo.dir/src/Set.cpp.o: CMakeFiles/todo.dir/flags.make
+CMakeFiles/todo.dir/src/Set.cpp.o: ../src/Set.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/todo.dir/src/Set.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/Set.cpp.o -c /mnt/f/5/10/todo/src/Set.cpp
 
-CMakeFiles/todo.dir/src/set.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/set.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/set.cpp > CMakeFiles/todo.dir/src/set.cpp.i
+CMakeFiles/todo.dir/src/Set.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/Set.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/Set.cpp > CMakeFiles/todo.dir/src/Set.cpp.i
 
-CMakeFiles/todo.dir/src/set.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/set.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/set.cpp -o CMakeFiles/todo.dir/src/set.cpp.s
+CMakeFiles/todo.dir/src/Set.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/Set.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/Set.cpp -o CMakeFiles/todo.dir/src/Set.cpp.s
 
-CMakeFiles/todo.dir/src/file.cpp.o: CMakeFiles/todo.dir/flags.make
-CMakeFiles/todo.dir/src/file.cpp.o: ../src/file.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/todo.dir/src/file.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/file.cpp.o -c /mnt/f/5/10/todo/src/file.cpp
+CMakeFiles/todo.dir/src/File.cpp.o: CMakeFiles/todo.dir/flags.make
+CMakeFiles/todo.dir/src/File.cpp.o: ../src/File.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/todo.dir/src/File.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/todo.dir/src/File.cpp.o -c /mnt/f/5/10/todo/src/File.cpp
 
-CMakeFiles/todo.dir/src/file.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/file.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/file.cpp > CMakeFiles/todo.dir/src/file.cpp.i
+CMakeFiles/todo.dir/src/File.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/todo.dir/src/File.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/5/10/todo/src/File.cpp > CMakeFiles/todo.dir/src/File.cpp.i
 
-CMakeFiles/todo.dir/src/file.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/file.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/file.cpp -o CMakeFiles/todo.dir/src/file.cpp.s
+CMakeFiles/todo.dir/src/File.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/todo.dir/src/File.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/5/10/todo/src/File.cpp -o CMakeFiles/todo.dir/src/File.cpp.s
 
 # Object files for target todo
 todo_OBJECTS = \
 "CMakeFiles/todo.dir/src/main.cpp.o" \
-"CMakeFiles/todo.dir/src/icon.cpp.o" \
+"CMakeFiles/todo.dir/src/Icon.cpp.o" \
 "CMakeFiles/todo.dir/src/ToDo.cpp.o" \
-"CMakeFiles/todo.dir/src/task.cpp.o" \
+"CMakeFiles/todo.dir/src/Task.cpp.o" \
 "CMakeFiles/todo.dir/src/AddButton.cpp.o" \
-"CMakeFiles/todo.dir/src/vector.cpp.o" \
-"CMakeFiles/todo.dir/src/editButton.cpp.o" \
+"CMakeFiles/todo.dir/src/Vector.cpp.o" \
+"CMakeFiles/todo.dir/src/EditButton.cpp.o" \
 "CMakeFiles/todo.dir/src/Button.cpp.o" \
-"CMakeFiles/todo.dir/src/set.cpp.o" \
-"CMakeFiles/todo.dir/src/file.cpp.o"
+"CMakeFiles/todo.dir/src/Set.cpp.o" \
+"CMakeFiles/todo.dir/src/File.cpp.o"
 
 # External object files for target todo
 todo_EXTERNAL_OBJECTS =
 
 todo: CMakeFiles/todo.dir/src/main.cpp.o
-todo: CMakeFiles/todo.dir/src/icon.cpp.o
+todo: CMakeFiles/todo.dir/src/Icon.cpp.o
 todo: CMakeFiles/todo.dir/src/ToDo.cpp.o
-todo: CMakeFiles/todo.dir/src/task.cpp.o
+todo: CMakeFiles/todo.dir/src/Task.cpp.o
 todo: CMakeFiles/todo.dir/src/AddButton.cpp.o
-todo: CMakeFiles/todo.dir/src/vector.cpp.o
-todo: CMakeFiles/todo.dir/src/editButton.cpp.o
+todo: CMakeFiles/todo.dir/src/Vector.cpp.o
+todo: CMakeFiles/todo.dir/src/EditButton.cpp.o
 todo: CMakeFiles/todo.dir/src/Button.cpp.o
-todo: CMakeFiles/todo.dir/src/set.cpp.o
-todo: CMakeFiles/todo.dir/src/file.cpp.o
+todo: CMakeFiles/todo.dir/src/Set.cpp.o
+todo: CMakeFiles/todo.dir/src/File.cpp.o
 todo: CMakeFiles/todo.dir/build.make
 todo: CMakeFiles/todo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/f/5/10/todo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable todo"

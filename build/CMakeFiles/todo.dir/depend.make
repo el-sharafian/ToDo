@@ -12,6 +12,37 @@ CMakeFiles/todo.dir/src/Button.cpp.o: ../include/button.hpp
 CMakeFiles/todo.dir/src/Button.cpp.o: ../include/set.hpp
 CMakeFiles/todo.dir/src/Button.cpp.o: ../src/Button.cpp
 
+CMakeFiles/todo.dir/src/EditButton.cpp.o: ../include/button.hpp
+CMakeFiles/todo.dir/src/EditButton.cpp.o: ../include/editButton.hpp
+CMakeFiles/todo.dir/src/EditButton.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/EditButton.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/EditButton.cpp.o: ../src/EditButton.cpp
+
+CMakeFiles/todo.dir/src/File.cpp.o: ../include/File.hpp
+CMakeFiles/todo.dir/src/File.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/File.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/File.cpp.o: ../include/vector.hpp
+CMakeFiles/todo.dir/src/File.cpp.o: ../src/File.cpp
+
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/AddButton.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/ToDo.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/addButton.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/button.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/editButton.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/file.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/icon.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../include/vector.hpp
+CMakeFiles/todo.dir/src/Icon.cpp.o: ../src/Icon.cpp
+
+CMakeFiles/todo.dir/src/Set.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/Set.cpp.o: ../src/Set.cpp
+
+CMakeFiles/todo.dir/src/Task.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/Task.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/Task.cpp.o: ../src/Task.cpp
+
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/AddButton.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/addButton.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/button.hpp
@@ -23,29 +54,10 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/todo.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/vector.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../src/ToDo.cpp
 
-CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/button.hpp
-CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/editButton.hpp
-CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/set.hpp
-CMakeFiles/todo.dir/src/editButton.cpp.o: ../include/task.hpp
-CMakeFiles/todo.dir/src/editButton.cpp.o: ../src/editButton.cpp
-
-CMakeFiles/todo.dir/src/file.cpp.o: ../include/File.hpp
-CMakeFiles/todo.dir/src/file.cpp.o: ../include/set.hpp
-CMakeFiles/todo.dir/src/file.cpp.o: ../include/task.hpp
-CMakeFiles/todo.dir/src/file.cpp.o: ../include/vector.hpp
-CMakeFiles/todo.dir/src/file.cpp.o: ../src/file.cpp
-
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/AddButton.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/ToDo.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/addButton.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/button.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/editButton.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/file.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/icon.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/set.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/task.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../include/vector.hpp
-CMakeFiles/todo.dir/src/icon.cpp.o: ../src/icon.cpp
+CMakeFiles/todo.dir/src/Vector.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/Vector.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/Vector.cpp.o: ../include/vector.hpp
+CMakeFiles/todo.dir/src/Vector.cpp.o: ../src/Vector.cpp
 
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/AddButton.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/ToDo.hpp
@@ -57,16 +69,4 @@ CMakeFiles/todo.dir/src/main.cpp.o: ../include/set.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/vector.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../src/main.cpp
-
-CMakeFiles/todo.dir/src/set.cpp.o: ../include/set.hpp
-CMakeFiles/todo.dir/src/set.cpp.o: ../src/set.cpp
-
-CMakeFiles/todo.dir/src/task.cpp.o: ../include/set.hpp
-CMakeFiles/todo.dir/src/task.cpp.o: ../include/task.hpp
-CMakeFiles/todo.dir/src/task.cpp.o: ../src/task.cpp
-
-CMakeFiles/todo.dir/src/vector.cpp.o: ../include/set.hpp
-CMakeFiles/todo.dir/src/vector.cpp.o: ../include/task.hpp
-CMakeFiles/todo.dir/src/vector.cpp.o: ../include/vector.hpp
-CMakeFiles/todo.dir/src/vector.cpp.o: ../src/vector.cpp
 
