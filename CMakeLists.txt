@@ -9,8 +9,7 @@ include_directories(include)
 add_executable(todo src/main.cpp src/icon.cpp src/ToDo.cpp 
                  src/task.cpp src/AddButton.cpp
                  src/vector.cpp src/editButton.cpp 
-                 src/deleteButton.cpp src/Button.cpp
-                 src/set.cpp src/favoriteButton.cpp
-                 src/isDoneButton.cpp src/file.cpp )
+                 src/Button.cpp src/set.cpp 
+                 src/file.cpp )
 
 target_link_libraries(todo sfml-window sfml-system sfml-graphics)

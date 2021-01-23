@@ -1,6 +1,5 @@
 #include <iostream>
 #include "../include/task.hpp"
-//#include "../include/table.hpp"
 #include <random>
 #include <ctime>
 #include <sstream>
@@ -17,34 +16,6 @@ Task::Task(string imgDirectory)
         exit(EXIT_FAILURE);
     }
 }
-void Task::ShowTask(sf::RenderWindow &window, Task task)
-{
-    sf::Text TName;
-    TName.setFont(font);
-    set.SetText(TName, 20, 50, task.GetName());
-    TName.setCharacterSize(50);
-    TName.setFillColor(sf::Color::Red);
-    if (!task.deleteButton.GetIsDeleted())
-    {
-        window.draw(task.deleteButton.GetSprite());
-        if (!task.isDoneButton.GetIsDone())
-        {
-            window.draw(task.isDoneButton.GetIsDoneSprite());
-        }
-        else
-        {
-            window.draw(task.isDoneButton.GetNotDoneSprite());
-        }
-        window.draw(TName);
-    }
-}
-void Task::Event(sf::RenderWindow &window, sf::Event evnt)
-{
-    if ((favoriteButton.GetNotFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y))))
-    {
-        window.draw(favoriteButton.GetFavoriteSprite());
-    }
-}
 void Task::SetTask(string t)
 {
     TaskName = t;
@@ -59,7 +30,8 @@ void Task::SetTask(string t)
 
     // Now the variable x holds the value 12345
     cout << "Value of x : " << x;
-    favoriteButton.SetIsFavorite(x);
+    // favoriteButton.SetIsFavorite(x);
+    IsFavorite = x;
 
     string d = TaskName;
     d = d[index - 2]; //the second int for delete
@@ -71,7 +43,8 @@ void Task::SetTask(string t)
 
     // Now the variable x holds the value 12345
     cout << "Value of x : " << y;
-    deleteButton.SetIsDeleted(y);
+    // deleteButton.SetIsDeleted(y);
+    IsDeleted = x;
 
     string dn = TaskName;
     dn = dn[index - 1]; //the third int for isDone
@@ -83,7 +56,8 @@ void Task::SetTask(string t)
 
     // Now the variable x holds the value 12345
     cout << "Value of x : " << z;
-    isDoneButton.SetIsDone(z);
+    // isDoneButton.SetIsDone(z);
+    IsDone = x;
 }
 string Task::GetTask()
 {

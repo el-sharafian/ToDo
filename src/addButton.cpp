@@ -17,7 +17,7 @@ using namespace std;
 AddButton::AddButton()
 {
     Win.create(sf::VideoMode(600, 200), "add a task name", sf::Style::Close);
-    if (Texture.loadFromFile("../assets/images/background2.jpg"))
+    if (Texture.loadFromFile("../assets/images/background2.png"))
     {
         // error ...
     }
@@ -29,6 +29,7 @@ AddButton::AddButton()
     set.SetText(TaskNameText, 10, 50, TaskName);
     AddTaskText.setFont(Fontt);
     set.SetText(AddTaskText, 140, 0, addTask);
+    AddTaskText.setFillColor(sf::Color(253, 173, 173));
 }
 ostream &operator<<(ostream &output, const vector<Task> &p)
 {
@@ -37,7 +38,6 @@ ostream &operator<<(ostream &output, const vector<Task> &p)
     i++;
     return output;
 }
-
 void AddButton::DisplayWindow(AddButton &addButton)
 {
     sf::Text txt;

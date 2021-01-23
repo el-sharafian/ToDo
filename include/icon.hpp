@@ -6,13 +6,7 @@
 #include "task.hpp"
 #include "set.hpp"
 #include "editButton.hpp"
-#include "deleteButton.hpp"
 #include "addButton.hpp"
-#include "deleteButton.hpp"
-#include "isDoneButton.hpp"
-#include "favoriteButton.hpp"
-
-
 
 class Icon     // drawing icons
 {

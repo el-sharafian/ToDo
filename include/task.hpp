@@ -1,14 +1,11 @@
 #ifndef TASK_H
 #define TASK_H
 
-#include "set.hpp"
-#include "../include/deleteButton.hpp"
-#include "favoriteButton.hpp"
-#include "isDoneButton.hpp"
 #include <string>
 #include <vector>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "set.hpp"
 
 class Task
 {
@@ -19,20 +16,19 @@ class Task
 public:
     Task();
     Task(std::string);
-    void ShowTask(sf::RenderWindow &, Task);
     void SetTask(std::string);
     void Event(sf::RenderWindow &, sf::Event);
     std::string GetName();
     std::string GetTask(void);
-    FavoriteButton favoriteButton;
-    DeleteButton deleteButton;
-    IsDoneButton isDoneButton;
 
 private:
+    int IsFavorite;
+    int IsDeleted;
+    int IsDone;
     sf::Font font;
     std::string TaskName;
     bool Check = false;
-    Set set; // sets Texts and Sprites
+    Set set;    // sets Texts and Sprites
 };
 
 #endif

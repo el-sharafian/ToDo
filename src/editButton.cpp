@@ -2,28 +2,33 @@
 
 #define Enter_key 13
 #define BACKSPACE_key 8
+#define ESCAPE_key 27
 
 EditButton::EditButton()
 {
-    Texture.loadFromFile("../assets/images/background2.jpg");
+    Texture.loadFromFile("../assets/images/background2.png");
     Sprite.setTexture(Texture);
-    win.create(sf::VideoMode(600, 200), "edit a task", sf::Style::Close);
+    win.create(sf::VideoMode(600, 300), "edit a task", sf::Style::Close);
 
     font.loadFromFile("../assets/icons/f1.ttf");
 
     TaskText.setFont(font);
-    set.SetText(TaskText, 110, 0, Task);
+    set.SetText(TaskText, 120, 0, Task);
     TaskText.setFillColor(sf::Color(253, 173, 173));
 
     TaskNameText.setFont(font);
-    set.SetText(TaskNameText, 5, 50, TaskName);
+    set.SetText(TaskNameText, 5, 40, TaskName);
 
     NameText.setFont(font);
-    set.SetText(NameText, 120, 95, Name);
+    set.SetText(NameText, 135, 95, Name);
     NameText.setFillColor(sf::Color(253, 173, 173));
 
     NewNameText.setFont(font);
-    set.SetText(NewNameText, 5, 145, NewName);
+    set.SetText(NewNameText, 5, 135, NewName);
+
+    Text.setFont(font);
+    set.SetText(Text, 150, 270, TextString);
+    Text.setCharacterSize(20);
 }
 void WindowDisplay(EditButton &button)
 {
@@ -45,7 +50,10 @@ void WindowDisplay(EditButton &button)
                 }
                 if (evn.text.unicode == BACKSPACE_key)
                 {
-                    button.TaskName.erase(button.TaskName.size() - 1);
+                    if (!IsNameEntered)
+                        button.TaskName.erase(button.TaskName.size() - 1);
+                    else
+                        button.NewName.erase(button.NewName.size() - 1);
                 }
                 else if (evn.text.unicode < 128)
                 {
@@ -58,6 +66,10 @@ void WindowDisplay(EditButton &button)
                     }
                     else
                     {
+                        if (evn.text.unicode == ESCAPE_key)
+                        {
+                            button.win.close();
+                        }
                         if (button.NewName.size() < 35)
                         {
                             button.NewName += static_cast<char>(evn.text.unicode);
@@ -77,6 +89,7 @@ void WindowDisplay(EditButton &button)
             {
                 button.win.draw(button.NameText);
                 button.win.draw(button.NewNameText);
+                button.win.draw(button.Text);
             }
             button.win.display();
         }

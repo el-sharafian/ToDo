@@ -12,7 +12,6 @@ public:
     ToDo();
     void Loop();
     ~ToDo();
-    Task SetTask(std::string);
 
 private:
     sf::RenderWindow *window;
@@ -21,7 +20,7 @@ private:
     sf::Font font2;
     sf::Text text;
     sf::Sprite sprite;
-    sf::Texture backgrounfTexture;
+    sf::Texture backgroundTexture;
     std::string s;
 };
 

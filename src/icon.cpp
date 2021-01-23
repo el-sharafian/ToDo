@@ -23,9 +23,7 @@ Icon::Icon(std::string imgDirectory)
     set.SetTexture(EditSprite, iconName, EditTexture, 985, 615);
 }
 void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window)
-{
-    FavoriteButton fav;
-    
+{    
     Task tsk;
     sf::Text taskNameText;
     sf::Text txt;
@@ -50,13 +48,6 @@ void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window)
             {
                 EditButton editButton;
                 WindowDisplay(editButton);
-            }
-            else if (fav.GetNotFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)) )
-            {
-                tsk.Event(window, evnt);
-                window.draw(fav.GetFavoriteSprite());
-
-                // window.close();
             }
         }
     }

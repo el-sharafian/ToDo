@@ -5,13 +5,15 @@
 #include "task.hpp"
 #include "button.hpp"
 
-// icon for editing task's name
-
-class EditButton : public Button
+class EditButton : public Button    // icon for editing task's name
 {
     friend void WindowDisplay(EditButton &);
 
 public:
+    EditButton();
+    sf::RenderWindow win;
+
+private:
     std::string Task = "Enter the name of task \n";
     sf::Text TaskText;
     std::string TaskName = "";
@@ -20,8 +22,8 @@ public:
     sf::Text NameText;
     std::string NewName = "";
     sf::Text NewNameText;
-    EditButton();
-    sf::RenderWindow win;
+    sf::Text Text;
+    std::string TextString = "Press Escape to change the name";
 };
 
 #endif // EDITBUTTON_HPP

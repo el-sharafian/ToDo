@@ -8,13 +8,16 @@
 #include "task.hpp"
 #include "vector.hpp"
 
-class AddButton : public Button     // adds a task
+class AddButton     // adds a task
 {
 public:
     AddButton();
     void DisplayWindow(AddButton &);
 
 private:
+    Set set;
+    sf::Texture Texture;
+    sf::Sprite Sprite;
     std::string addTask = "Enter name of your task \n";
     sf::Text AddTaskText;
     std::string TaskName = "";
