@@ -4,12 +4,12 @@
 #include <iostream>
 using namespace std;
 
-bool DrawWindow()       //draw a window if user press delete icon
+bool DrawWindow() //draw a window if user press delete icon
 {
     bool check;
     sf::RenderWindow window;
-    window.create(sf::VideoMode(300, 150), "delete", sf::Style::None);
-    window.setPosition(sf::Vector2i(500, 500));
+    window.create(sf::VideoMode(300, 150), "delete", sf::Style::Close);
+    // window.setPosition(sf::Vector2i(500, 500));
     Set set;
     sf::Sprite Sprite;
     sf::Texture Texture;
@@ -18,12 +18,12 @@ bool DrawWindow()       //draw a window if user press delete icon
     sf::Sprite NoSprite;
     sf::Texture NoTexture;
     sf::Text text;
-
-    set.SetText(text, 0,0,"Do you want to delete this task?");
-    std::string iconName = "../assets/icons/t1.png";
-    set.SetTexture(YesSprite, iconName, YesTexture, 80, 50);
+    string a = "Do you want to delete this task?";
+    set.SetText(text, 10, 10, a);
+    std::string iconName = "../assets/icons/cross1.png";
+    set.SetTexture(YesSprite, iconName, YesTexture, 40, 50);
     iconName = "../assets/icons/cross.png";
-    set.SetTexture(NoSprite, iconName, NoTexture, 150, 50);
+    set.SetTexture(NoSprite, iconName, NoTexture, 130, 50);
     iconName = "../assets/images/back.png";
     Texture.loadFromFile(iconName);
     Sprite.setTexture(Texture);
@@ -43,8 +43,8 @@ bool DrawWindow()       //draw a window if user press delete icon
             }
             if (NoSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
-                window.close();
                 check = false;
+                window.close();
             }
             window.clear();
             window.draw(Sprite);
@@ -56,19 +56,19 @@ bool DrawWindow()       //draw a window if user press delete icon
     }
     return check;
 }
-
 ToDo::ToDo()
 {
     Set set;
-    window = new sf::RenderWindow(sf::VideoMode(800, 500), "ToDO");
+    window = new sf::RenderWindow(sf::VideoMode(1100, 735), "ToDO");
     icon = new Icon("../assets/icons");
 
     font.loadFromFile("../assets/icons/font.ttf");
+    font2.loadFromFile("../assets/icons/f1.ttf");
 
     text.setFont(font);
-    set.SetText(text, 300, 0, "Make a ToDo list");
+    set.SetText(text, 420, 0, "Make a ToDo list");
 
-    if (!backgrounfTexture.loadFromFile("../assets/images/ax5.jpg"))
+    if (!backgrounfTexture.loadFromFile("../assets/images/background.jpg"))
     {
         // error...
     }
@@ -76,7 +76,8 @@ ToDo::ToDo()
 }
 istream &operator>>(istream &input, Task &p)
 {
-    input >> p.TaskName;
+    getline(input, p.TaskName);
+    // input >> p.TaskName;
     return input;
 }
 void ToDo::Loop()
@@ -87,6 +88,13 @@ void ToDo::Loop()
     FavoriteButton fav;
     IsDoneButton IsDne;
     DeleteButton dlt;
+    sf::Texture BinTexture;
+    BinTexture.loadFromFile("../assets/icons/bin.png");
+    sf::Texture FavoriteTexture;
+    FavoriteTexture.loadFromFile("../assets/icons/favorite.png");
+    sf::Texture IsDoneTexture;
+    IsDoneTexture.loadFromFile("../assets/icons/done.png");
+
     fstream Tasks("../Tasks.txt", ios::app | ios::in);
     if (!Tasks.is_open())
     {
@@ -94,8 +102,12 @@ void ToDo::Loop()
     }
     Task a;
     vector<Task> tasks;
+    vector<sf::Sprite> BinSprite(50);
+    vector<sf::Sprite> FavoriteSprite(50);
+    vector<sf::Sprite> IsDoneSprite(50);
     vector<sf::Text> TaskName;
     sf::Text Task1;
+    Task tsk;
 
     while (!Tasks.fail() && !Tasks.eof())
     {
@@ -118,11 +130,10 @@ void ToDo::Loop()
     }
     for (size_t i = 0; i < tasks.size(); i++)
     {
-        Task1.setFont(font);
+        Task1.setFont(font2);
         Task1.setString(tasks[i].GetName());
         TaskName.push_back(Task1);
     }
-    Task tsk;
     tsk.SetTask(a.GetName());
 
     while (window->isOpen())
@@ -150,23 +161,36 @@ void ToDo::Loop()
             {
                 text.setFillColor(sf::Color::Black);
             }
-            if (dlt.GetSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+
+            for (size_t i = 0; i < tasks.size(); i++)
             {
-                CheckDelete = DrawWindow();
+                if (BinSprite[i].getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+                {
+                    CheckDelete = DrawWindow();
+                }
             }
-            else if (IsDne.GetNotDoneSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
-            {
-                CheckIsDne = 1;
-            }
-            if (fav.GetNotFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
-            {
-                CheckFav = true;
-            }
+
+            //
+            // else if (IsDne.GetNotDoneSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            // {
+            //     CheckIsDne = 1;
+            // }
+            // if (fav.GetNotFavoriteSprite().getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
+            // {
+            //     CheckFav = true;
+            // }
         }
         for (size_t i = 0; i < tasks.size(); i++)
         {
-            TaskName[i].setFillColor(sf::Color::Red);
-            TaskName[i].setPosition(sf::Vector2f(50, (i * 50)));
+            TaskName[i].setFillColor(sf::Color::Black);
+            TaskName[i].setPosition(sf::Vector2f(50, (i * 50) + 50));
+            TaskName[i].setCharacterSize(30);
+            BinSprite[i].setTexture(BinTexture);
+            BinSprite[i].setPosition(sf::Vector2f(1050, (i * 50) + 50));
+            FavoriteSprite[i].setTexture(FavoriteTexture);
+            FavoriteSprite[i].setPosition(sf::Vector2f(1000, (i * 50) + 50));
+            IsDoneSprite[i].setTexture(IsDoneTexture);
+            IsDoneSprite[i].setPosition(sf::Vector2f(10, (i * 50) + 50));
         }
         window->clear();
         window->draw(sprite);
@@ -175,23 +199,26 @@ void ToDo::Loop()
         for (size_t i = 0; i < tasks.size(); i++)
         {
             window->draw(TaskName[i]);
+            window->draw(BinSprite[i]);
+            window->draw(FavoriteSprite[i]);
+            window->draw(IsDoneSprite[i]);
         }
-        if (!CheckDelete)
-        {
-            if (!CheckFav)
-            {
-                window->draw(tsk.favoriteButton.GetNotFavoriteSprite());
-            }
-            else
-            {
-                window->draw(tsk.favoriteButton.GetFavoriteSprite());
-            }
-            tsk.ShowTask(*window, tsk);
-            if (CheckIsDne)
-            {
-                window->draw(IsDne.GetIsDoneSprite());
-            }
-        }
+        // if (!CheckDelete)
+        // {
+        //     if (!CheckFav)
+        //     {
+        //         window->draw(tsk.favoriteButton.GetNotFavoriteSprite());
+        //     }
+        //     else
+        //     {
+        //         window->draw(tsk.favoriteButton.GetFavoriteSprite());
+        //     }
+        //     tsk.ShowTask(*window, tsk);
+        //     if (CheckIsDne)
+        //     {
+        //         window->draw(IsDne.GetIsDoneSprite());
+        //     }
+        // }
         window->display();
     }
 }

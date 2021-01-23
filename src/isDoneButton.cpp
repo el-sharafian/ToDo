@@ -3,7 +3,7 @@
 
 IsDoneButton::IsDoneButton()
 {
-    std::string iconName = "../assets/icons/tick.png";
+    std::string iconName = "../assets/icons/done.png";
     set.SetTexture(Sprite, iconName, Texture, 10, 50);
     iconName = "../assets/icons/notDone.png";
     set.SetTexture(NotDoneSprite, iconName, NotDoneTexture, 10, 50);

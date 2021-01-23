@@ -17,7 +17,7 @@ using namespace std;
 AddButton::AddButton()
 {
     Win.create(sf::VideoMode(600, 200), "add a task name", sf::Style::Close);
-    if (Texture.loadFromFile("../assets/images/ax5.jpg"))
+    if (Texture.loadFromFile("../assets/images/background2.jpg"))
     {
         // error ...
     }

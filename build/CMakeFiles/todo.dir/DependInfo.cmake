@@ -4,19 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/f/5/9/todo/src/AddButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
-  "/mnt/f/5/9/todo/src/Button.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
-  "/mnt/f/5/9/todo/src/ToDo.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
-  "/mnt/f/5/9/todo/src/deleteButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/deleteButton.cpp.o"
-  "/mnt/f/5/9/todo/src/editButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/editButton.cpp.o"
-  "/mnt/f/5/9/todo/src/favoriteButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/favoriteButton.cpp.o"
-  "/mnt/f/5/9/todo/src/file.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/file.cpp.o"
-  "/mnt/f/5/9/todo/src/icon.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
-  "/mnt/f/5/9/todo/src/isDoneButton.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/isDoneButton.cpp.o"
-  "/mnt/f/5/9/todo/src/main.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
-  "/mnt/f/5/9/todo/src/set.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/set.cpp.o"
-  "/mnt/f/5/9/todo/src/task.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/task.cpp.o"
-  "/mnt/f/5/9/todo/src/vector.cpp" "/mnt/f/5/9/todo/build/CMakeFiles/todo.dir/src/vector.cpp.o"
+  "/mnt/f/5/10/todo/src/AddButton.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
+  "/mnt/f/5/10/todo/src/Button.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
+  "/mnt/f/5/10/todo/src/ToDo.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
+  "/mnt/f/5/10/todo/src/deleteButton.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/deleteButton.cpp.o"
+  "/mnt/f/5/10/todo/src/editButton.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/editButton.cpp.o"
+  "/mnt/f/5/10/todo/src/favoriteButton.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/favoriteButton.cpp.o"
+  "/mnt/f/5/10/todo/src/file.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/file.cpp.o"
+  "/mnt/f/5/10/todo/src/icon.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/icon.cpp.o"
+  "/mnt/f/5/10/todo/src/isDoneButton.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/isDoneButton.cpp.o"
+  "/mnt/f/5/10/todo/src/main.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
+  "/mnt/f/5/10/todo/src/set.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/set.cpp.o"
+  "/mnt/f/5/10/todo/src/task.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/task.cpp.o"
+  "/mnt/f/5/10/todo/src/vector.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/vector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

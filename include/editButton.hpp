@@ -16,6 +16,10 @@ public:
     sf::Text TaskText;
     std::string TaskName = "";
     sf::Text TaskNameText;
+    std::string Name = "Enter the new name";
+    sf::Text NameText;
+    std::string NewName = "";
+    sf::Text NewNameText;
     EditButton();
     sf::RenderWindow win;
 };

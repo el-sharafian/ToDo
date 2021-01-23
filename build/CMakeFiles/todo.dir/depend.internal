@@ -11,11 +11,11 @@ CMakeFiles/todo.dir/src/AddButton.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/9/todo/src/AddButton.cpp
+ /mnt/f/5/10/todo/src/AddButton.cpp
 CMakeFiles/todo.dir/src/Button.cpp.o
  ../include/button.hpp
  ../include/set.hpp
- /mnt/f/5/9/todo/src/Button.cpp
+ /mnt/f/5/10/todo/src/Button.cpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/AddButton.hpp
  ../include/addButton.hpp
@@ -29,12 +29,12 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/task.hpp
  ../include/todo.hpp
  ../include/vector.hpp
- /mnt/f/5/9/todo/src/ToDo.cpp
+ /mnt/f/5/10/todo/src/ToDo.cpp
 CMakeFiles/todo.dir/src/deleteButton.cpp.o
  ../include/button.hpp
  ../include/deleteButton.hpp
  ../include/set.hpp
- /mnt/f/5/9/todo/src/deleteButton.cpp
+ /mnt/f/5/10/todo/src/deleteButton.cpp
 CMakeFiles/todo.dir/src/editButton.cpp.o
  ../include/button.hpp
  ../include/deleteButton.hpp
@@ -43,12 +43,12 @@ CMakeFiles/todo.dir/src/editButton.cpp.o
  ../include/isDoneButton.hpp
  ../include/set.hpp
  ../include/task.hpp
- /mnt/f/5/9/todo/src/editButton.cpp
+ /mnt/f/5/10/todo/src/editButton.cpp
 CMakeFiles/todo.dir/src/favoriteButton.cpp.o
  ../include/button.hpp
  ../include/favoriteButton.hpp
  ../include/set.hpp
- /mnt/f/5/9/todo/src/favoriteButton.cpp
+ /mnt/f/5/10/todo/src/favoriteButton.cpp
 CMakeFiles/todo.dir/src/file.cpp.o
  ../include/File.hpp
  ../include/button.hpp
@@ -58,7 +58,7 @@ CMakeFiles/todo.dir/src/file.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/9/todo/src/file.cpp
+ /mnt/f/5/10/todo/src/file.cpp
 CMakeFiles/todo.dir/src/icon.cpp.o
  ../include/AddButton.hpp
  ../include/ToDo.hpp
@@ -73,12 +73,12 @@ CMakeFiles/todo.dir/src/icon.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/9/todo/src/icon.cpp
+ /mnt/f/5/10/todo/src/icon.cpp
 CMakeFiles/todo.dir/src/isDoneButton.cpp.o
- /mnt/f/5/9/todo/include/button.hpp
- /mnt/f/5/9/todo/include/isDoneButton.hpp
- /mnt/f/5/9/todo/include/set.hpp
- /mnt/f/5/9/todo/src/isDoneButton.cpp
+ /mnt/f/5/10/todo/include/button.hpp
+ /mnt/f/5/10/todo/include/isDoneButton.hpp
+ /mnt/f/5/10/todo/include/set.hpp
+ /mnt/f/5/10/todo/src/isDoneButton.cpp
 CMakeFiles/todo.dir/src/main.cpp.o
  ../include/AddButton.hpp
  ../include/ToDo.hpp
@@ -92,18 +92,18 @@ CMakeFiles/todo.dir/src/main.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/9/todo/src/main.cpp
+ /mnt/f/5/10/todo/src/main.cpp
 CMakeFiles/todo.dir/src/set.cpp.o
  ../include/set.hpp
- /mnt/f/5/9/todo/src/set.cpp
+ /mnt/f/5/10/todo/src/set.cpp
 CMakeFiles/todo.dir/src/task.cpp.o
- /mnt/f/5/9/todo/include/button.hpp
- /mnt/f/5/9/todo/include/deleteButton.hpp
- /mnt/f/5/9/todo/include/favoriteButton.hpp
- /mnt/f/5/9/todo/include/isDoneButton.hpp
- /mnt/f/5/9/todo/include/set.hpp
- /mnt/f/5/9/todo/include/task.hpp
- /mnt/f/5/9/todo/src/task.cpp
+ /mnt/f/5/10/todo/include/button.hpp
+ /mnt/f/5/10/todo/include/deleteButton.hpp
+ /mnt/f/5/10/todo/include/favoriteButton.hpp
+ /mnt/f/5/10/todo/include/isDoneButton.hpp
+ /mnt/f/5/10/todo/include/set.hpp
+ /mnt/f/5/10/todo/include/task.hpp
+ /mnt/f/5/10/todo/src/task.cpp
 CMakeFiles/todo.dir/src/vector.cpp.o
  ../include/button.hpp
  ../include/deleteButton.hpp
@@ -112,4 +112,4 @@ CMakeFiles/todo.dir/src/vector.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/9/todo/src/vector.cpp
+ /mnt/f/5/10/todo/src/vector.cpp

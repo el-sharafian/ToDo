@@ -17,10 +17,10 @@ Icon::Icon(std::string imgDirectory)
     font.loadFromFile("../assets/icons/f1.ttf");
 
     std::string iconName = imgDirectory + "/add.png";
-    set.SetTexture(AddSprite, iconName, AddTexture, 10, 410);
+    set.SetTexture(AddSprite, iconName, AddTexture, 15, 615);
 
-    iconName = imgDirectory + "/edit5.png";
-    set.SetTexture(EditSprite, iconName, EditTexture, 685, 390);
+    iconName = imgDirectory + "/edit.png";
+    set.SetTexture(EditSprite, iconName, EditTexture, 985, 615);
 }
 void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window)
 {

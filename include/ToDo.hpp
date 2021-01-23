@@ -18,6 +18,7 @@ private:
     sf::RenderWindow *window;
     Icon *icon;
     sf::Font font;
+    sf::Font font2;
     sf::Text text;
     sf::Sprite sprite;
     sf::Texture backgrounfTexture;

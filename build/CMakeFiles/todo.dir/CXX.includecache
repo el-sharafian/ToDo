@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/File.hpp
-iostream
--
-fstream
--
-task.hpp
-../include/task.hpp
-vector.hpp
-../include/vector.hpp
-
 ../include/button.hpp
 string
 -
@@ -27,6 +17,14 @@ set.hpp
 ../include/deleteButton.hpp
 SFML/Graphics.hpp
 -
+button.hpp
+../include/button.hpp
+
+../include/editButton.hpp
+SFML/Graphics.hpp
+-
+task.hpp
+../include/task.hpp
 button.hpp
 ../include/button.hpp
 
@@ -66,21 +64,7 @@ iostream
 SFML/Graphics.hpp
 -
 
-../include/vector.hpp
-vector
--
-iostream
--
-task.hpp
-../include/task.hpp
-
-/mnt/f/5/9/todo/src/file.cpp
-File.hpp
-/mnt/f/5/9/todo/src/File.hpp
-iostream
--
-string
--
-fstream
--
+/mnt/f/5/10/todo/src/editButton.cpp
+editButton.hpp
+/mnt/f/5/10/todo/src/editButton.hpp
 
