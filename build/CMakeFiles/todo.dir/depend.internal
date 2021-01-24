@@ -7,23 +7,23 @@ CMakeFiles/todo.dir/src/AddButton.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/10/todo/src/AddButton.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/AddButton.cpp
 CMakeFiles/todo.dir/src/Button.cpp.o
  ../include/button.hpp
  ../include/set.hpp
- /mnt/f/5/10/todo/src/Button.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/Button.cpp
 CMakeFiles/todo.dir/src/EditButton.cpp.o
  ../include/button.hpp
  ../include/editButton.hpp
  ../include/set.hpp
  ../include/task.hpp
- /mnt/f/5/10/todo/src/EditButton.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/EditButton.cpp
 CMakeFiles/todo.dir/src/File.cpp.o
  ../include/File.hpp
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/10/todo/src/File.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/File.cpp
 CMakeFiles/todo.dir/src/Icon.cpp.o
  ../include/AddButton.hpp
  ../include/ToDo.hpp
@@ -35,14 +35,14 @@ CMakeFiles/todo.dir/src/Icon.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/10/todo/src/Icon.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/Icon.cpp
 CMakeFiles/todo.dir/src/Set.cpp.o
  ../include/set.hpp
- /mnt/f/5/10/todo/src/Set.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/Set.cpp
 CMakeFiles/todo.dir/src/Task.cpp.o
- /mnt/f/5/10/todo/include/set.hpp
- /mnt/f/5/10/todo/include/task.hpp
- /mnt/f/5/10/todo/src/Task.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/include/set.hpp
+ /mnt/c/Users/pc/desktop/tmp/todo/include/task.hpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/Task.cpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/AddButton.hpp
  ../include/addButton.hpp
@@ -53,12 +53,12 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/task.hpp
  ../include/todo.hpp
  ../include/vector.hpp
- /mnt/f/5/10/todo/src/ToDo.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/ToDo.cpp
 CMakeFiles/todo.dir/src/Vector.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/10/todo/src/Vector.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/Vector.cpp
 CMakeFiles/todo.dir/src/main.cpp.o
  ../include/AddButton.hpp
  ../include/ToDo.hpp
@@ -69,4 +69,4 @@ CMakeFiles/todo.dir/src/main.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/vector.hpp
- /mnt/f/5/10/todo/src/main.cpp
+ /mnt/c/Users/pc/desktop/tmp/todo/src/main.cpp

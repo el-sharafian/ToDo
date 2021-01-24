@@ -4,6 +4,8 @@
 #include <SFML/Graphics.hpp>
 #include "task.hpp"
 #include "button.hpp"
+#include <fstream>
+#include <string>
 
 class EditButton : public Button    // icon for editing task's name
 {
@@ -12,6 +14,7 @@ class EditButton : public Button    // icon for editing task's name
 public:
     EditButton();
     sf::RenderWindow win;
+    unsigned int search(std::fstream &, std::string &);
 
 private:
     std::string Task = "Enter the name of task \n";

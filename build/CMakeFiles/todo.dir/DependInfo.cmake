@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/f/5/10/todo/src/AddButton.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
-  "/mnt/f/5/10/todo/src/Button.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
-  "/mnt/f/5/10/todo/src/EditButton.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/EditButton.cpp.o"
-  "/mnt/f/5/10/todo/src/File.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/File.cpp.o"
-  "/mnt/f/5/10/todo/src/Icon.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/Icon.cpp.o"
-  "/mnt/f/5/10/todo/src/Set.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/Set.cpp.o"
-  "/mnt/f/5/10/todo/src/Task.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/Task.cpp.o"
-  "/mnt/f/5/10/todo/src/ToDo.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
-  "/mnt/f/5/10/todo/src/Vector.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/Vector.cpp.o"
-  "/mnt/f/5/10/todo/src/main.cpp" "/mnt/f/5/10/todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/AddButton.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/Button.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/Button.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/EditButton.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/EditButton.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/File.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/File.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/Icon.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/Icon.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/Set.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/Set.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/Task.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/Task.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/ToDo.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/Vector.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/Vector.cpp.o"
+  "/mnt/c/Users/pc/desktop/tmp/todo/src/main.cpp" "/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
