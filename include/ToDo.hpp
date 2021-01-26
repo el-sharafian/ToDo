@@ -3,7 +3,7 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "icon.hpp"
+#include "Icon.hpp"
 #include "AddButton.hpp"
 
 std::string DrawWindow();     //draw a window if user press delete icon

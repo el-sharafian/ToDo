@@ -1,4 +1,4 @@
-#include "button.hpp"
+#include "Button.hpp"
 
 Button::Button()
 {

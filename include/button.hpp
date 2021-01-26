@@ -3,7 +3,7 @@
 
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "set.hpp"
+#include "Set.hpp"
 
 // abstract class
 

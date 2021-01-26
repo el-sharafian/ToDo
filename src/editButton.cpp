@@ -1,4 +1,4 @@
-#include "editButton.hpp"
+#include "EditButton.hpp"
 
 #define Enter_key 13
 #define BACKSPACE_key 8
@@ -29,7 +29,7 @@ EditButton::EditButton()
     set.SetText(NewNameText, 5, 135, NewName);
 
     Text.setFont(font);
-    set.SetText(Text, 150, 270, TextString);
+    set.SetText(Text, 100, 270, TextString);
     Text.setCharacterSize(20);
 }
 // unsigned int EditButton::search(fstream &file, string &search)

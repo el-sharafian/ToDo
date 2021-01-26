@@ -4,10 +4,10 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <vector>
-#include "task.hpp"
-#include "set.hpp"
-#include "editButton.hpp"
-#include "addButton.hpp"
+#include "Task.hpp"
+#include "Set.hpp"
+#include "EditButton.hpp"
+#include "AddButton.hpp"
 
 class Icon     // drawing icons
 {

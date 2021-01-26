@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/task.hpp"
+#include "Task.hpp"
 #include <random>
 #include <ctime>
 

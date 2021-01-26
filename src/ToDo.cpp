@@ -1,6 +1,6 @@
-#include "todo.hpp"
-#include "set.hpp"
-#include "task.hpp"
+#include "ToDo.hpp"
+#include "Set.hpp"
+#include "Task.hpp"
 #include <iostream>
 
 using namespace std;
@@ -8,16 +8,16 @@ using namespace std;
 ToDo::ToDo()
 {
     Set set;
-    window = new sf::RenderWindow(sf::VideoMode(1100, 735), "ToDO", sf::Style::Close);
+    window = new sf::RenderWindow(sf::VideoMode(900, 601), "ToDO", sf::Style::Close);
     icon = new Icon("../assets/icons");
 
     font.loadFromFile("../assets/icons/font.ttf");
     font2.loadFromFile("../assets/icons/f1.ttf");
 
     Text.setFont(font);
-    set.SetText(Text, 420, 0, "Make a ToDo list");
+    set.SetText(Text, 320, 0, "Make a ToDo list");
 
-    if (!BackgroundTexture.loadFromFile("../assets/images/background.jpg"))
+    if (!BackgroundTexture.loadFromFile("../assets/images/back2.jpg"))
     {
         // error...
     }
@@ -31,14 +31,22 @@ ToDo::ToDo()
 }
 void ToDo::Loop()
 {
-    vector<sf::Sprite> BinSprite(11);
-    vector<sf::Sprite> FavoriteSprite(11);
-    vector<sf::Sprite> NotFavoriteSprite(11);
-    vector<string> IsFavorite(11);
-    vector<string> IsDeleted(11);
-    vector<string> IsDone(11);
-    vector<sf::Sprite> IsDoneSprite(11);
-    vector<sf::Sprite> NotDoneSprite(11);
+
+    sf::Text txt2;
+    string s = "Reopen the window to apply changes:)";
+    txt2.setString(s);
+    txt2.setFont(font2);
+    txt2.setPosition(sf::Vector2f(250, 570));
+    txt2.setCharacterSize(20);
+    txt2.setFillColor(sf::Color::Black);
+    vector<sf::Sprite> BinSprite(9);
+    vector<sf::Sprite> FavoriteSprite(9);
+    vector<sf::Sprite> NotFavoriteSprite(9);
+    vector<string> IsFavorite(9);
+    vector<string> IsDeleted(9);
+    vector<string> IsDone(9);
+    vector<sf::Sprite> IsDoneSprite(9);
+    vector<sf::Sprite> NotDoneSprite(9);
     vector<sf::Text> TaskName;
     sf::Text Task1;
     vector<Task> task;
@@ -129,11 +137,11 @@ void ToDo::Loop()
             TaskName[i].setPosition(sf::Vector2f(50, (i * 50) + 50));
             TaskName[i].setCharacterSize(30);
             BinSprite[i].setTexture(BinTexture);
-            BinSprite[i].setPosition(sf::Vector2f(1040, (i * 50) + 50));
+            BinSprite[i].setPosition(sf::Vector2f(840, (i * 50) + 50));
             FavoriteSprite[i].setTexture(FavoriteTexture);
-            FavoriteSprite[i].setPosition(sf::Vector2f(1000, (i * 50) + 50));
+            FavoriteSprite[i].setPosition(sf::Vector2f(800, (i * 50) + 50));
             NotFavoriteSprite[i].setTexture(NotFavoriteTexture);
-            NotFavoriteSprite[i].setPosition(sf::Vector2f(1000, (i * 50) + 50));
+            NotFavoriteSprite[i].setPosition(sf::Vector2f(800, (i * 50) + 50));
             IsDoneSprite[i].setTexture(IsDoneTexture);
             IsDoneSprite[i].setPosition(sf::Vector2f(10, (i * 50) + 50));
             NotDoneSprite[i].setTexture(NotDoneTexture);
@@ -143,6 +151,7 @@ void ToDo::Loop()
         window->draw(Sprite);
         icon->DrawIcons(*window, icon->Add(), icon->Edit());
         window->draw(Text);
+        window->draw(txt2);
         for (size_t i = 0; i < task.size(); i++)
         {
             if ("0" == IsDeleted[i])
@@ -181,11 +190,13 @@ void ToDo::Loop()
         if (IsDeleted[i] == "1")
             Delete[i] = 1;
     }
-    int TaskS = task.size() - 1;
-    for (size_t i = TaskS; 0 < i; i--)
+    const int index = task.size();
+    for (size_t i = 0; i < index; i++)
     {
-        if (Delete[i] == 1)
+        if (IsDeleted[i] == "1")
+        {
             task.erase(task.begin() + i);
+        }
     }
     ofstream Tasks("../Tasks.txt", ios::trunc);
     if (!Tasks.is_open())
@@ -236,10 +247,6 @@ string DrawWindow() //draw a window if user press delete icon
         sf::Event evnt;
         while (window.pollEvent(evnt))
         {
-            if (evnt.type == sf::Event::Closed)
-            {
-                window.close();
-            }
             if (YesSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 check = "1";
@@ -248,6 +255,10 @@ string DrawWindow() //draw a window if user press delete icon
             if (NoSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 check = "0";
+                window.close();
+            }
+            if (evnt.type == sf::Event::Closed)
+            {
                 window.close();
             }
             window.clear();

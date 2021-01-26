@@ -5,7 +5,7 @@
 #include <vector>
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "set.hpp"
+#include "Set.hpp"
 
 class Task
 {

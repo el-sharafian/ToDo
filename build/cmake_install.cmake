@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/f/5/todo
+# Install script for directory: /mnt/c/Users/pc/desktop/t17/todo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/f/5/todo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/pc/desktop/t17/todo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -2,8 +2,8 @@
 #define EDITBUTTON_HPP
 
 #include <SFML/Graphics.hpp>
-#include "task.hpp"
-#include "button.hpp"
+#include "Task.hpp"
+#include "Button.hpp"
 #include <fstream>
 #include <string>
 #include <vector>
@@ -27,7 +27,7 @@ private:
     std::string NewName = "";
     sf::Text NewNameText;
     sf::Text Text;
-    std::string TextString = "Press Escape to change the name";
+    std::string TextString = "Close the window to change the name";
 };
 
 #endif // EDITBUTTON_HPP

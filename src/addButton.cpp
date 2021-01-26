@@ -1,5 +1,5 @@
-#include "addButton.hpp"
-#include "set.hpp"
+#include "AddButton.hpp"
+#include "Set.hpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
@@ -29,12 +29,15 @@ AddButton::AddButton()
     set.SetText(AddTaskText, 140, 0, addTask);
     AddTaskText.setFillColor(sf::Color(253, 173, 173));
 }
-void AddButton::DisplayWindow(AddButton &addButton, vector <Task> & task)
+void AddButton::DisplayWindow(AddButton &addButton, vector<Task> &task)
 {
     sf::Text txt;
+    string s = "Please close the window to add the task:)";
+    txt.setString(s);
     txt.setFont(Fontt);
-    txt.setPosition(sf::Vector2f(400, 300));
-    txt.setFillColor(sf::Color::Black);
+    txt.setPosition(sf::Vector2f(100, 170));
+    txt.setCharacterSize(20);
+    txt.setFillColor(sf::Color(253, 173, 173));
 
     Task t(addButton.TaskName);
 
@@ -43,11 +46,7 @@ void AddButton::DisplayWindow(AddButton &addButton, vector <Task> & task)
         sf::Event evn;
         if (addButton.Win.pollEvent(evn))
         {
-            if (evn.type == sf::Event::Closed)
-            {
-                addButton.Win.close();
-            }
-            else if (evn.type == sf::Event::TextEntered)
+            if (evn.type == sf::Event::TextEntered)
             {
                 if (evn.text.unicode == BACKSPACE_key)
                 {
@@ -60,6 +59,10 @@ void AddButton::DisplayWindow(AddButton &addButton, vector <Task> & task)
                         addButton.TaskName += static_cast<char>(evn.text.unicode);
                     }
                 }
+            }
+            else if (evn.type == sf::Event::Closed)
+            {
+                addButton.Win.close();
             }
             addButton.TaskNameText.setString(addButton.TaskName);
             addButton.Win.clear();

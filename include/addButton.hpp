@@ -5,7 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <SFML/Graphics.hpp>
-#include "task.hpp"
+#include "Task.hpp"
 
 class AddButton     // adds a task
 {

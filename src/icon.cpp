@@ -1,9 +1,9 @@
-#include "icon.hpp"
+#include "Icon.hpp"
 #include "ToDo.hpp"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-#include "task.hpp"
+#include "Task.hpp"
 
 #define Sp 20
 #define BACKSPACE_key 8
@@ -16,10 +16,10 @@ Icon::Icon(std::string imgDirectory)
     font.loadFromFile("../assets/icons/f1.ttf");
 
     std::string iconName = imgDirectory + "/add.png";
-    set.SetTexture(AddSprite, iconName, AddTexture, 15, 615);
+    set.SetTexture(AddSprite, iconName, AddTexture, 15, 485);
 
     iconName = imgDirectory + "/edit.png";
-    set.SetTexture(EditSprite, iconName, EditTexture, 985, 615);
+    set.SetTexture(EditSprite, iconName, EditTexture, 785, 485);
 }
 void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window, vector <Task> & task)
 {    
