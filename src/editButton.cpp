@@ -32,23 +32,23 @@ EditButton::EditButton()
     set.SetText(Text, 150, 270, TextString);
     Text.setCharacterSize(20);
 }
-unsigned int EditButton::search(fstream &file, string &search)
-{
-    string line;
-    unsigned int curLine;
-    unsigned int cur2;
-    for (curLine = 0; getline(file, line); curLine++)
-    {
-        if (line.find(search) != string::npos)
-        {
-            cout << "found: " << search << "line: " << curLine << endl;
-            cur2 = curLine;
-        }
-    }
+// unsigned int EditButton::search(fstream &file, string &search)
+// {
+//     string line;
+//     unsigned int curLine;
+//     unsigned int cur2;
+//     for (curLine = 0; getline(file, line); curLine++)
+//     {
+//         if (line.find(search) != string::npos)
+//         {
+//             cout << "found: " << search << "line: " << curLine << endl;
+//             cur2 = curLine;
+//         }
+//     }
 
-    return cur2;
-}
-void WindowDisplay(EditButton &button)
+//     return cur2;
+// }
+void WindowDisplay(EditButton &button, vector<Task> &task)
 {
     bool IsNameEntered = false;
     while (button.win.isOpen())
@@ -95,13 +95,13 @@ void WindowDisplay(EditButton &button)
                     }
                 }
                 button.TaskNameText.setString(button.TaskName);
-                fstream Tasks("../Tasks.txt", ios::app | ios::in);
-                if (!Tasks.is_open())
-                {
-                    exit(EXIT_FAILURE);
-                }
+                // fstream Tasks("../Tasks.txt", ios::app | ios::in);
+                // if (!Tasks.is_open())
+                // {
+                //     exit(EXIT_FAILURE);
+                // }
 
-                cout << button.search(Tasks, button.TaskName) << endl;
+                // cout << button.search(Tasks, button.TaskName) << endl;
             }
             button.TaskText.setString(button.Task);
             button.NameText.setString(button.Name);
@@ -117,6 +117,14 @@ void WindowDisplay(EditButton &button)
                 button.win.draw(button.Text);
             }
             button.win.display();
+        }
+    }
+    for (size_t i = 0; i < task.size(); i++)
+    {
+        if (button.TaskName == task[i].GetName())
+        {
+            task[i].SetTask(button.NewName);
+            cout << task.size() << "****" << endl;
         }
     }
 }

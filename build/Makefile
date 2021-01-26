@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/pc/desktop/tmp/todo
+CMAKE_SOURCE_DIR = /mnt/f/5/todo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/pc/desktop/tmp/todo/build
+CMAKE_BINARY_DIR = /mnt/f/5/todo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles /mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/todo/build/CMakeFiles /mnt/f/5/todo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/5/todo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,33 +204,6 @@ src/EditButton.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/EditButton.cpp.s
 .PHONY : src/EditButton.cpp.s
 
-src/File.o: src/File.cpp.o
-
-.PHONY : src/File.o
-
-# target to build an object file
-src/File.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/File.cpp.o
-.PHONY : src/File.cpp.o
-
-src/File.i: src/File.cpp.i
-
-.PHONY : src/File.i
-
-# target to preprocess a source file
-src/File.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/File.cpp.i
-.PHONY : src/File.cpp.i
-
-src/File.s: src/File.cpp.s
-
-.PHONY : src/File.s
-
-# target to generate assembly for a file
-src/File.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/File.cpp.s
-.PHONY : src/File.cpp.s
-
 src/Icon.o: src/Icon.cpp.o
 
 .PHONY : src/Icon.o
@@ -339,33 +312,6 @@ src/ToDo.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/ToDo.cpp.s
 .PHONY : src/ToDo.cpp.s
 
-src/Vector.o: src/Vector.cpp.o
-
-.PHONY : src/Vector.o
-
-# target to build an object file
-src/Vector.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Vector.cpp.o
-.PHONY : src/Vector.cpp.o
-
-src/Vector.i: src/Vector.cpp.i
-
-.PHONY : src/Vector.i
-
-# target to preprocess a source file
-src/Vector.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Vector.cpp.i
-.PHONY : src/Vector.cpp.i
-
-src/Vector.s: src/Vector.cpp.s
-
-.PHONY : src/Vector.s
-
-# target to generate assembly for a file
-src/Vector.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Vector.cpp.s
-.PHONY : src/Vector.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -411,9 +357,6 @@ help:
 	@echo "... src/EditButton.o"
 	@echo "... src/EditButton.i"
 	@echo "... src/EditButton.s"
-	@echo "... src/File.o"
-	@echo "... src/File.i"
-	@echo "... src/File.s"
 	@echo "... src/Icon.o"
 	@echo "... src/Icon.i"
 	@echo "... src/Icon.s"
@@ -426,9 +369,6 @@ help:
 	@echo "... src/ToDo.o"
 	@echo "... src/ToDo.i"
 	@echo "... src/ToDo.s"
-	@echo "... src/Vector.o"
-	@echo "... src/Vector.i"
-	@echo "... src/Vector.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

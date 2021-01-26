@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-#include "file.hpp"
 #include "task.hpp"
 
 #define Sp 20
@@ -22,7 +21,7 @@ Icon::Icon(std::string imgDirectory)
     iconName = imgDirectory + "/edit.png";
     set.SetTexture(EditSprite, iconName, EditTexture, 985, 615);
 }
-void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window)
+void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window, vector <Task> & task)
 {    
     Task tsk;
     sf::Text taskNameText;
@@ -42,12 +41,12 @@ void Icon::IconEvents(sf::Event evnt, sf::RenderWindow &window)
             if (AddSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 AddButton addbutton;
-                addbutton.DisplayWindow(addbutton);
+                addbutton.DisplayWindow(addbutton, task);
             }
             else if (EditSprite.getGlobalBounds().contains(sf::Vector2f(evnt.mouseButton.x, evnt.mouseButton.y)))
             {
                 EditButton editButton;
-                WindowDisplay(editButton);
+                WindowDisplay(editButton, task);
             }
         }
     }

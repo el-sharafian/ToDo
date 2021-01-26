@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <string>
+#include <vector>
 #include "task.hpp"
 #include "set.hpp"
 #include "editButton.hpp"
@@ -14,7 +15,7 @@ public:
     Icon(std::string);
     sf::Sprite Edit();
     sf::Sprite Add();
-    void IconEvents(sf::Event, sf::RenderWindow &);
+    void IconEvents(sf::Event, sf::RenderWindow &, std::vector<Task> &);
     void DrawIcons(sf::RenderWindow &window, sf::Sprite, sf::Sprite);
 
 private:

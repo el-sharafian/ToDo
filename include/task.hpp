@@ -11,7 +11,7 @@ class Task
 {
     friend std::istream &operator>>(std::istream &input, Task &p);
     friend std::ostream &operator<<(std::ostream &output, const std::vector<Task> &p);
-    friend class File;
+    friend class ToDo;
 
 public:
     Task();
@@ -19,7 +19,7 @@ public:
     void SetTask(std::string);
     void Event(sf::RenderWindow &, sf::Event);
     std::string GetName();
-    std::string GetTask(void);
+    void setFa(std::string);
 
 private:
     int IsFavorite;
@@ -27,8 +27,8 @@ private:
     int IsDone;
     sf::Font font;
     std::string TaskName;
-    bool Check = false;
-    Set set;    // sets Texts and Sprites
+    // bool Check = false;
+    Set set; // sets Texts and Sprites
 };
 
 #endif

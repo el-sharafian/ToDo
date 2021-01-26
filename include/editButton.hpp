@@ -6,10 +6,11 @@
 #include "button.hpp"
 #include <fstream>
 #include <string>
+#include <vector>
 
-class EditButton : public Button    // icon for editing task's name
+class EditButton : public Button // icon for editing task's name
 {
-    friend void WindowDisplay(EditButton &);
+    friend void WindowDisplay(EditButton &, std::vector<Task> &);
 
 public:
     EditButton();

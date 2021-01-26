@@ -6,13 +6,12 @@
 #include <fstream>
 #include <SFML/Graphics.hpp>
 #include "task.hpp"
-#include "vector.hpp"
 
 class AddButton     // adds a task
 {
 public:
     AddButton();
-    void DisplayWindow(AddButton &);
+    void DisplayWindow(AddButton &,  std::vector<Task> &);
 
 private:
     Set set;
