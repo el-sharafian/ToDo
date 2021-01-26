@@ -1,3 +1,0 @@
-/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/pc/desktop/tmp/todo/build/CMakeFiles/todo.dir
