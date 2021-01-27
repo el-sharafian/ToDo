@@ -1,43 +1,34 @@
 #ifndef TASK_H
 #define TASK_H
 
-#include "set.hpp"
 #include <string>
 #include <vector>
-#include<iostream>
+#include <iostream>
 #include <SFML/Graphics.hpp>
+#include "set.hpp"
 
 class Task
 {
     friend std::istream &operator>>(std::istream &input, Task &p);
-    friend std::ostream &operator<<(std::ostream &output, const Task &p);
-    // friend void add(std::vector<task> &,std::string);
-    friend class File;
+    friend std::ostream &operator<<(std::ostream &output, const std::vector<Task> &p);
+    friend class ToDo;
 
 public:
     Task();
     Task(std::string);
-    void setPriority(unsigned int);
-    void setFavorite(char);
-    void setCheck(bool);
-    int getPriority(void);
-    char getFavorite(void);
-    bool getCheck(void);
-    std::string getTask(void);
-   // std::string TaskName;
-    void favorite(sf::RenderWindow &);
-    void notFavorite(sf::RenderWindow &);
-    void setTask(std::string);
+    void SetTask(std::string);
+    void Event(sf::RenderWindow &, sf::Event);
+    std::string GetName();
+    void setFa(std::string);
 
 private:
+    int IsFavorite;
+    int IsDeleted;
+    int IsDone;
+    sf::Font font;
     std::string TaskName;
-    unsigned int priority;
-    bool check = false;
-    sf::Texture favoriteTexture;
-    sf::Sprite favoriteSprite;
-    sf::Texture notFavoriteTexture;
-    sf::Sprite notFavoriteSprite;
-    Set set;    // sets Texts and Sprites
+    // bool Check = false;
+    Set set; // sets Texts and Sprites
 };
 
 #endif

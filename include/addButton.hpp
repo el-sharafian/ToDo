@@ -6,27 +6,22 @@
 #include <fstream>
 #include <SFML/Graphics.hpp>
 #include "task.hpp"
-#include "windowDisplay.hpp"
-#include "Button.hpp"
-#include "vector.hpp"
+#include "button.hpp"
 
-class AddButton //: public Button
+class AddButton : public Button    // adds a task
 {
-
 public:
     AddButton();
-    void displayWindow(AddButton &addButton);
+    void DisplayWindow(AddButton &,  std::vector<Task> &);  //displays AddButton Window
 
 private:
     std::string addTask = "Enter name of your task \n";
-    sf::Text addTaskText;
-    std::string taskName = "";
+    sf::Text AddTaskText;
+    std::string TaskName = "";
     sf::Text TaskNameText;
-    sf::RenderWindow win;
-    sf::Texture addWindowTexture;
-    sf::Sprite addWindowSprite;
-    Set set;
-    sf::Font fontt;
+    std::string WindowString = "Please close the window to add the task";
+    sf::Text WindowText;
+    sf::RenderWindow Win;
 };
 
 #endif // ADDBUTTON_HPP

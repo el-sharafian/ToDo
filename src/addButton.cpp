@@ -6,107 +6,72 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdlib>
-#include "file.hpp"
 
 #define Enter_key 13
 #define BACKSPACE_key 8
 
+using namespace std;
+
 AddButton::AddButton()
 {
-    win.create(sf::VideoMode(600, 400), "add a task name");
-    if (addWindowTexture.loadFromFile("../assets/images/ax5.jpg"))
-    {
-        // error ...
-    }
-    addWindowSprite.setTexture(addWindowTexture);
+    Win.create(sf::VideoMode(600, 200), "add a task name", sf::Style::Close);//creating second window to add tasks
+    Win.setPosition(sf::Vector2i(350, 500));     //set position of window
 
-    fontt.loadFromFile("../assets/icons/f1.ttf");
+    font.loadFromFile("../assets/icons/f1.ttf");   //loading font
 
-    TaskNameText.setFont(fontt);
-    set.setText(TaskNameText, 10, 50, taskName);
-    addTaskText.setFont(fontt);
-    set.setText(addTaskText, 140, 0, addTask);
+    Texture.loadFromFile("../assets/images/background2.png");//set the background for second window
+    Sprite.setTexture(Texture);
+    //set 2 texts for window
+    TaskNameText.setFont(font);
+    set.SetText(TaskNameText, 10, 50, TaskName);
+    AddTaskText.setFont(font);
+    set.SetText(AddTaskText, 140, 0, addTask);
+    AddTaskText.setFillColor(sf::Color(253, 173, 173));
+
+    WindowText.setFont(font);
+    set.SetText(WindowText, 100, 170, WindowString);
+    WindowText.setCharacterSize(20);
 }
-
-void AddButton::displayWindow(AddButton &addButton)
+void AddButton::DisplayWindow(AddButton &addButton, vector<Task> &task)
 {
+    Task temp(addButton.TaskName);//declare an object of class Task to set taskName
 
-    sf::Text txt;
-    txt.setFont(fontt);
-    txt.setPosition(sf::Vector2f(400, 300));
-    txt.setFillColor(sf::Color::Black);
-
-    // std::vector<Task> tasks;
-    Vector v;
-
-    while (addButton.win.isOpen())
+    while (addButton.Win.isOpen())
     {
         sf::Event evn;
-        if (addButton.win.pollEvent(evn))
+        if (addButton.Win.pollEvent(evn))
         {
             if (evn.type == sf::Event::Closed)
             {
-                addButton.win.close();
+                addButton.Win.close();
             }
             else if (evn.type == sf::Event::TextEntered)
             {
-                // if (evn.text.unicode == Enter_key)
-                // {
-                //     addButton.win.close();
-                // }
                 if (evn.text.unicode == BACKSPACE_key)
                 {
-                    addButton.taskName.erase(taskName.size() - 1);
+                    addButton.TaskName.erase(TaskName.size() - 1);
                 }
                 else if (evn.text.unicode < 128)
                 {
-                    if (addButton.taskName.size() < 40)
+                    if (addButton.TaskName.size() < 35)
                     {
-                        addButton.taskName += static_cast<char>(evn.text.unicode);
-                        std::fstream file;
-                        std::string s = "both.txt";
-                        File fi(file, s);
-                        fi.isOpen(file);
-                        //Task t;
-                        //t.setTask(taskName);
-                        //string a = "salam";
-                        //v.push(taskName);
-                        fi.writeToFile(file, v);
-                        std::vector<Task> t;
-                        std::vector<Task> *vptr = v.assign();
-                        std::vector<Task> *vptr2 = &t;
-                        Task tt;
-                        tt.setTask(taskName);
-                        t.push_back(tt);
-                        std::cout << vptr << std::endl;
-                        vptr2 = v.assign();
-                        std::cout << vptr2 << std::endl;
-                        //std::cout<<v.assign()<<std::endl;
-                        //t=v.assign();
-                        if (evn.text.unicode == Enter_key)
-                        {
-                            std::string b = fi.readFromFile(file, v);
-                            std::cout << b << std::endl;
-                            txt.setString(b);
-                            //std::cout << v.assign() << std::endl;
-                        }
+                        addButton.TaskName += static_cast<char>(evn.text.unicode);//adding the entered text to string
                     }
                 }
-                // for (const auto &e : v)
-                //     output << e;
-                // cin.ignore();
             }
-            addButton.TaskNameText.setString(addButton.taskName);
-            addButton.win.clear();
-            addButton.win.draw(addButton.addWindowSprite);
-            addButton.win.draw(addButton.addTaskText);
-            addButton.win.draw(addButton.TaskNameText);
-            addButton.win.draw(txt);
-            addButton.win.display();
+            addButton.TaskNameText.setString(addButton.TaskName);//set the string that user entered
+            addButton.Win.clear();
+            addButton.Win.draw(addButton.Sprite);//draw background
+            addButton.Win.draw(addButton.AddTaskText);//draw the first text that sets before
+            addButton.Win.draw(addButton.TaskNameText);//draw the text that user entered
+            addButton.Win.draw(addButton.WindowText);//draw the second text that sets befor
+            addButton.Win.display();
         }
     }
-    std::cout << addButton.taskName;
-    std::ofstream output("../src/output.txt", std::ios::app);
-    // testOpen(output);
-    output << addButton.taskName << std::endl;
+    addButton.TaskName = addButton.TaskName + "000";
+    temp.SetTask(addButton.TaskName);//set the taskName for object
+    if (4 < addButton.TaskName.size())  // checks if addButton.TaskName is empty 
+    {
+        task.push_back(temp);//add object to the vector
+    }
 }

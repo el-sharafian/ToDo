@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/pc/desktop/t4/ToDo
+CMAKE_SOURCE_DIR = /mnt/f/t4/todo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/pc/desktop/t4/ToDo/build
+CMAKE_BINARY_DIR = /mnt/f/t4/todo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/t4/todo/build/CMakeFiles /mnt/f/t4/todo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/pc/desktop/t4/ToDo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/t4/todo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ todo/fast:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/build
 .PHONY : todo/fast
 
+src/AddButton.o: src/AddButton.cpp.o
+
+.PHONY : src/AddButton.o
+
+# target to build an object file
+src/AddButton.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/AddButton.cpp.o
+.PHONY : src/AddButton.cpp.o
+
+src/AddButton.i: src/AddButton.cpp.i
+
+.PHONY : src/AddButton.i
+
+# target to preprocess a source file
+src/AddButton.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/AddButton.cpp.i
+.PHONY : src/AddButton.cpp.i
+
+src/AddButton.s: src/AddButton.cpp.s
+
+.PHONY : src/AddButton.s
+
+# target to generate assembly for a file
+src/AddButton.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/AddButton.cpp.s
+.PHONY : src/AddButton.cpp.s
+
 src/Button.o: src/Button.cpp.o
 
 .PHONY : src/Button.o
@@ -149,6 +176,114 @@ src/Button.s: src/Button.cpp.s
 src/Button.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Button.cpp.s
 .PHONY : src/Button.cpp.s
+
+src/EditButton.o: src/EditButton.cpp.o
+
+.PHONY : src/EditButton.o
+
+# target to build an object file
+src/EditButton.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/EditButton.cpp.o
+.PHONY : src/EditButton.cpp.o
+
+src/EditButton.i: src/EditButton.cpp.i
+
+.PHONY : src/EditButton.i
+
+# target to preprocess a source file
+src/EditButton.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/EditButton.cpp.i
+.PHONY : src/EditButton.cpp.i
+
+src/EditButton.s: src/EditButton.cpp.s
+
+.PHONY : src/EditButton.s
+
+# target to generate assembly for a file
+src/EditButton.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/EditButton.cpp.s
+.PHONY : src/EditButton.cpp.s
+
+src/Icon.o: src/Icon.cpp.o
+
+.PHONY : src/Icon.o
+
+# target to build an object file
+src/Icon.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Icon.cpp.o
+.PHONY : src/Icon.cpp.o
+
+src/Icon.i: src/Icon.cpp.i
+
+.PHONY : src/Icon.i
+
+# target to preprocess a source file
+src/Icon.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Icon.cpp.i
+.PHONY : src/Icon.cpp.i
+
+src/Icon.s: src/Icon.cpp.s
+
+.PHONY : src/Icon.s
+
+# target to generate assembly for a file
+src/Icon.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Icon.cpp.s
+.PHONY : src/Icon.cpp.s
+
+src/Set.o: src/Set.cpp.o
+
+.PHONY : src/Set.o
+
+# target to build an object file
+src/Set.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Set.cpp.o
+.PHONY : src/Set.cpp.o
+
+src/Set.i: src/Set.cpp.i
+
+.PHONY : src/Set.i
+
+# target to preprocess a source file
+src/Set.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Set.cpp.i
+.PHONY : src/Set.cpp.i
+
+src/Set.s: src/Set.cpp.s
+
+.PHONY : src/Set.s
+
+# target to generate assembly for a file
+src/Set.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Set.cpp.s
+.PHONY : src/Set.cpp.s
+
+src/Task.o: src/Task.cpp.o
+
+.PHONY : src/Task.o
+
+# target to build an object file
+src/Task.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Task.cpp.o
+.PHONY : src/Task.cpp.o
+
+src/Task.i: src/Task.cpp.i
+
+.PHONY : src/Task.i
+
+# target to preprocess a source file
+src/Task.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Task.cpp.i
+.PHONY : src/Task.cpp.i
+
+src/Task.s: src/Task.cpp.s
+
+.PHONY : src/Task.s
+
+# target to generate assembly for a file
+src/Task.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/Task.cpp.s
+.PHONY : src/Task.cpp.s
 
 src/ToDo.o: src/ToDo.cpp.o
 
@@ -177,194 +312,32 @@ src/ToDo.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/ToDo.cpp.s
 .PHONY : src/ToDo.cpp.s
 
-src/addButton.o: src/addButton.cpp.o
+src/functions.o: src/functions.cpp.o
 
-.PHONY : src/addButton.o
-
-# target to build an object file
-src/addButton.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/addButton.cpp.o
-.PHONY : src/addButton.cpp.o
-
-src/addButton.i: src/addButton.cpp.i
-
-.PHONY : src/addButton.i
-
-# target to preprocess a source file
-src/addButton.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/addButton.cpp.i
-.PHONY : src/addButton.cpp.i
-
-src/addButton.s: src/addButton.cpp.s
-
-.PHONY : src/addButton.s
-
-# target to generate assembly for a file
-src/addButton.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/addButton.cpp.s
-.PHONY : src/addButton.cpp.s
-
-src/deleteButton.o: src/deleteButton.cpp.o
-
-.PHONY : src/deleteButton.o
+.PHONY : src/functions.o
 
 # target to build an object file
-src/deleteButton.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/deleteButton.cpp.o
-.PHONY : src/deleteButton.cpp.o
+src/functions.cpp.o:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/functions.cpp.o
+.PHONY : src/functions.cpp.o
 
-src/deleteButton.i: src/deleteButton.cpp.i
+src/functions.i: src/functions.cpp.i
 
-.PHONY : src/deleteButton.i
-
-# target to preprocess a source file
-src/deleteButton.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/deleteButton.cpp.i
-.PHONY : src/deleteButton.cpp.i
-
-src/deleteButton.s: src/deleteButton.cpp.s
-
-.PHONY : src/deleteButton.s
-
-# target to generate assembly for a file
-src/deleteButton.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/deleteButton.cpp.s
-.PHONY : src/deleteButton.cpp.s
-
-src/editButton.o: src/editButton.cpp.o
-
-.PHONY : src/editButton.o
-
-# target to build an object file
-src/editButton.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/editButton.cpp.o
-.PHONY : src/editButton.cpp.o
-
-src/editButton.i: src/editButton.cpp.i
-
-.PHONY : src/editButton.i
+.PHONY : src/functions.i
 
 # target to preprocess a source file
-src/editButton.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/editButton.cpp.i
-.PHONY : src/editButton.cpp.i
+src/functions.cpp.i:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/functions.cpp.i
+.PHONY : src/functions.cpp.i
 
-src/editButton.s: src/editButton.cpp.s
+src/functions.s: src/functions.cpp.s
 
-.PHONY : src/editButton.s
-
-# target to generate assembly for a file
-src/editButton.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/editButton.cpp.s
-.PHONY : src/editButton.cpp.s
-
-src/favoriteButton.o: src/favoriteButton.cpp.o
-
-.PHONY : src/favoriteButton.o
-
-# target to build an object file
-src/favoriteButton.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/favoriteButton.cpp.o
-.PHONY : src/favoriteButton.cpp.o
-
-src/favoriteButton.i: src/favoriteButton.cpp.i
-
-.PHONY : src/favoriteButton.i
-
-# target to preprocess a source file
-src/favoriteButton.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/favoriteButton.cpp.i
-.PHONY : src/favoriteButton.cpp.i
-
-src/favoriteButton.s: src/favoriteButton.cpp.s
-
-.PHONY : src/favoriteButton.s
+.PHONY : src/functions.s
 
 # target to generate assembly for a file
-src/favoriteButton.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/favoriteButton.cpp.s
-.PHONY : src/favoriteButton.cpp.s
-
-src/file.o: src/file.cpp.o
-
-.PHONY : src/file.o
-
-# target to build an object file
-src/file.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/file.cpp.o
-.PHONY : src/file.cpp.o
-
-src/file.i: src/file.cpp.i
-
-.PHONY : src/file.i
-
-# target to preprocess a source file
-src/file.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/file.cpp.i
-.PHONY : src/file.cpp.i
-
-src/file.s: src/file.cpp.s
-
-.PHONY : src/file.s
-
-# target to generate assembly for a file
-src/file.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/file.cpp.s
-.PHONY : src/file.cpp.s
-
-src/icon.o: src/icon.cpp.o
-
-.PHONY : src/icon.o
-
-# target to build an object file
-src/icon.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/icon.cpp.o
-.PHONY : src/icon.cpp.o
-
-src/icon.i: src/icon.cpp.i
-
-.PHONY : src/icon.i
-
-# target to preprocess a source file
-src/icon.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/icon.cpp.i
-.PHONY : src/icon.cpp.i
-
-src/icon.s: src/icon.cpp.s
-
-.PHONY : src/icon.s
-
-# target to generate assembly for a file
-src/icon.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/icon.cpp.s
-.PHONY : src/icon.cpp.s
-
-src/isDoneButton.o: src/isDoneButton.cpp.o
-
-.PHONY : src/isDoneButton.o
-
-# target to build an object file
-src/isDoneButton.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/isDoneButton.cpp.o
-.PHONY : src/isDoneButton.cpp.o
-
-src/isDoneButton.i: src/isDoneButton.cpp.i
-
-.PHONY : src/isDoneButton.i
-
-# target to preprocess a source file
-src/isDoneButton.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/isDoneButton.cpp.i
-.PHONY : src/isDoneButton.cpp.i
-
-src/isDoneButton.s: src/isDoneButton.cpp.s
-
-.PHONY : src/isDoneButton.s
-
-# target to generate assembly for a file
-src/isDoneButton.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/isDoneButton.cpp.s
-.PHONY : src/isDoneButton.cpp.s
+src/functions.cpp.s:
+	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/functions.cpp.s
+.PHONY : src/functions.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -393,141 +366,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/set.o: src/set.cpp.o
-
-.PHONY : src/set.o
-
-# target to build an object file
-src/set.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/set.cpp.o
-.PHONY : src/set.cpp.o
-
-src/set.i: src/set.cpp.i
-
-.PHONY : src/set.i
-
-# target to preprocess a source file
-src/set.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/set.cpp.i
-.PHONY : src/set.cpp.i
-
-src/set.s: src/set.cpp.s
-
-.PHONY : src/set.s
-
-# target to generate assembly for a file
-src/set.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/set.cpp.s
-.PHONY : src/set.cpp.s
-
-src/table.o: src/table.cpp.o
-
-.PHONY : src/table.o
-
-# target to build an object file
-src/table.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/table.cpp.o
-.PHONY : src/table.cpp.o
-
-src/table.i: src/table.cpp.i
-
-.PHONY : src/table.i
-
-# target to preprocess a source file
-src/table.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/table.cpp.i
-.PHONY : src/table.cpp.i
-
-src/table.s: src/table.cpp.s
-
-.PHONY : src/table.s
-
-# target to generate assembly for a file
-src/table.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/table.cpp.s
-.PHONY : src/table.cpp.s
-
-src/task.o: src/task.cpp.o
-
-.PHONY : src/task.o
-
-# target to build an object file
-src/task.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/task.cpp.o
-.PHONY : src/task.cpp.o
-
-src/task.i: src/task.cpp.i
-
-.PHONY : src/task.i
-
-# target to preprocess a source file
-src/task.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/task.cpp.i
-.PHONY : src/task.cpp.i
-
-src/task.s: src/task.cpp.s
-
-.PHONY : src/task.s
-
-# target to generate assembly for a file
-src/task.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/task.cpp.s
-.PHONY : src/task.cpp.s
-
-src/vector.o: src/vector.cpp.o
-
-.PHONY : src/vector.o
-
-# target to build an object file
-src/vector.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/vector.cpp.o
-.PHONY : src/vector.cpp.o
-
-src/vector.i: src/vector.cpp.i
-
-.PHONY : src/vector.i
-
-# target to preprocess a source file
-src/vector.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/vector.cpp.i
-.PHONY : src/vector.cpp.i
-
-src/vector.s: src/vector.cpp.s
-
-.PHONY : src/vector.s
-
-# target to generate assembly for a file
-src/vector.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/vector.cpp.s
-.PHONY : src/vector.cpp.s
-
-src/windowDisplay.o: src/windowDisplay.cpp.o
-
-.PHONY : src/windowDisplay.o
-
-# target to build an object file
-src/windowDisplay.cpp.o:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/windowDisplay.cpp.o
-.PHONY : src/windowDisplay.cpp.o
-
-src/windowDisplay.i: src/windowDisplay.cpp.i
-
-.PHONY : src/windowDisplay.i
-
-# target to preprocess a source file
-src/windowDisplay.cpp.i:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/windowDisplay.cpp.i
-.PHONY : src/windowDisplay.cpp.i
-
-src/windowDisplay.s: src/windowDisplay.cpp.s
-
-.PHONY : src/windowDisplay.s
-
-# target to generate assembly for a file
-src/windowDisplay.cpp.s:
-	$(MAKE) -f CMakeFiles/todo.dir/build.make CMakeFiles/todo.dir/src/windowDisplay.cpp.s
-.PHONY : src/windowDisplay.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -537,51 +375,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... todo"
+	@echo "... src/AddButton.o"
+	@echo "... src/AddButton.i"
+	@echo "... src/AddButton.s"
 	@echo "... src/Button.o"
 	@echo "... src/Button.i"
 	@echo "... src/Button.s"
+	@echo "... src/EditButton.o"
+	@echo "... src/EditButton.i"
+	@echo "... src/EditButton.s"
+	@echo "... src/Icon.o"
+	@echo "... src/Icon.i"
+	@echo "... src/Icon.s"
+	@echo "... src/Set.o"
+	@echo "... src/Set.i"
+	@echo "... src/Set.s"
+	@echo "... src/Task.o"
+	@echo "... src/Task.i"
+	@echo "... src/Task.s"
 	@echo "... src/ToDo.o"
 	@echo "... src/ToDo.i"
 	@echo "... src/ToDo.s"
-	@echo "... src/addButton.o"
-	@echo "... src/addButton.i"
-	@echo "... src/addButton.s"
-	@echo "... src/deleteButton.o"
-	@echo "... src/deleteButton.i"
-	@echo "... src/deleteButton.s"
-	@echo "... src/editButton.o"
-	@echo "... src/editButton.i"
-	@echo "... src/editButton.s"
-	@echo "... src/favoriteButton.o"
-	@echo "... src/favoriteButton.i"
-	@echo "... src/favoriteButton.s"
-	@echo "... src/file.o"
-	@echo "... src/file.i"
-	@echo "... src/file.s"
-	@echo "... src/icon.o"
-	@echo "... src/icon.i"
-	@echo "... src/icon.s"
-	@echo "... src/isDoneButton.o"
-	@echo "... src/isDoneButton.i"
-	@echo "... src/isDoneButton.s"
+	@echo "... src/functions.o"
+	@echo "... src/functions.i"
+	@echo "... src/functions.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/set.o"
-	@echo "... src/set.i"
-	@echo "... src/set.s"
-	@echo "... src/table.o"
-	@echo "... src/table.i"
-	@echo "... src/table.s"
-	@echo "... src/task.o"
-	@echo "... src/task.i"
-	@echo "... src/task.s"
-	@echo "... src/vector.o"
-	@echo "... src/vector.i"
-	@echo "... src/vector.s"
-	@echo "... src/windowDisplay.o"
-	@echo "... src/windowDisplay.i"
-	@echo "... src/windowDisplay.s"
 .PHONY : help
 
 

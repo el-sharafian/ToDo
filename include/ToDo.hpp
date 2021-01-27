@@ -4,6 +4,9 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include "icon.hpp"
+#include "AddButton.hpp"
+
+std::string DrawWindow();     //draw a window if user press delete icon
 
 class ToDo
 {
@@ -16,11 +19,16 @@ private:
     sf::RenderWindow *window;
     Icon *icon;
     sf::Font font;
-    sf::Text text;
-    sf::Sprite sprite;
-    sf::Texture backgrounfTexture;
-    std::string s;
-    // sf::Text t;
+    sf::Font font2;
+    sf::Text Text;
+    sf::Text WindowText;
+    sf::Sprite Sprite;
+    sf::Texture BackgroundTexture;
+    sf::Texture BinTexture;
+    sf::Texture FavoriteTexture;
+    sf::Texture NotFavoriteTexture;
+    sf::Texture IsDoneTexture;
+    sf::Texture NotDoneTexture;
 };
 
 #endif // TODO_HPP
