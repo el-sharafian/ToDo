@@ -9,13 +9,13 @@
 #include "editButton.hpp"
 #include "addButton.hpp"
 
-class Icon     // drawing icons
+class Icon // drawing icons
 {
 public:
     Icon(std::string);
     sf::Sprite Edit();
     sf::Sprite Add();
-    void IconEvents(sf::Event, sf::RenderWindow &, std::vector<Task> &);
+    bool IconEvents(sf::Event, sf::RenderWindow &, std::vector<Task> &);
     void DrawIcons(sf::RenderWindow &window, sf::Sprite, sf::Sprite);
 
 private:

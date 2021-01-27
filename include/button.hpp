@@ -16,7 +16,7 @@ protected:
     sf::Font font;
     sf::Texture Texture;
     sf::Sprite Sprite;
-    Set set;    //sets Texts and Sprites
+    Set set; // sets Texts and Sprites
 };
 
 #endif // BUTTON_HPP

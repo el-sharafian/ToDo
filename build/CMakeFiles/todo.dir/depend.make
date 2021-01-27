@@ -45,6 +45,10 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/task.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../include/todo.hpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o: ../src/ToDo.cpp
 
+CMakeFiles/todo.dir/src/functions.cpp.o: ../include/functions.hpp
+CMakeFiles/todo.dir/src/functions.cpp.o: ../include/set.hpp
+CMakeFiles/todo.dir/src/functions.cpp.o: ../include/task.hpp
+CMakeFiles/todo.dir/src/functions.cpp.o: ../src/functions.cpp
 
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/AddButton.hpp
 CMakeFiles/todo.dir/src/main.cpp.o: ../include/ToDo.hpp

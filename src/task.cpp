@@ -15,11 +15,11 @@ Task::Task(string imgDirectory)
         exit(EXIT_FAILURE);
     }
 }
-void Task::SetTask(string t)//set the task name
+void Task::SetTask(string t) // set the task name
 {
     TaskName = t;
 }
-std::string Task::GetName()//function for get task name
+std::string Task::GetName() // function for get task name
 {
     return TaskName;
 }

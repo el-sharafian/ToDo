@@ -110,15 +110,15 @@ icon.hpp
 AddButton.hpp
 ../include/AddButton.hpp
 
-/mnt/f/t4/todo/src/ToDo.cpp
+/mnt/f/todo2/src/ToDo.cpp
 todo.hpp
-/mnt/f/t4/todo/src/todo.hpp
+/mnt/f/todo2/src/todo.hpp
 set.hpp
-/mnt/f/t4/todo/src/set.hpp
+/mnt/f/todo2/src/set.hpp
 functions.hpp
-/mnt/f/t4/todo/src/functions.hpp
+/mnt/f/todo2/src/functions.hpp
 task.hpp
-/mnt/f/t4/todo/src/task.hpp
+/mnt/f/todo2/src/task.hpp
 iostream
 -
 

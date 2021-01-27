@@ -5,15 +5,14 @@
 
 using namespace std;
 
-
-EditButton::EditButton()    //load Textures and set Texts and Sprites
+EditButton::EditButton() // load Textures and set Texts and Sprites
 {
-    Texture.loadFromFile("../assets/images/background2.png");//set background for window
+    Texture.loadFromFile("../assets/images/background2.png"); // set background for window
     Sprite.setTexture(Texture);
-    Win.create(sf::VideoMode(600, 300), "edit a task", sf::Style::Close);//creating the window for edit tasks
-    Win.setPosition(sf::Vector2i(350, 500));    //set position of window
+    Win.create(sf::VideoMode(600, 300), "edit a task", sf::Style::Close); // creating the window for edit tasks
+    Win.setPosition(sf::Vector2i(350, 500));                              // set position of window
 
-    font.loadFromFile("../assets/icons/f1.ttf");    //loading font
+    font.loadFromFile("../assets/icons/f1.ttf"); // loading font
 
     TaskText.setFont(font);
     set.SetText(TaskText, 130, 0, Task);
@@ -33,7 +32,7 @@ EditButton::EditButton()    //load Textures and set Texts and Sprites
     set.SetText(WindowText, 120, 270, WindowString);
     WindowText.setCharacterSize(20);
 }
-void WindowDisplay(EditButton &button, vector<Task> &task)
+void WindowDisplay(EditButton &button, vector<Task> &task) // display EditButton window
 {
     bool IsNameEntered = false;
     while (button.Win.isOpen())
@@ -43,7 +42,7 @@ void WindowDisplay(EditButton &button, vector<Task> &task)
         {
             if (evn.type == sf::Event::Closed)
             {
-                button.Win.close();
+                button.Win.close(); // close the EditButton window
             }
             if (evn.type == sf::Event::TextEntered)
             {
@@ -51,12 +50,16 @@ void WindowDisplay(EditButton &button, vector<Task> &task)
                 {
                     IsNameEntered = true;
                 }
-                if (evn.text.unicode == BACKSPACE_KEY)
+                if (evn.text.unicode == BACKSPACE_KEY) // delete the last character from string if BACKSPACE is pressed
                 {
                     if (!IsNameEntered)
+                    {
                         button.TaskName.erase(button.TaskName.size() - 1);
+                    }
                     else
+                    {
                         button.NewName.erase(button.NewName.size() - 1);
+                    }
                 }
                 else if (evn.text.unicode < 128)
                 {
@@ -64,30 +67,30 @@ void WindowDisplay(EditButton &button, vector<Task> &task)
                     {
                         if (button.TaskName.size() < 35)
                         {
-                            button.TaskName += static_cast<char>(evn.text.unicode);//getting the name of task that user wants to change
+                            button.TaskName += static_cast<char>(evn.text.unicode); // getting the name of task that user wants to change
                         }
                     }
                     else
                     {
                         if (button.NewName.size() < 35)
                         {
-                            button.NewName += static_cast<char>(evn.text.unicode);//getting the new name
+                            button.NewName += static_cast<char>(evn.text.unicode); // getting the new name
                         }
                     }
                 }
-                button.TaskNameText.setString(button.TaskName);//set the string for name
+                button.TaskNameText.setString(button.TaskName); // set the string for name
             }
             button.TaskText.setString(button.Task);
             button.NameText.setString(button.Name);
-            button.NewNameText.setString(button.NewName);//set the string for new name
+            button.NewNameText.setString(button.NewName); // set the string for new name
             button.Win.clear();
             button.Win.draw(button.Sprite);
             button.Win.draw(button.TaskText);
-            button.Win.draw(button.TaskNameText);//draw the name
+            button.Win.draw(button.TaskNameText); // draw the name
             if (IsNameEntered)
             {
                 button.Win.draw(button.NameText);
-                button.Win.draw(button.NewNameText);//draw new name
+                button.Win.draw(button.NewNameText); // draw new name
                 button.Win.draw(button.WindowText);
             }
             button.Win.display();
@@ -95,9 +98,9 @@ void WindowDisplay(EditButton &button, vector<Task> &task)
     }
     for (size_t i = 0; i < task.size(); i++)
     {
-        if (button.TaskName == task[i].GetName())
+        if (button.TaskName == task[i].GetName())   // checks if the input is a task name
         {
-            task[i].SetTask(button.NewName);//set the new name for the object
+            task[i].SetTask(button.NewName); // set the new name for the object
         }
     }
 }

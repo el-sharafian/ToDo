@@ -6,7 +6,7 @@
 #include "icon.hpp"
 #include "AddButton.hpp"
 
-std::string DrawWindow();     //draw a window if user press delete icon
+std::string DrawWindow(); //draw a window if user press delete icon
 
 class ToDo
 {
@@ -20,8 +20,8 @@ private:
     Icon *icon;
     sf::Font font;
     sf::Font font2;
-    sf::Text Text;
     sf::Text WindowText;
+    sf::Text WindowText2;
     sf::Sprite Sprite;
     sf::Texture BackgroundTexture;
     sf::Texture BinTexture;

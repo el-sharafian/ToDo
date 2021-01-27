@@ -8,11 +8,11 @@
 #include "task.hpp"
 #include "button.hpp"
 
-class AddButton : public Button    // adds a task
+class AddButton : public Button // adds a task
 {
 public:
     AddButton();
-    void DisplayWindow(AddButton &,  std::vector<Task> &);  //displays AddButton Window
+    bool DisplayWindow(AddButton &, std::vector<Task> &); // displays AddButton Window
 
 private:
     std::string addTask = "Enter name of your task \n";

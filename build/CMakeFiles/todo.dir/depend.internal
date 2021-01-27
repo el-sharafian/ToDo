@@ -6,17 +6,17 @@ CMakeFiles/todo.dir/src/AddButton.cpp.o
  ../include/button.hpp
  ../include/set.hpp
  ../include/task.hpp
- /mnt/f/t4/todo/src/AddButton.cpp
+ /mnt/f/todo2/src/AddButton.cpp
 CMakeFiles/todo.dir/src/Button.cpp.o
  ../include/button.hpp
  ../include/set.hpp
- /mnt/f/t4/todo/src/Button.cpp
+ /mnt/f/todo2/src/Button.cpp
 CMakeFiles/todo.dir/src/EditButton.cpp.o
  ../include/button.hpp
  ../include/editButton.hpp
  ../include/set.hpp
  ../include/task.hpp
- /mnt/f/t4/todo/src/EditButton.cpp
+ /mnt/f/todo2/src/EditButton.cpp
 CMakeFiles/todo.dir/src/Icon.cpp.o
  ../include/AddButton.hpp
  ../include/ToDo.hpp
@@ -26,14 +26,14 @@ CMakeFiles/todo.dir/src/Icon.cpp.o
  ../include/icon.hpp
  ../include/set.hpp
  ../include/task.hpp
- /mnt/f/t4/todo/src/Icon.cpp
+ /mnt/f/todo2/src/Icon.cpp
 CMakeFiles/todo.dir/src/Set.cpp.o
  ../include/set.hpp
- /mnt/f/t4/todo/src/Set.cpp
+ /mnt/f/todo2/src/Set.cpp
 CMakeFiles/todo.dir/src/Task.cpp.o
- /mnt/f/t4/todo/include/set.hpp
- /mnt/f/t4/todo/include/task.hpp
- /mnt/f/t4/todo/src/Task.cpp
+ /mnt/f/todo2/include/set.hpp
+ /mnt/f/todo2/include/task.hpp
+ /mnt/f/todo2/src/Task.cpp
 CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/AddButton.hpp
  ../include/addButton.hpp
@@ -44,8 +44,12 @@ CMakeFiles/todo.dir/src/ToDo.cpp.o
  ../include/set.hpp
  ../include/task.hpp
  ../include/todo.hpp
- /mnt/f/t4/todo/src/ToDo.cpp
+ /mnt/f/todo2/src/ToDo.cpp
 CMakeFiles/todo.dir/src/functions.cpp.o
+ ../include/functions.hpp
+ ../include/set.hpp
+ ../include/task.hpp
+ /mnt/f/todo2/src/functions.cpp
 CMakeFiles/todo.dir/src/main.cpp.o
  ../include/AddButton.hpp
  ../include/ToDo.hpp
@@ -55,4 +59,4 @@ CMakeFiles/todo.dir/src/main.cpp.o
  ../include/icon.hpp
  ../include/set.hpp
  ../include/task.hpp
- /mnt/f/t4/todo/src/main.cpp
+ /mnt/f/todo2/src/main.cpp

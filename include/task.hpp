@@ -27,7 +27,6 @@ private:
     int IsDone;
     sf::Font font;
     std::string TaskName;
-    // bool Check = false;
     Set set; // sets Texts and Sprites
 };
 
