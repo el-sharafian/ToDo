@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/f/todo2/src/AddButton.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
-  "/mnt/f/todo2/src/Button.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/Button.cpp.o"
-  "/mnt/f/todo2/src/EditButton.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/EditButton.cpp.o"
-  "/mnt/f/todo2/src/Icon.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/Icon.cpp.o"
-  "/mnt/f/todo2/src/Set.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/Set.cpp.o"
-  "/mnt/f/todo2/src/Task.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/Task.cpp.o"
-  "/mnt/f/todo2/src/ToDo.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
-  "/mnt/f/todo2/src/functions.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/functions.cpp.o"
-  "/mnt/f/todo2/src/main.cpp" "/mnt/f/todo2/build/CMakeFiles/todo.dir/src/main.cpp.o"
+  "/mnt/f/todo3/src/AddButton.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/AddButton.cpp.o"
+  "/mnt/f/todo3/src/Button.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/Button.cpp.o"
+  "/mnt/f/todo3/src/EditButton.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/EditButton.cpp.o"
+  "/mnt/f/todo3/src/Icon.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/Icon.cpp.o"
+  "/mnt/f/todo3/src/Set.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/Set.cpp.o"
+  "/mnt/f/todo3/src/Task.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/Task.cpp.o"
+  "/mnt/f/todo3/src/ToDo.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/ToDo.cpp.o"
+  "/mnt/f/todo3/src/functions.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/functions.cpp.o"
+  "/mnt/f/todo3/src/main.cpp" "/mnt/f/todo3/build/CMakeFiles/todo.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
