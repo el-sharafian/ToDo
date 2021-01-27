@@ -1,3 +1,0 @@
-/mnt/f/todo3/build/CMakeFiles/rebuild_cache.dir
-/mnt/f/todo3/build/CMakeFiles/edit_cache.dir
-/mnt/f/todo3/build/CMakeFiles/todo.dir
